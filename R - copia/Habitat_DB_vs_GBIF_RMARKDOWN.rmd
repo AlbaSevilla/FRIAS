@@ -1,0 +1,775 @@
+---
+title: "Habitat_DB_vs_GBIF"
+author: "Alba Sevilla Navarro"
+date: "`r Sys.Date()`"
+OutputFiles: html_document
+---
+
+Para evaluar las discrepancias entre el campo habitat extraido directamente de la base de datos y la extracción del habitat por la función creada en base a los datos de GBIF, se ha llevado a cabo el siguiente análisis que recoge:
+
+#### 1-. Análisis exploratorio de los datos:
+
+Con el fin de observar las frecuencias de errores en las clasificaciones de habitats de la base de datos respecto a GBIF, para ello se obtiene la tabla de frecuencias y su representación en un gráfico de barras. Como se puede ver, no todas las bases de datos contienen discrepancias con GBIF, debido a que el habitat de éstas se ha obtenido con GBIF. Aquí partimos de la base de datos MasterList unicamente con los registros que no coinciden en el habitat.
+
+```{r}
+#Establecemos el directorio
+setwd("../OutputFiles/Check/CheckHabitat")
+CheckHabitatMasterlist <- read_excel("No_FreshwaterHabitatwithFunctionMasterList2.xlsx")
+#Nos quedamos con las variables de interés, para tener una tabla con información que ahora mismo no necesitamos. Cogemos OriginalNameDB, AcceptedNameGBIF, habitat(dado por la base de datos) y Habitat(dado por GBIF)
+CheckHabitatMasterlist_subset <- CheckHabitatMasterlist %>%
+  select(OriginalNameDB, AcceptedNameGBIF, habitat, Habitat)
+#Desglosamos según la variable habitat y separada por ;
+CheckHabitatMasterlist_subset <- CheckHabitatMasterlist_subset %>%
+  separate_rows(habitat, sep = ";")
+CheckHabitatMasterlist_subset$Source_Date <- sub(".*\\(([^)]+)\\).*", "\\1", CheckHabitatMasterlist_subset$habitat)
+
+#Hacemos la tabla de frecuencias
+counts <- as.data.frame(table(CheckHabitatMasterlist_subset$Source_Date))
+colnames(counts) <- c("Source_Date", "Freq")
+counts <- counts[order(-counts$Freq), ]
+
+CheckHabitatMasterlist_subset$Source_Date <- factor(CheckHabitatMasterlist_subset$Source_Date,levels = counts$Source_Date)
+table(CheckHabitatMasterlist_subset$Source_Date)
+
+#Gráfico de barras para evaluar las categorías discretas de la variable 'habitat'
+ggplot(CheckHabitatMasterlist_subset, aes(x = Source_Date)) +
+  geom_bar(fill = "steelblue") +
+  theme_minimal() +
+  labs(title = "Discrepancias en habitat: Bases de Datos vs GBIF",
+       x = "Base de datos",
+       y = "Número de registros") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+#### 2-. Tablas de contingencia:
+
+Obtenemos las tablas de contingencia que cruzan los habitats dados por la fuente original y los habitats dados por GBIF. Lo hacemos para todas las bases de datos que se quieren comparar. Aquí partimos de la base de datos MasterList completa, con y sin coincidencias en el habitat.
+
+```{r}
+#Establecemos de nuevo el directorio ya que el rmarkdown 'pierde' la información de donde está el directorio de celda en celda
+setwd("../OutputFiles/Check/CheckHabitat")
+CheckHabitatMasterlist <- read_excel("HabitatwithFunctionMasterList2.xlsx")
+CheckHabitatMasterlist_subset <- CheckHabitatMasterlist %>%
+  select(OriginalNameDB, AcceptedNameGBIF, habitat, Habitat)
+
+CheckHabitatMasterlist_subset <- CheckHabitatMasterlist_subset %>%
+  separate_rows(habitat, sep = ";")
+CheckHabitatMasterlist_subset$Source_Date <- sub(".*\\(([^)]+)\\).*", "\\1", CheckHabitatMasterlist_subset$habitat) #Aquí obtenemos el nombre de la base de datos y creamos una columna con eso
+
+#Cuando se generaban las tablas de frecuencias, a veces el nombre de la categoria del habitat era tan largo, que estropeaba la representación de la tabla, esto ocurre porque hay muchas palabras repetidas dentro de un habitat porque son la combinación de diferentes etiquetas obtenidas de la web (el caso de CABI), por ello se van a eliminar los duplicados en las categorias, si antes era 'freshwater/lakes freshwater/river' se queda en 'freshwater lakes river'
+remove_duplicates <- function(label) {
+  label <- as.character(label)
+  parts <- unlist(strsplit(label, "\\s*/\\s*|\\s+"))  # divide por espacio o slash
+  unique_parts <- unique(parts[parts != ""])  # quitar vacíos
+  cleaned_label <- paste(unique_parts, collapse = " ") #Categoría final
+  return(cleaned_label)
+}
+
+#Le aplicamos la función a la MasterList en la variable habitat y en la variable Source_Date
+CheckHabitatMasterlist_subset$habitat <- sapply(CheckHabitatMasterlist_subset$habitat, remove_duplicates)
+CheckHabitatMasterlist_subset$Source_Date <- sapply(CheckHabitatMasterlist_subset$Source_Date, remove_duplicates)
+
+#Creamos la tabla de frecuencias para cada Base de Datos
+counts <- as.data.frame(table(CheckHabitatMasterlist_subset$Source_Date))
+colnames(counts) <- c("Source_Date", "Freq")
+counts <- counts[order(-counts$Freq), ]
+CheckHabitatMasterlist_subset$Source_Date <- factor(CheckHabitatMasterlist_subset$Source_Date, levels = counts$Source_Date)
+source_dates <- unique(CheckHabitatMasterlist_subset$Source_Date)
+
+#for (source_date in source_dates) {
+#  dataset <- CheckHabitatMasterlist_subset %>%
+#    filter(Source_Date == source_date)
+#  tabla <- table(Habitat = dataset$habitat, GBIF_Group = dataset$Habitat)
+#  tabla_db <- as.data.frame.matrix(tabla)
+#  cat("\n Tabla para:", source_date, "====\n")
+#  print(tabla_db)
+#}
+
+```
+
+#### 3-. Cálculamos el ratio de error por habitat:
+
+Para ello, vamos primero a obtener una muestra de cada categoría de habitat de la MasterList, para ello, al ser una muestra bastante heterogénea, no podemos realizar un muestreo aleatorio simple directamente, ya que este muestreo no tiene en cuenta la heterogeneidad de la población. Para no caer en este error, realizamos un Muestreo Estratificado aleatorio, en donde cada estrato es independiente de los demás. Se realiza un Muestreo Estratificado aleatorio con método proporcional
+
+1.  Primero calculamos los tamaño de muestra de cada habitat
+
+Los parámetros utilizados a continuación se definen de la siguiente manera:
+
+-   $N_h: Número~total~de~unidades~en~el~estrato~h$
+
+-   $Wh=\frac{N_h}{N}~Es~la~ponderacion~del~estrato~h$
+
+-   $n_h:Número~de~unidades~de~la~muestra~en~el~estrato~h$
+
+Se lleva a cabo un muestreo con afijación proporcional porque la nh es proporcional al tamaño de cada estrato. Una afijación de Neymann, se usa cuando queremos minimizar la varianza entre estratos. Usar esta afijación es mejor cuando hay grandes diferencias de variabilidad entre los estratos. En este caso, los estratos no se componen de las mismas categorías por lo que evaluar la varianza entre estratos no es lo correcto. Función obtenida de <https://github.com/DFJL/SamplingUtil/blob/master/R/nstrata.R>
+
+```{r}
+setwd("../OutputFiles/Check/CheckHabitat")
+#OBTENCIÓN DE Nh y Wh
+Estratos <- CheckHabitatMasterlist_subset[, c("AcceptedNameGBIF", "habitat", "Habitat")] #Extraemos las columnas estrictamente necesarias para facilitar la visualización de la tabla
+tabla <- table(Estratos$habitat)
+Estratos <- as.data.frame(tabla)
+names(Estratos) <- c("habitat", "n")
+Estratos$p <- Estratos$n / sum(Estratos$n)
+
+# Función nstrata para el cálculo del tamaño de la muestra
+nstrata <- function(n, wh, sh = NULL, ch = NULL, method = "proportional") {
+  nh <- rep(0, length(wh))
+  method <- match.arg(method, c("proportional", "neyman"))
+
+  if (method == "proportional") {
+    nh <- ceiling(n * wh)
+    } else {
+      if (method == "neyman" && is.null(ch) && !is.null(sh)) {
+        nh <- ceiling(n * ((wh * sh) / sum(wh * sh)))
+      }
+    }
+  return(nh)
+}
+resultados_df <- data.frame() #Aquí almacenaremos los resultados
+
+
+#Obtención de las muestras por muestreo estratificado para cada categoria de habitat
+for (hab in unique(Estratos$habitat)) {
+  CheckHabitatMasterlist_subset_GRIIS_hab <- CheckHabitatMasterlist_subset %>%
+    filter(habitat == hab)
+  #OBTENCIÓN nh
+  nsizeProp <- nstrata(n = Estratos$n[Estratos$habitat == hab], wh = Estratos$p[Estratos$habitat == hab], method = "proportional")
+  tabla_tamaño_estratificado <- cbind(Estratos[Estratos$habitat == hab, ], n_sample = nsizeProp)
+  nsizeProp <- tabla_tamaño_estratificado$n_sample
+  #DATASET FINAL
+  resultados_habitat <- data.frame(
+    habitat = hab,
+    nh = nsizeProp
+  )
+  resultados_df <- rbind(resultados_df, resultados_habitat)
+  
+}
+
+colnames(Estratos)[colnames(Estratos) == "n"] <- "Nh"
+colnames(Estratos)[colnames(Estratos) == "p"] <- "Wh"
+resultados_df <- resultados_df %>% select(-habitat)
+resultadofinal <- cbind(Estratos, resultados_df)
+resultadofinal
+```
+
+2.  Extraemos las muestras de cada habitat con el tamaño de muestra obtenido antes:
+
+```{r}
+setwd("../OutputFiles/Check/CheckHabitat")
+#Extraemos cada muestra del habitat correspondiente
+muestras_aleatorias_por_habitat <- list()
+for (i in 1:nrow(resultadofinal)) {
+  hab <- resultadofinal$habitat[i]
+  if(resultadofinal$nh[i]>1){
+  size_muestra <- (resultadofinal$nh[i])# Tamaño de muestra definido para ese hábitat
+  }
+  else {
+  size_muestra <- resultadofinal$nh[i]# Tamaño de muestra definido para ese hábitat
+  }
+  registros_por_habitat <- CheckHabitatMasterlist_subset %>% #Filtramos por habitat
+    filter(habitat == hab)
+
+  numero_total_registros <- nrow(registros_por_habitat) #Número de filas
+  if (size_muestra > numero_total_registros) {
+    size_muestra <- numero_total_registros
+  }
+#m.a.s sin reemplazo de cada habitat
+  muestra_aleatoria_por_habitat <- registros_por_habitat[
+    sample(numero_total_registros, size = size_muestra, replace = FALSE), ]
+
+  muestras_aleatorias_por_habitat[[hab]] <- muestra_aleatoria_por_habitat
+}
+
+# Para ver las muestras individuales por hábitat
+# muestras_aleatorias_por_habitat
+
+muestra_total_aleatoria_por_habitat <- do.call(rbind, muestras_aleatorias_por_habitat)
+
+muestra_total_aleatoria_por_habitat
+
+conteo_sources <- table(muestra_total_aleatoria_por_habitat$Source_Date)
+print(conteo_sources)
+
+write.xlsx(muestra_total_aleatoria_por_habitat, "./OutputFiles/Check/CheckHabitat/sample_10%_DB_vs_GBIF_CheckHabitat_SIyNOcoincidentes.xlsx")
+```
+
+3.  Obtenemos los ratios de error para cada categoría respecto a GBIF
+
+```{r}
+setwd("../OutputFiles/Check/CheckHabitat")
+unique(muestra_total_aleatoria_por_habitat$habitat)
+muestra_total_aleatoria_por_habitat$habitat_freshwater <- grepl("freshwater|dulceacuicola", muestra_total_aleatoria_por_habitat$habitat, ignore.case = TRUE) #Creamos una columna de TRUE o FALSE si la columna
+                                                                                                                                               #habitat contiene 'freshwater'
+muestra_total_aleatoria_por_habitat$Habitat_freshwater <- grepl("freshwater|dulceacuicola", muestra_total_aleatoria_por_habitat$Habitat, ignore.case = TRUE) #Creamos una columna de TRUE o FALSE si la columna
+                                                                                                                                               #Habitat contiene 'freshwater'
+
+#Creamos una columna TRUE o FALSE que indique si coinciden las dos columnas que hemos creado
+muestra_total_aleatoria_por_habitat$coincidencia_habitat <- muestra_total_aleatoria_por_habitat$habitat_freshwater == muestra_total_aleatoria_por_habitat$Habitat_freshwater
+#SERÁ:
+#TRUE si coinciden las columnas creadas, es decir que ambas funciones dan freshwater
+#FALSE si no coinciden las columnas creadas, es decir una columna dice que la especie es freshwater y la otra no y viceversa
+
+# #PROBAMOS MANUALMENTE A CONTAR LOS FALSE del habitat 'terrestrial|freshwater'
+# unique(muestra_total_aleatoria_por_habitat$habitat) #Obtenemos todas las categorías de habitat de GRIIS
+# terrestrialfreshwater <- muestra_total_aleatoria_por_habitat %>% filter(habitat=="terrestrial|freshwater(GRIIS)") #hacemos un subset de los registros terrestrial|freshwater de la muestra
+# error_terrestrialfreshwater <- terrestrialfreshwater %>% filter(coincidencia_habitat=="FALSE") #obtenemos de ese subset otro subset de los FALSE, es decir que no coincide el resultado de GBIF con                                                                                                #el de GRIIS 
+# n_error_terrestrialfreshwater <- nrow(error_terrestrialfreshwater) #numero total de no coincidencias
+# n_error_terrestrialfreshwater
+# p_error_terrestrialfreshwater <- n_error_terrestrialfreshwater/nrow(terrestrialfreshwater) #porcentaje de no coincidencias
+# p_error_terrestrialfreshwater
+
+
+#OBTENEMOS LOS FALSE de manera automatizada
+categorias_habitat <- unique(muestra_total_aleatoria_por_habitat$habitat) 
+
+
+resultados <- map_dfr(categorias_habitat, function(hab) {
+  subset_habitat <- muestra_total_aleatoria_por_habitat %>% filter(habitat == hab)
+  errores <- subset_habitat %>% filter(coincidencia_habitat == "FALSE")
+  n_error <- nrow(errores)
+  total <- nrow(subset_habitat)
+  tibble(
+    habitat = hab,
+    n_error = n_error,
+    total = total,
+    p_error = ifelse(total > 0, n_error / total, NA)
+  )
+})
+print(resultados)
+```
+
+#BUSCAMOS LOS REGISTROS QUE SON FRESHWATER PARA GRIIS Y NO FRESHWATER PARA GBIF EN EL RESTO DE BASES DE DATOS QUE CONTIENEN EL CAMPO HABITAT A VER QUÉ HABITAT ESTÁ ASIGNADO EN ELLAS:
+
+```{r}
+setwd("../OutputFiles/Check/CheckHabitat")
+muestra_total_aleatoria_por_habitat_nocoincidentes <- read_excel("No_FreshwaterHabitatwithFunctionMasterList2.xlsx")
+griis_nocoincidenciashabitat <- muestra_total_aleatoria_por_habitat_nocoincidentes %>%  filter(grepl("GRIIS", habitat)) %>% filter(grepl("freshwater", habitat))
+head(griis_nocoincidenciashabitat)
+#450 REGISTROS
+```
+
+Ahora obtenemos la lista de nombres de esas especies clasificadas erróneamente por griis:
+
+```{r}
+nombres_griisnocoincidenciashabitat <- griis_nocoincidenciashabitat$AcceptedNameGBIF
+nombres_griisnocoincidenciashabitat <- unique(nombres_griisnocoincidenciashabitat)
+```
+
+Las bases de datos que vamos a consultar son las que tienen el campo habitat en la base de datos inicial:
+
+-   USGS
+
+-   ZENNI
+
+-   IPBES
+
+-   CONABIO
+
+-   GISD
+
+-   FISHBASESEALIFE
+
+-   CABI
+
+abrimos las bases de datos
+
+```{r}
+setwd("../Inputfiles")
+USGS_dataset <- read_csv("Step0_OriginalDatabase_USGS.csv")
+#La columna de nombres científicos es 'Scientific Name' y la de habitat es 'Native Habitat'
+#Buscamos las especies de nombres_griisnocoincidenciashabitat en USGS que coincidan con registros de la columna Scientific Name:
+# Filtrar las filas que tienen coincidencias con los nombres en la lista
+USGS_filtrado <- USGS_dataset %>%
+  filter(`Scientific Name` %in% nombres_griisnocoincidenciashabitat) %>%
+  select(`Scientific Name`, `Native Habitat`)%>%
+  distinct(`Scientific Name`, .keep_all = TRUE)
+USGS_filtrado
+```
+
+```{r}
+setwd("../Inputfiles")
+ZENNI_dataset <- read_excel("Step0_OriginalDatabase_ZENNI.xlsx", sheet="Fauna (in Portuguese)")
+ZENNI_filtrado <- ZENNI_dataset %>%
+  dplyr::filter(`Nome científico` %in% nombres_griisnocoincidenciashabitat)%>%
+  dplyr::select(`Nome científico`, `Ambiente afetado`) %>%
+  dplyr::distinct(`Nome científico`, .keep_all = TRUE)
+
+ZENNI_filtrado
+```
+
+```{r}
+setwd("../Inputfiles")
+IPBES_dataset <- read_excel("Step0_OriginalDatabase_IPBES.xlsx", sheet="IMPACTS_20241024")
+IPBES_filtrado <- IPBES_dataset %>%
+  filter(`Verified.Name.GBIF.Taxon` %in% nombres_griisnocoincidenciashabitat) %>%
+  select(`Verified.Name.GBIF.Taxon`, `Realm`) %>%
+  distinct(`Verified.Name.GBIF.Taxon`, .keep_all = TRUE)
+IPBES_filtrado
+```
+
+```{r}
+setwd("../Inputfiles")
+CONABIO_dataset <- read_excel("Step0_OriginalDatabase_CONABIO.xlsx", col_names = FALSE)
+colnames(CONABIO_dataset) <- as.character(unlist(CONABIO_dataset[2, ]))
+CONABIO_dataset <- CONABIO_dataset[-c(1,2), ]
+
+CONABIO_filtrado <- CONABIO_dataset %>%
+  filter(`Nombre científico` %in% nombres_griisnocoincidenciashabitat) %>%
+  select(`Nombre científico`, `Ambiente`) %>%
+  distinct(`Nombre científico`, .keep_all = TRUE)
+CONABIO_filtrado
+```
+
+```{r}
+setwd("../Inputfiles")
+FISHBASESEALIFE_dataset <- read_excel("Step0_OriginalDatabase_FISHBASESEALIFE.xlsx")
+FISHBASESEALIFE_filtrado <- FISHBASESEALIFE_dataset %>%
+  filter(`Species` %in% nombres_griisnocoincidenciashabitat) %>%
+  select(`Species`) %>%
+  distinct(`Species`, .keep_all = TRUE)
+FISHBASESEALIFE_filtrado
+```
+
+```{r}
+setwd("../Inputfiles")
+EASIN_dataset <- read_excel("Step0_OriginalDatabaseFreshwaterNODUPLICATES_EASIN.xlsx")
+EASIN_filtrado <- EASIN_dataset %>%
+  filter(`Name` %in% nombres_griisnocoincidenciashabitat) 
+EASIN_filtrado$Habitat <- "FRESHWATER"
+EASIN_filtrado
+```
+
+```{r}
+setwd("../Inputfiles")
+CABI_dataset <- read.csv("Step0_OriginalDatabase_CABI.csv", sep=";")
+CABI_filtrado <- CABI_dataset %>%
+  filter(`Preferred.scientific.name` %in% nombres_griisnocoincidenciashabitat) %>%
+  select(`Preferred.scientific.name`, `Habitat`) %>%
+  distinct(`Preferred.scientific.name`, .keep_all = TRUE)
+CABI_filtrado
+```
+
+```{r}
+USGS_final <- USGS_filtrado %>%
+  dplyr::rename(especie = `Scientific Name`, habitat = `Native Habitat`) %>%
+  mutate(DATABASE = "USGS")
+
+ZENNI_final <- ZENNI_filtrado %>%
+  dplyr::rename(especie = `Nome científico`, habitat = `Ambiente afetado`) %>%
+  mutate(DATABASE = "ZENNI")
+
+IPBES_final <- IPBES_filtrado %>%
+  dplyr::rename(especie = `Verified.Name.GBIF.Taxon`, habitat = `Realm`) %>%
+  mutate(DATABASE = "IPBES")
+
+CONABIO_final <- CONABIO_filtrado %>%
+  dplyr::rename(especie = `Nombre científico`, habitat = `Ambiente`) %>%
+  mutate(DATABASE = "CONABIO")
+
+FISHBASESEALIFE_final <- FISHBASESEALIFE_filtrado %>%
+  dplyr::rename(especie = `Species`) %>%
+  mutate(DATABASE = "FISHBASESEALIFE")
+
+CABI_final <- CABI_filtrado %>%
+  dplyr::rename(especie = `Preferred.scientific.name`, habitat = `Habitat`) %>%
+  mutate(DATABASE = "CABI")
+
+EASIN_final <- EASIN_filtrado %>%
+  dplyr::rename(especie = `Name`, habitat = `Habitat`) %>%
+  mutate(DATABASE = "EASIN")
+
+# Unir todos en uno solo
+bases_unidas <- bind_rows(
+  USGS_final,
+  ZENNI_final,
+  IPBES_final,
+  CONABIO_final,
+  FISHBASESEALIFE_final,
+  CABI_final,
+  EASIN_final
+)
+
+# Reordenar columnas
+bases_unidas <- bases_unidas %>%
+  select(DATABASE, especie, habitat) %>%
+  arrange(especie)
+bases_unidas <- as.data.frame(bases_unidas)
+
+#EN GRIIS:
+griis_nocoincidenciashabitat2 <- griis_nocoincidenciashabitat[,c("AcceptedNameGBIF", "habitat", "Habitat")]
+griis_nocoincidenciashabitat2 <- as.data.frame(griis_nocoincidenciashabitat2)
+
+Comparacion_final <- merge(
+  x = bases_unidas,
+  y = griis_nocoincidenciashabitat2,
+  by.x = "especie",
+  by.y = "AcceptedNameGBIF"
+)
+names(Comparacion_final)[names(Comparacion_final) == "habitat.x"] <- "Habitat_DATABASE"
+names(Comparacion_final)[names(Comparacion_final) == "habitat.y"] <- "Habitat_GRIIS"
+names(Comparacion_final)[names(Comparacion_final) == "Habitat"] <- "Habitat_GBIF"
+
+Comparacion_final <- Comparacion_final %>%
+  filter(!is.na(especie))
+Comparacion_final <- Comparacion_final %>%
+  separate_rows(Habitat_GRIIS, sep = ";")
+Comparacion_final <- Comparacion_final %>% 
+  filter(grepl("GRIIS", Habitat_GRIIS))
+
+setwd("../OutputFiles/Check/CheckHabitat")
+write.xlsx(Comparacion_final, "GRIIS_vs_OtherDatabases_vs_GBIF.xlsx")
+```
+
+```{r}
+Comparacion_final_2 <- Comparacion_final %>% 
+  filter(!grepl("freshwater|dulceacuícola", Habitat_DATABASE, ignore.case = TRUE)) %>% 
+  filter(grepl("freshwater", Habitat_GRIIS, ignore.case = TRUE))
+
+Comparacion_final_2
+setwd("../OutputFiles/Check/CheckHabitat")
+write.xlsx(Comparacion_final_2, "nocorresponden_GRIIS_vs_OtherDatabases_vs_GBIF.xlsx")
+```
+
+Como podemos ver, las bases de datos coinciden en 64/115 registros en el habitat con GRIIS. No es una buena manera de obtener si es mejor GBIF o GRIIS, por lo que pasamos a que manualmente, comprobamos el habitat de unas 61 especies, obteniendo el 10% de cada categoría de habitat:
+
+```{r}
+#Establecemos el directorio
+setwd("../OutputFiles/Check/CheckHabitat")
+CheckHabitatMasterlist <- read_excel("No_FreshwaterHabitatwithFunctionMasterList2.xlsx")
+#Nos quedamos con las variables de interés, para tener una tabla con información que ahora mismo no necesitamos. Cogemos OriginalNameDB, AcceptedNameGBIF, habitat(dado por la base de datos) y Habitat(dado por GBIF)
+CheckHabitatMasterlist_subset <- CheckHabitatMasterlist %>%
+  select(OriginalNameDB, AcceptedNameGBIF, Source_Date, habitat, Habitat)
+names(CheckHabitatMasterlist_subset)[names(CheckHabitatMasterlist_subset) == "Habitat"] <- "Habitat_GBIF"
+
+CheckHabitatMasterlist_subset <- CheckHabitatMasterlist_subset %>%
+  filter(Source_Date == "GRIIS_2022")
+names(CheckHabitatMasterlist_subset)[names(CheckHabitatMasterlist_subset) == "habitat"] <- "Habitat_GRIIS"
+
+CheckHabitatMasterlist_subset
+
+table(CheckHabitatMasterlist_subset$Source_Date)
+
+#Extraer el 10% de cada tipo de habitat
+muestra_por_habitat <- CheckHabitatMasterlist_subset %>%
+  group_by(Habitat_GRIIS)
+
+# Lista de hábitats únicos desde muestra_10_por_habitat
+habitats_de_interes <- unique(muestra_por_habitat$Habitat_GRIIS)
+
+# Filtrar y extraer el 10% de cada habitat, con al menos 1 fila
+muestra_filtrada <- muestra_por_habitat %>%
+  filter(Habitat_GRIIS %in% habitats_de_interes) %>%
+  group_by(Habitat_GRIIS) %>%
+  group_map(~ {
+    n_total <- nrow(.x)
+    n_sample <- max(1, round(n_total * 0.10))
+    .x %>% sample_n(n_sample)
+  }, .keep = TRUE) %>%  # <-- esta parte es clave
+  bind_rows()
+
+
+# Verifica que haya representación de todos los hábitats
+muestra_filtrada
+write.xlsx(muestra_filtrada, "sample_10%_GRIIS_GBIF_NOcoincidentes.xlsx")
+```
+
+#### MUESTREO ESTRATIFICADO PARA LAS ESPECIES CUYO HABITAT NO COINCIDE ENTRE LA BASE DE DATOS ORIGINAL Y GBIF:
+
+```{r}
+#Establecemos de nuevo el directorio ya que el rmarkdown 'pierde' la información de donde está el directorio de celda en celda
+setwd("../OutputFiles/Check/CheckHabitat")
+CheckHabitatMasterlist <- read_excel("No_FreshwaterHabitatwithFunctionMasterList2.xlsx")
+CheckHabitatMasterlist_subset <- CheckHabitatMasterlist %>%
+  select(OriginalNameDB, AcceptedNameGBIF, habitat, Habitat)
+
+CheckHabitatMasterlist_subset <- CheckHabitatMasterlist_subset %>%
+  separate_rows(habitat, sep = ";")
+CheckHabitatMasterlist_subset$Source_Date <- sub(".*\\(([^)]+)\\).*", "\\1", CheckHabitatMasterlist_subset$habitat) #Aquí obtenemos el nombre de la base de datos y creamos una columna con eso
+
+#Cuando se generaban las tablas de frecuencias, a veces el nombre de la categoria del habitat era tan largo, que estropeaba la representación de la tabla, esto ocurre porque hay muchas palabras repetidas dentro de un habitat porque son la combinación de diferentes etiquetas obtenidas de la web (el caso de CABI), por ello se van a eliminar los duplicados en las categorias, si antes era 'freshwater/lakes freshwater/river' se queda en 'freshwater lakes river'
+remove_duplicates <- function(label) {
+  label <- as.character(label)
+  parts <- unlist(strsplit(label, "\\s*/\\s*|\\s+"))  # divide por espacio o slash
+  unique_parts <- unique(parts[parts != ""])  # quitar vacíos
+  cleaned_label <- paste(unique_parts, collapse = " ") #Categoría final
+  return(cleaned_label)
+}
+
+#Le aplicamos la función a la MasterList en la variable habitat y en la variable Source_Date
+CheckHabitatMasterlist_subset$habitat <- sapply(CheckHabitatMasterlist_subset$habitat, remove_duplicates)
+CheckHabitatMasterlist_subset$Source_Date <- sapply(CheckHabitatMasterlist_subset$Source_Date, remove_duplicates)
+
+#Creamos la tabla de frecuencias para cada Base de Datos
+counts <- as.data.frame(table(CheckHabitatMasterlist_subset$Source_Date))
+colnames(counts) <- c("Source_Date", "Freq")
+counts <- counts[order(-counts$Freq), ]
+CheckHabitatMasterlist_subset$Source_Date <- factor(CheckHabitatMasterlist_subset$Source_Date, levels = counts$Source_Date)
+source_dates <- unique(CheckHabitatMasterlist_subset$Source_Date)
+```
+
+```{r}
+#Establecemos de nuevo el directorio ya que el rmarkdown 'pierde' la información de donde está el directorio de celda en celda
+setwd("../OutputFiles/Check/CheckHabitat")
+CheckHabitatMasterlist <- read_excel("No_FreshwaterHabitatwithFunctionMasterList2.xlsx")
+CheckHabitatMasterlist_subset <- CheckHabitatMasterlist %>%
+  select(OriginalNameDB, AcceptedNameGBIF, habitat, Habitat)
+
+CheckHabitatMasterlist_subset <- CheckHabitatMasterlist_subset %>%
+  separate_rows(habitat, sep = ";")
+CheckHabitatMasterlist_subset$Source_Date <- sub(".*\\(([^)]+)\\).*", "\\1", CheckHabitatMasterlist_subset$habitat) #Aquí obtenemos el nombre de la base de datos y creamos una columna con eso
+
+#Cuando se generaban las tablas de frecuencias, a veces el nombre de la categoria del habitat era tan largo, que estropeaba la representación de la tabla, esto ocurre porque hay muchas palabras repetidas dentro de un habitat porque son la combinación de diferentes etiquetas obtenidas de la web (el caso de CABI), por ello se van a eliminar los duplicados en las categorias, si antes era 'freshwater/lakes freshwater/river' se queda en 'freshwater lakes river'
+remove_duplicates <- function(label) {
+  label <- as.character(label)
+  parts <- unlist(strsplit(label, "\\s*/\\s*|\\s+"))  # divide por espacio o slash
+  unique_parts <- unique(parts[parts != ""])  # quitar vacíos
+  cleaned_label <- paste(unique_parts, collapse = " ") #Categoría final
+  return(cleaned_label)
+}
+
+#Le aplicamos la función a la MasterList en la variable habitat y en la variable Source_Date
+CheckHabitatMasterlist_subset$habitat <- sapply(CheckHabitatMasterlist_subset$habitat, remove_duplicates)
+CheckHabitatMasterlist_subset$Source_Date <- sapply(CheckHabitatMasterlist_subset$Source_Date, remove_duplicates)
+
+#Creamos la tabla de frecuencias para cada Base de Datos
+counts <- as.data.frame(table(CheckHabitatMasterlist_subset$Source_Date))
+colnames(counts) <- c("Source_Date", "Freq")
+counts <- counts[order(-counts$Freq), ]
+CheckHabitatMasterlist_subset$Source_Date <- factor(CheckHabitatMasterlist_subset$Source_Date, levels = counts$Source_Date)
+source_dates <- unique(CheckHabitatMasterlist_subset$Source_Date)
+table(CheckHabitatMasterlist_subset$Source_Date)
+```
+
+$$n_h=n\cdot\frac{N_h}{N}=n\cdot \frac{N_h}{\sum_{h=1}^{n}N_h}=n \cdot w_h$$ Siendo N el número de elementos de la población, n el de la muestra y Nh el del estrato i.
+
+Con un nivel de confianza k_h para cada nivel: $$k_h=\frac{n_h}{N_h}$$
+
+```{r}
+setwd("../OutputFiles/Check/CheckHabitat")
+#OBTENCIÓN DE Nh y Wh
+Estratos <- CheckHabitatMasterlist_subset[, c("AcceptedNameGBIF", "habitat", "Habitat")] #Extraemos las columnas estrictamente necesarias para facilitar la visualización de la tabla
+tabla <- table(Estratos$habitat)
+Estratos <- as.data.frame(tabla)
+names(Estratos) <- c("habitat", "n")
+Estratos$p <- Estratos$n / sum(Estratos$n) #Esto es wh
+
+# Función nstrata para el cálculo del tamaño de la muestra
+nstrata <- function(n, wh, sh = NULL, ch = NULL, method = "proportional") {
+  nh <- rep(0, length(wh))
+  method <- match.arg(method, c("proportional", "neyman"))
+
+  if (method == "proportional") {
+    nh <- ceiling(n * wh)
+    } else {
+      if (method == "neyman" && is.null(ch) && !is.null(sh)) {
+        nh <- ceiling(n * ((wh * sh) / sum(wh * sh)))
+      }
+    }
+  return(nh)
+}
+resultados_df <- data.frame() #Aquí almacenaremos los resultados
+
+
+#Obtención de las muestras por muestreo estratificado para cada categoria de habitat
+for (hab in unique(Estratos$habitat)) {
+  CheckHabitatMasterlist_subset_GRIIS_hab <- CheckHabitatMasterlist_subset %>%
+    filter(habitat == hab)
+  #OBTENCIÓN nh
+  nsizeProp <- nstrata(n = Estratos$n[Estratos$habitat == hab], wh = Estratos$p[Estratos$habitat == hab], method = "proportional")
+  tabla_tamaño_estratificado <- cbind(Estratos[Estratos$habitat == hab, ], n_sample = nsizeProp)
+  nsizeProp <- tabla_tamaño_estratificado$n_sample
+  #DATASET FINAL
+  resultados_habitat <- data.frame(
+    habitat = hab,
+    nh = nsizeProp
+  )
+  resultados_df <- rbind(resultados_df, resultados_habitat)
+  
+}
+
+colnames(Estratos)[colnames(Estratos) == "n"] <- "Nh"
+colnames(Estratos)[colnames(Estratos) == "p"] <- "Wh"
+resultados_df <- resultados_df %>% select(-habitat)
+resultadofinal <- cbind(Estratos, resultados_df)
+resultadofinal$k <- resultadofinal$nh/resultadofinal$Nh
+resultadofinal
+sum(resultadofinal$nh)
+
+griisk <-resultadofinal %>% filter(grepl("GRIIS", habitat))
+mean(griisk$k)
+```
+
+```{r}
+setwd("../OutputFiles/Check/CheckHabitat")
+#Extraemos cada muestra del habitat correspondiente
+muestras_aleatorias_por_habitat <- list()
+for (i in 1:nrow(resultadofinal)) {
+  hab <- resultadofinal$habitat[i]
+  if(resultadofinal$nh[i]>1){
+  size_muestra <- (resultadofinal$nh[i])# Tamaño de muestra definido para ese hábitat
+  }
+  else {
+  size_muestra <- resultadofinal$nh[i]# Tamaño de muestra definido para ese hábitat
+  }
+  registros_por_habitat <- CheckHabitatMasterlist_subset %>% #Filtramos por habitat
+    filter(habitat == hab)
+
+  numero_total_registros <- nrow(registros_por_habitat) #Número de filas
+  if (size_muestra > numero_total_registros) {
+    size_muestra <- numero_total_registros
+  }
+#m.a.s sin reemplazo de cada habitat
+  muestra_aleatoria_por_habitat <- registros_por_habitat[
+    sample(numero_total_registros, size = size_muestra, replace = FALSE), ]
+
+  muestras_aleatorias_por_habitat[[hab]] <- muestra_aleatoria_por_habitat
+}
+
+# Para ver las muestras individuales por hábitat
+# muestras_aleatorias_por_habitat
+
+muestra_total_aleatoria_por_habitat <- do.call(rbind, muestras_aleatorias_por_habitat)
+nombres <- muestra_total_aleatoria_por_habitat$AcceptedNameGBIF
+muestra_total_aleatoria_por_habitat$kingdom <- name_backbone_checklist(nombres)$kingdom
+muestra_total_aleatoria_por_habitat$phylum <- name_backbone_checklist(nombres)$phylum
+muestra_total_aleatoria_por_habitat$order <- name_backbone_checklist(nombres)$order
+muestra_total_aleatoria_por_habitat$family <- name_backbone_checklist(nombres)$family
+muestra_total_aleatoria_por_habitat$genus <- name_backbone_checklist(nombres)$genus
+
+muestra_total_aleatoria_por_habitat
+table(muestra_total_aleatoria_por_habitat$Source_Date)
+GRIIS_subset <- muestra_total_aleatoria_por_habitat %>% filter(Source_Date == "GRIIS")
+table(GRIIS_subset$habitat)
+```
+
+```{r}
+setwd("../OutputFiles/Check/CheckHabitat")
+#Extraemos cada muestra del habitat correspondiente#Extraemos cadhabitata muestra del habitat correspondiente
+muestras_aleatorias_por_habitat <- list()
+for (i in 1:nrow(resultadofinal)) {
+  hab <- resultadofinal$habitat[i]
+  if(resultadofinal$nh[i]>1){
+  size_muestra <- 0.10*(resultadofinal$nh[i])# Tamaño de muestra definido para ese hábitat
+  }
+  else {
+  size_muestra <- resultadofinal$nh[i]# Tamaño de muestra definido para ese hábitat
+  }
+  registros_por_habitat <- CheckHabitatMasterlist_subset %>% #Filtramos por habitat
+    filter(habitat == hab)
+
+  numero_total_registros <- nrow(registros_por_habitat) #Número de filas
+  if (size_muestra > numero_total_registros) {
+    size_muestra <- numero_total_registros
+  }
+#m.a.s sin reemplazo de cada habitat
+  muestra_aleatoria_por_habitat <- registros_por_habitat[
+    sample(numero_total_registros, size = size_muestra, replace = FALSE), ]
+
+  muestras_aleatorias_por_habitat[[hab]] <- muestra_aleatoria_por_habitat
+}
+
+# Para ver las muestras individuales por hábitat
+# muestras_aleatorias_por_habitat
+
+muestra_total_aleatoria_por_habitat <- do.call(rbind, muestras_aleatorias_por_habitat)
+nombres <- muestra_total_aleatoria_por_habitat$AcceptedNameGBIF
+muestra_total_aleatoria_por_habitat$kingdom <- name_backbone_checklist(nombres)$kingdom
+muestra_total_aleatoria_por_habitat$phylum <- name_backbone_checklist(nombres)$phylum
+muestra_total_aleatoria_por_habitat$order <- name_backbone_checklist(nombres)$order
+muestra_total_aleatoria_por_habitat$family <- name_backbone_checklist(nombres)$family
+muestra_total_aleatoria_por_habitat$genus <- name_backbone_checklist(nombres)$genus
+
+muestra_total_aleatoria_por_habitat
+table(muestra_total_aleatoria_por_habitat$Source_Date)
+write.xlsx(muestra_total_aleatoria_por_habitat, "./OutputFiles/Check/CheckHabitat/sample_10%_DB_vs_GBIF_CheckHabitat_NOcoincidentes.xlsx")
+```
+
+Error que se comete con el tamaño de muestra:
+
+```{r}
+# Especificar ocurrencias muestrales (x), tamaño de muestra (n) y nivel de confianza
+
+#####################################################################
+##### Error de muestreo para la proporcion sin el 10% ###############
+#####################################################################
+n <- 242
+N <- 449
+confidence_level <- 0.95
+k <- confidence_level
+
+# Calcular estimación puntual, alfa, valor crítico z, error estándar y margen de error
+P <- n / N
+#P <- 0.5
+Q <- 1-P
+#error <- sqrt(((N-n)/(N-1))*((P*Q)/n))
+error <- k * sqrt((N-n)/(N-1)) * sqrt((P*(1-P))/n)
+
+# Calcular los límites inferior y superior del intervalo de confianza
+lower_bound <- P - error
+upper_bound <- P + error
+
+# Imprimir los resultados
+cat(sprintf("Estimación puntual: %.3f\n", P))
+cat(sprintf("Margen de error: %.3f\n", error))
+cat("Intervalo de confianza : (", lower_bound, "-", upper_bound, ")", "\n")
+
+#####################################################################
+##### Error de muestreo para la proporcion con el 10% ###############
+#####################################################################
+n <- 42
+N <- 449
+confidence_level <- 0.95
+k <- confidence_level
+# Calcular estimación puntual, alfa, valor crítico z, error estándar y margen de error
+P <- n / N
+#P <- 0.5
+Q <- 1-P
+#error <- sqrt(((N-n)/(N-1))*((P*Q)/n))
+error <- k * sqrt((N-n)/(N-1)) * sqrt((P*(1-P))/n)
+
+# Calcular los límites inferior y superior del intervalo de confianza
+lower_bound <- P - error
+upper_bound <- P + error
+
+# Imprimir los resultados
+cat(sprintf("Estimación puntual: %.3f\n", P))
+cat(sprintf("Margen de error: %.3f\n", error))
+cat("Intervalo de confianza : (", lower_bound, "-", upper_bound, ")", "\n")
+
+
+
+```
+```{r}
+# Parámetros conocidos
+n <- 42         # tamaño de la muestra
+N <- 449        # tamaño de la población
+x <- 36         # número de "éxitos" en la muestra
+conf_level <- 0.95
+
+# Calcular la proporción muestral
+P_hat <- x / n
+Q_hat <- 1 - P_hat
+
+# Obtener z (valor crítico z) a partir del nivel de confianza
+alpha <- 1 - conf_level
+z <- qnorm(1 - alpha/2)  # valor z correspondiente al nivel de confianza
+
+# Error estándar corregido para población finita
+fpc <- sqrt((N - n) / (N - 1))  # corrección por población finita
+SE <- sqrt((P_hat * Q_hat) / n) * fpc
+
+# Margen de error
+E <- z * SE
+
+# Intervalo de confianza
+lower_bound <- P_hat - E
+upper_bound <- P_hat + E
+
+# Imprimir resultados
+cat(sprintf("Proporción muestral: %.3f\n", P_hat))
+cat(sprintf("Margen de error: %.3f\n", E))
+cat("Intervalo de confianza : (", round(lower_bound, 3), "-", round(upper_bound, 3), ")\n")
+
+
+```
