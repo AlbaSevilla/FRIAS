@@ -1,0 +1,220 @@
+"especie" "DATABASE" "Habitat_DATABASE" "Habitat_GRIIS" "Habitat_GBIF"
+"1" "Acanthurus monroviae" "USGS" "Marine" "brackish|marine(GRIIS)" "MARINE"
+"2" "Acanthurus pyroferus" "USGS" "Marine" "brackish|marine(GRIIS)" "MARINE"
+"3" "Aedes aegypti" "ZENNI" "Terrestre" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"4" "Aedes aegypti" "IPBES" "Terrestrial" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"5" "Aedes aegypti" "GISD" "Terrestrial" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"6" "Aedes atropalpus" "IPBES" "Terrestrial" "terrestrial|freshwater(GRIIS)" NA
+"7" "Aedes notoscriptus" "IPBES" "Terrestrial" "terrestrial|freshwater(GRIIS)" NA
+"8" "Aedes triseriatus" "IPBES" "Terrestrial" "terrestrial|freshwater(GRIIS)" NA
+"9" "Alexandrium minutum" "GISD" "Marine" "brackish|marine(GRIIS)" "MARINE"
+"10" "Alexandrium minutum" "CONABIO" "Marino" "brackish|marine(GRIIS)" "MARINE"
+"11" "Alexandrium ostenfeldii" "CONABIO" "Marino" "brackish|marine(GRIIS)" "MARINE"
+"12" "Alocasia macrorrhizos" "CONABIO" "Terrestre" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"13" "Alternanthera sessilis" "GISD" "Terrestrial" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"14" "Amathia verticillata" "ZENNI" "Marinho" "terrestrial|freshwater(GRIIS)" "MARINE,TERRESTRIAL"
+"15" "Ampelisca abdita" "CONABIO" "Marino" "brackish|marine(GRIIS)" "MARINE"
+"16" "Amphibalanus eburneus" "IPBES" "Marine" "brackish|marine(GRIIS)" "MARINE"
+"17" "Amphibalanus eburneus" "CONABIO" "Marino" "brackish|marine(GRIIS)" "MARINE"
+"18" "Anopheles quadrimaculatus" "GISD" "Terrestrial" "terrestrial|freshwater(GRIIS)" NA
+"19" "Bankia destructa" "CONABIO" "Marino" "brackish|marine(GRIIS)" "MARINE"
+"20" "Bankia zeteki" "CONABIO" "Marino" "brackish|marine(GRIIS)" "MARINE"
+"21" "Beroe ovata" "IPBES" "Marine" "brackish|marine(GRIIS)" "MARINE"
+"22" "Blackfordia virginica" "USGS" "Freshwater-Marine" "brackish|marine(GRIIS)" "MARINE"
+"23" "Blackfordia virginica" "ZENNI" "Marinho" "brackish|marine(GRIIS)" "MARINE"
+"24" "Bolboschoenus glaucus" "USGS" "Freshwater" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"25" "Boonea bisuturalis" "GISD" "Marine" "brackish|marine(GRIIS)" "MARINE"
+"26" "Boonea bisuturalis" "CONABIO" "Marino" "brackish|marine(GRIIS)" "MARINE"
+"27" "Carex acutiformis" "USGS" "Freshwater" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"28" "Carex disticha" "USGS" "Freshwater" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"29" "Carex extensa" "USGS" "Freshwater" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"30" "Carex kobomugi" "IPBES" "Marine" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"31" "Colocasia esculenta" "USGS" "Freshwater" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"32" "Colocasia esculenta" "CONABIO" "Terrestre" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"33" "Cryptocoryne beckettii" "USGS" "Freshwater" "freshwater(GRIIS)" NA
+"34" "Cryptocoryne undulata" "USGS" "Freshwater" "freshwater(GRIIS)" NA
+"35" "Culex quinquefasciatus" "IPBES" "Terrestrial" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"36" "Cynops orientalis" "USGS" "Freshwater" "terrestrial|freshwater(GRIIS)" NA
+"37" "Cynoscion nebulosus" "USGS" "Marine" "brackish|marine(GRIIS)" "MARINE,TERRESTRIAL"
+"38" "Cyperus difformis" "USGS" "Freshwater" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"39" "Cyperus difformis" "CONABIO" "Terrestre" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"40" "Cyperus difformis" "IPBES" "Terrestrial" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"41" "Cyperus esculentus" "CONABIO" "Terrestre" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"42" "Cyperus esculentus" "IPBES" "Terrestrial" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"43" "Cyperus iria" "CONABIO" "Terrestre" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"44" "Cyperus oxylepis" "CONABIO" "Terrestre" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"45" "Dacelo novaeguineae" "GISD" "Terrestrial" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"46" "Dendrobates auratus" "USGS" "Freshwater" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"47" "Dendrobates auratus" "GISD" "Freshwater_terrestrial" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"48" "Dendrobates auratus" "IPBES" "Terrestrial" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"49" "Diadumene lineata" "ZENNI" "Marinho" "brackish|marine(GRIIS)" "MARINE"
+"50" "Ectopleura crocea" "CONABIO" "Marino" "brackish|marine(GRIIS)" "MARINE"
+"51" "Eleocharis pachycarpa" "USGS" "Freshwater" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"52" "Eleutherodactylus antillensis" "GISD" "Freshwater_terrestrial" "terrestrial|freshwater(GRIIS)" NA
+"53" "Eleutherodactylus coqui" "USGS" "Freshwater" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"54" "Eleutherodactylus coqui" "GISD" "Freshwater_terrestrial" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"55" "Eleutherodactylus coqui" "IPBES" "Terrestrial" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"56" "Eleutherodactylus martinicensis" "GISD" "Freshwater_terrestrial" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"57" "Enhydrosoma lacunae" "CONABIO" "Marino" "freshwater|brackish(GRIIS)" "MARINE"
+"58" "Epinephelus ongus" "USGS" "Marine-Brackish" "brackish|marine(GRIIS)" "MARINE"
+"59" "Erigeron annuus" "IPBES" "Terrestrial" "terrestrial|freshwater- freshwater|brackish|marine(GRIIS)" "TERRESTRIAL"
+"60" "Erythranthe guttata" "CONABIO" "Terrestre" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"61" "Fejervarya kawamurai" "GISD" "Freshwater_terrestrial" "terrestrial|freshwater(GRIIS)" NA
+"62" "Fejervarya sakishimensis" "GISD" "Freshwater_terrestrial" "terrestrial|freshwater(GRIIS)" NA
+"63" "Gastrophryne carolinensis" "GISD" "Freshwater_terrestrial" "terrestrial|freshwater(GRIIS)" NA
+"64" "Glossostigma cleistanthum" "USGS" "Freshwater" "freshwater(GRIIS)" NA
+"65" "Glyceria fluitans" "CONABIO" "Dulceacuícola" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"66" "Glyceria fluitans" "USGS" "Freshwater" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"67" "Heniochus acuminatus" "USGS" "Marine" "brackish|marine(GRIIS)" "MARINE"
+"68" "Homolepis aturensis" "CONABIO" "Terrestre" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"69" "Hygrophila corymbosa" "CONABIO" "Dulceacuícola" "freshwater(GRIIS)" "TERRESTRIAL"
+"70" "Hygrophila corymbosa" "USGS" "Freshwater" "freshwater(GRIIS)" "TERRESTRIAL"
+"71" "Hygrophila difformis" "CONABIO" "Dulceacuícola" "freshwater(GRIIS)" "TERRESTRIAL"
+"72" "Hygrophila difformis" "USGS" "Freshwater" "freshwater(GRIIS)" "TERRESTRIAL"
+"73" "Juncus bulbosus" "USGS" "Freshwater" "terrestrial|freshwater(GRIIS)" NA
+"74" "Juncus compressus" "USGS" "Freshwater" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"75" "Juncus ensifolius" "CABI" "Brackish|Estuaries Brackish|Lagoons Brackish|Inland saline areas Freshwater|Rivers / streams Freshwater|Reservoirs Freshwater|Ponds Freshwater|Lakes" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"76" "Juncus inflexus" "USGS" "Freshwater" "terrestrial|freshwater(GRIIS)" NA
+"77" "Kaloula pulchra" "USGS" "Freshwater" "terrestrial|freshwater(GRIIS)" NA
+"78" "Kaloula pulchra" "GISD" "Freshwater_terrestrial" "terrestrial|freshwater(GRIIS)" NA
+"79" "Limnophila aromatica" "USGS" "Freshwater" "freshwater(GRIIS)" NA
+"80" "Limnophila indica" "USGS" "Freshwater" "freshwater(GRIIS)" NA
+"81" "Lindernia dubia" "IPBES" "Terrestrial" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"82" "Lindernia rotundifolia" "CONABIO" "Dulceacuícola" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"83" "Lissotriton montandoni" "GISD" "Freshwater_terrestrial" "terrestrial|freshwater(GRIIS)" NA
+"84" "Ludwigia repens" "IPBES" "Freshwater" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"85" "Luzula campestris" "GISD" "Terrestrial" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"86" "Lythrum hyssopifolia" "USGS" "Freshwater" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"87" "Lythrum hyssopifolia" "IPBES" "Terrestrial" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"88" "Lythrum maritimum" "CABI" "Brackish|Lagoons Brackish|Estuaries Freshwater|Ponds Freshwater|Rivers / streams" "terrestrial|freshwater(GRIIS)" NA
+"89" "Lythrum tribracteatum" "USGS" "Freshwater" "terrestrial|freshwater(GRIIS)" NA
+"90" "Marsilea crenata" "USGS" "Freshwater" "freshwater(GRIIS)" NA
+"91" "Marsilea drummondii" "USGS" "Freshwater" "freshwater(GRIIS)" NA
+"92" "Megabruchidius dorsalis" "IPBES" "Terrestrial" "brackish|marine(GRIIS)" "TERRESTRIAL"
+"93" "Mentha aquatica" "USGS" "Freshwater" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"94" "Mentha aquatica" "CONABIO" "Terrestre" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"95" "Mnemiopsis leidyi" "IPBES" "Marine" "freshwater|brackish|marine- brackish|marine(GRIIS)" "MARINE"
+"96" "Mnemiopsis leidyi" "GISD" "Marine" "freshwater|brackish|marine- brackish|marine(GRIIS)" "MARINE"
+"97" "Mnemiopsis leidyi" "CONABIO" "Marino" "freshwater|brackish|marine- brackish|marine(GRIIS)" "MARINE"
+"98" "Mustela erminea" "IPBES" "Terrestrial" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"99" "Mustela erminea" "GISD" "Terrestrial" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"100" "Mustela nivalis" "IPBES" "Terrestrial" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"101" "Mustela nivalis" "GISD" "Terrestrial" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"102" "Mustela putorius" "IPBES" "Terrestrial" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"103" "Mycteria leucocephala" "IPBES" "Terrestrial" "terrestrial|freshwater|marine(GRIIS)" "TERRESTRIAL"
+"104" "Mytella strigata" "IPBES" "Marine" "brackish|marine(GRIIS)" "MARINE"
+"105" "Nitellopsis obtusa" "USGS" "Freshwater-Marine" "freshwater|marine(GRIIS)" NA
+"106" "Nymphoides hydrophylla" "CONABIO" "Dulceacuícola" "freshwater(GRIIS)" "TERRESTRIAL"
+"107" "Omobranchus obliquus" "USGS" "Marine" "brackish|marine(GRIIS)" "MARINE"
+"108" "Oryza longistaminata" "CONABIO" "Dulceacuícola" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"109" "Oryza punctata" "CONABIO" "Dulceacuícola" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"110" "Oryza rufipogon" "CONABIO" "Dulceacuícola" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"111" "Pandanus tectorius" "CONABIO" "Terrestre" "terrestrial|brackish(GRIIS)" "TERRESTRIAL,MARINE"
+"112" "Paralichthys lethostigma" "USGS" "Marine" "brackish|marine(GRIIS)" "MARINE,TERRESTRIAL"
+"113" "Pelophylax porosus" "GISD" "Freshwater_terrestrial" "terrestrial|freshwater(GRIIS)" NA
+"114" "Penaeus japonicus" "CONABIO" "Marino" "terrestrial|freshwater(GRIIS)" "MARINE"
+"115" "Penaeus vannamei" "IPBES" "Marine" "brackish|marine(GRIIS)" "MARINE"
+"116" "Penaeus vannamei" "ZENNI" "Marinho" "brackish|marine(GRIIS)" "MARINE"
+"117" "Peprilus simillimus" "USGS" "Marine-Freshwater" "freshwater|marine(GRIIS)" "MARINE"
+"118" "Phalaris aquatica" "CONABIO" "Terrestre" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"119" "Phalaris aquatica" "IPBES" "Terrestrial" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"120" "Phalaris arundinacea" "USGS" "Freshwater" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"121" "Phalaris arundinacea" "CONABIO" "Terrestre" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"122" "Phalaris arundinacea" "IPBES" "Terrestrial" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"123" "Phalaris arundinacea" "GISD" "Terrestrial" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"124" "Phalaris brachystachys" "CONABIO" "Terrestre" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"125" "Phalaris canariensis" "CONABIO" "Terrestre" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"126" "Phalaris minor" "CONABIO" "Terrestre" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"127" "Phalaris minor" "IPBES" "Terrestrial" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"128" "Phalaris paradoxa" "CONABIO" "Terrestre" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"129" "Phytophthora alni" "IPBES" "Terrestrial" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"130" "Phytophthora alni" "GISD" "Terrestrial" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"131" "Phytophthora plurivora" "IPBES" "Terrestrial" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"132" "Phytophthora plurivora" "GISD" "Terrestrial" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"133" "Pipa parva" "IPBES" "Freshwater" "terrestrial|freshwater(GRIIS)" NA
+"134" "Pipa parva" "GISD" "Freshwater_terrestrial" "terrestrial|freshwater(GRIIS)" NA
+"135" "Platax orbicularis" "USGS" "Marine" "brackish|marine(GRIIS)" "MARINE"
+"136" "Platax orbicularis" "CONABIO" "Marino" "brackish|marine(GRIIS)" "MARINE"
+"137" "Ploceus cucullatus" "IPBES" "Terrestrial" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"138" "Ploceus cucullatus" "GISD" "Terrestrial" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"139" "Ploceus manyar" "IPBES" "Terrestrial" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"140" "Ploceus melanocephalus" "IPBES" "Terrestrial" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"141" "Ploceus melanocephalus" "GISD" "Terrestrial" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"142" "Plotosus lineatus" "IPBES" "Marine" "brackish|marine(GRIIS)" "MARINE"
+"143" "Protemblemaria punctata" "USGS" "Marine" "freshwater(GRIIS)" "MARINE"
+"144" "Pseudemys peninsularis" "CONABIO" "Dulceacuícola" "terrestrial|freshwater(GRIIS)" NA
+"145" "Pseudodiaptomus marinus" "CONABIO" "Salobre" "brackish|marine(GRIIS)" "MARINE"
+"146" "Pseudopolydora achaeta" "ZENNI" "Marinho" "brackish|marine(GRIIS)" "MARINE"
+"147" "Rachycentron canadum" "USGS" "Marine-Brackish" "brackish|marine(GRIIS)" "MARINE"
+"148" "Ranoidea raniformis" "GISD" "Freshwater_terrestrial" "terrestrial|freshwater(GRIIS)" NA
+"149" "Ranoidea raniformis" "IPBES" "Terrestrial" "terrestrial|freshwater(GRIIS)" NA
+"150" "Reynoutria japonica" "USGS" "Freshwater" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"151" "Reynoutria japonica" "IPBES" "Terrestrial" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"152" "Rhizophora mangle" "IPBES" "Terrestrial" "terrestrial|brackish|marine(GRIIS)" "MARINE,TERRESTRIAL"
+"153" "Rhizophora mangle" "GISD" "Terrestrial" "terrestrial|brackish|marine(GRIIS)" "MARINE,TERRESTRIAL"
+"154" "Rorippa amphibia" "USGS" "Freshwater" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"155" "Rorippa austriaca" "IPBES" "Terrestrial" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"156" "Rorippa sylvestris" "USGS" "Freshwater" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"157" "Rorippa sylvestris" "IPBES" "Terrestrial" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"158" "Schoenoplectiella mucronata" "USGS" "Freshwater" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"159" "Schoenoplectus triqueter" "USGS" "Freshwater" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"160" "Sciaenops ocellatus" "USGS" "Marine" "brackish|marine(GRIIS)" "MARINE,TERRESTRIAL"
+"161" "Sciaenops ocellatus" "CONABIO" "salobre" "brackish|marine(GRIIS)" "MARINE,TERRESTRIAL"
+"162" "Scinax ruber" "USGS" "Freshwater" "terrestrial|freshwater(GRIIS)" NA
+"163" "Scinax ruber" "GISD" "Freshwater_terrestrial" "terrestrial|freshwater(GRIIS)" NA
+"164" "Scinax ruber" "IPBES" "Terrestrial" "terrestrial|freshwater(GRIIS)" NA
+"165" "Scinax x-signatus" "GISD" "Freshwater_terrestrial" "terrestrial|freshwater(GRIIS)" NA
+"166" "Scinax x-signatus" "ZENNI" "Terrestre" "terrestrial|freshwater(GRIIS)" NA
+"167" "Sonneratia apetala" "IPBES" "Terrestrial" "brackish|marine(GRIIS)" "MARINE"
+"168" "Sphaeroma quoianum" "IPBES" "Marine" "brackish|marine(GRIIS)" "MARINE"
+"169" "Spilopelia senegalensis" "IPBES" "Terrestrial" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"170" "Spilopelia senegalensis" "GISD" "Terrestrial" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"171" "Staurotypus salvinii" "USGS" "Freshwater" "terrestrial|freshwater(GRIIS)" NA
+"172" "Stenophysa maugeriae" "USGS" "Freshwater" "freshwater(GRIIS)" NA
+"173" "Suberites aurantiacus" "CONABIO" "Marino" "brackish|marine(GRIIS)" "MARINE"
+"174" "Teredo navalis" "IPBES" "Marine" "brackish|marine(GRIIS)" "MARINE"
+"175" "Teredo navalis" "GISD" "Marine" "brackish|marine(GRIIS)" "MARINE"
+"176" "Teredo navalis" "CONABIO" "Salobre" "brackish|marine(GRIIS)" "MARINE"
+"177" "Tridentiger barbatus" "USGS" "Marine" "brackish(GRIIS)" NA
+"178" "Varicorbula gibba" "IPBES" "Marine" "brackish|marine(GRIIS)" "MARINE"
+"179" "Veronica anagallis-aquatica" "USGS" "Freshwater" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"180" "Veronica anagallis-aquatica" "IPBES" "Freshwater" "terrestrial|freshwater(GRIIS)" "TERRESTRIAL"
+"181" "Xenostrobus securis" "USGS" "Brackish" "brackish|marine(GRIIS)" "MARINE"
+"182" "Xenostrobus securis" "IPBES" "Marine" "brackish|marine(GRIIS)" "MARINE"
+"183" "Zalophus californianus" "USGS" "Marine" "freshwater|marine(GRIIS)" "MARINE,TERRESTRIAL"
+"184" "Zosterops japonicus" "IPBES" "Terrestrial" "freshwater|marine(GRIIS)" "TERRESTRIAL"
+"185" "Zosterops japonicus" "GISD" "Terrestrial" "freshwater|marine(GRIIS)" "TERRESTRIAL"
+"186" NA "CONABIO" NA "freshwater|marine(GRIIS)" NA
+"187" NA "CONABIO" NA "freshwater|brackish(GRIIS)" NA
+"188" NA "CONABIO" NA "terrestrial|brackish(GRIIS)" NA
+"189" NA "CONABIO" NA "terrestrial|freshwater(GRIIS)" NA
+"190" NA "CONABIO" NA "terrestrial|freshwater(GRIIS)" NA
+"191" NA "CONABIO" NA "freshwater(GRIIS)" NA
+"192" NA "CONABIO" NA "freshwater(GRIIS)" NA
+"193" NA "CONABIO" NA "freshwater(GRIIS)" NA
+"194" NA "CONABIO" NA "freshwater(GRIIS)" NA
+"195" NA "CONABIO" NA "freshwater(GRIIS)" NA
+"196" NA "CONABIO" NA "freshwater|brackish(GRIIS)" NA
+"197" NA "CONABIO" NA "terrestrial|freshwater(GRIIS)" NA
+"198" NA "CONABIO" NA "terrestrial|freshwater(GRIIS)" NA
+"199" NA "CONABIO" NA "terrestrial|freshwater(GRIIS)" NA
+"200" NA "CONABIO" NA "terrestrial|freshwater(GRIIS)" NA
+"201" NA "CONABIO" NA "terrestrial|freshwater(GRIIS)" NA
+"202" NA "CONABIO" NA "brackish|marine(GRIIS)" NA
+"203" NA "CONABIO" NA "terrestrial|freshwater(GRIIS)" NA
+"204" NA "CONABIO" NA "freshwater(GRIIS)" NA
+"205" NA "CONABIO" NA "freshwater(GRIIS)" NA
+"206" NA "CONABIO" NA "freshwater(GRIIS)" NA
+"207" NA "CONABIO" NA "freshwater(GRIIS)" NA
+"208" NA "CONABIO" NA "freshwater(GRIIS)" NA
+"209" NA "CONABIO" NA "freshwater(GRIIS)" NA
+"210" NA "CONABIO" NA "freshwater(GRIIS)" NA
+"211" NA "CONABIO" NA "freshwater(GRIIS)" NA
+"212" NA "CONABIO" NA "terrestrial|freshwater(GRIIS)" NA
+"213" NA "CONABIO" NA "freshwater(GRIIS)" NA
+"214" NA "CONABIO" NA "freshwater|marine(GRIIS)" NA
+"215" NA "CONABIO" NA "terrestrial|freshwater(GRIIS)" NA
+"216" NA "CONABIO" NA "freshwater(GRIIS)" NA
+"217" NA "CONABIO" NA "freshwater(GRIIS)" NA
+"218" NA "CONABIO" NA "terrestrial|freshwater(GRIIS)" NA
+"219" NA "CONABIO" NA "freshwater(GRIIS)" NA
