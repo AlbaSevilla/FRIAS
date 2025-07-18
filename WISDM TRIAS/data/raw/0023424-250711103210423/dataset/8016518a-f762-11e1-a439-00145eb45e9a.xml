@@ -1,0 +1,1490 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eml:eml xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0 https://rs.gbif.org/schema/eml-gbif-profile/1.3/eml.xsd"
+packageId="8016518a-f762-11e1-a439-00145eb45e9a"  system="http://gbif.org" scope="system"
+xml:lang="es">
+    <dataset>
+        <alternateIdentifier>10.15468/9uut5l</alternateIdentifier>
+        <alternateIdentifier>https://www.snib.mx/iptconabio/resource?r=SNIB-KE002-KE0022006F-MEXU-PV-2020.08.06</alternateIdentifier>
+        <alternateIdentifier>0eda0cd7-f246-45d0-80e6-f633f8f3c582</alternateIdentifier>
+        <alternateIdentifier>7f93c170-f762-11e1-a439-00145eb45e9a</alternateIdentifier>
+        <alternateIdentifier>3941e0f3-a88c-42af-b340-60056c84dc41</alternateIdentifier>
+        <alternateIdentifier>75dc6f56-7b8c-4820-8d8c-3734b2ad365d</alternateIdentifier>
+        <alternateIdentifier>80903a4f-bc74-47bc-a52b-a8d5c280ef5d</alternateIdentifier>
+        <alternateIdentifier>8043a3a6-f762-11e1-a439-00145eb45e9a</alternateIdentifier>
+        <alternateIdentifier>f2b6763d-931a-4ffc-b92f-3d9b5db3f3d3</alternateIdentifier>
+        <alternateIdentifier>1731c035-3b85-42ae-bf24-4233fdf697ad</alternateIdentifier>
+        <alternateIdentifier>80b56342-f762-11e1-a439-00145eb45e9a</alternateIdentifier>
+        <alternateIdentifier>7f8dc63a-f762-11e1-a439-00145eb45e9a</alternateIdentifier>
+        <alternateIdentifier>7fcba126-f762-11e1-a439-00145eb45e9a</alternateIdentifier>
+        <alternateIdentifier>3c6a5d9a-3d99-4f65-b44d-62a7dd9da196</alternateIdentifier>
+        <alternateIdentifier>453ba2a3-7a71-48a9-b8f2-b201c70f07a1</alternateIdentifier>
+        <alternateIdentifier>ab95dd97-4100-4ea2-9507-2b6ec11716f9</alternateIdentifier>
+        <alternateIdentifier>a69745d9-519e-490a-8ae7-3942d9ce7c5d</alternateIdentifier>
+        <alternateIdentifier>80d0549a-f762-11e1-a439-00145eb45e9a</alternateIdentifier>
+        <alternateIdentifier>cb5cd6d7-1743-4d41-a5c0-43992b336c9c</alternateIdentifier>
+        <alternateIdentifier>800d7704-f762-11e1-a439-00145eb45e9a</alternateIdentifier>
+        <alternateIdentifier>c58c8244-a545-47ed-b169-43c438675f45</alternateIdentifier>
+        <alternateIdentifier>794215ba-5f4a-423f-b5a5-775f0dbf6c2a</alternateIdentifier>
+        <alternateIdentifier>http://www.snib.mx/iptconabio/resource?r=SNIB-AC003</alternateIdentifier>
+        <alternateIdentifier>http://www.snib.mx/iptconabio/resource?r=SNIB-AC003-AC003312F-ND</alternateIdentifier>
+        <alternateIdentifier>8016518a-f762-11e1-a439-00145eb45e9a</alternateIdentifier>
+        <alternateIdentifier>13246</alternateIdentifier>
+        <title>Digitalización y Sistematización de las Colecciones Biológicas Nacionales del Instituto de Biología, UNAM (Plantas vasculares)</title>
+        <creator>
+            <individualName>
+                <givenName>Víctor</givenName>
+                <surName>Sánchez Cordero Dávila</surName>
+            </individualName>
+            <organizationName>Universidad Nacional Autónoma de MéxicoInstituto de BiologíaDepartamento de Zoología</organizationName>
+            <positionName>Responsable</positionName>
+            <address>
+                <city>México</city>
+                <administrativeArea>Distrito Federal</administrativeArea>
+                <postalCode>04510</postalCode>
+                <country>MEXICO</country>
+            </address>
+            <phone>Tel directo (55)-5622-9163 y y 5622-9066 Tel. Instituto Biologia conmutador (0052-55) 5622-9147, ext.47846 Tel. Jefatura de Zoologia 5622-9161/9129</phone>
+            <electronicMailAddress>victor@ib.unam.mx</electronicMailAddress>
+        </creator>
+        <metadataProvider>
+            <individualName>
+                <givenName>CONABIO</givenName>
+                <surName>Comisión nacional para el conocimiento y uso de la biodiversidad</surName>
+            </individualName>
+            <organizationName>Comisión Nacional para el Conocimiento y Uso de la Biodiversidad</organizationName>
+            <positionName>Dirección General de Sistemas</positionName>
+            <address>
+                <deliveryPoint>Liga Periférico-Insurgentes Sur No. 4903, Col. Parques del Pedregal</deliveryPoint>
+                <city>MÉXICO</city>
+                <administrativeArea>Tlalpan</administrativeArea>
+                <postalCode>14010</postalCode>
+                <country>MEXICO</country>
+            </address>
+            <phone>50045000</phone>
+            <electronicMailAddress>patricia.ramos@conabio.gob.mx</electronicMailAddress>
+            <onlineUrl>https://www.gob.mx/conabio</onlineUrl>
+        </metadataProvider>
+        <pubDate>
+                2025-04-02
+        </pubDate>
+        <language>SPANISH</language>
+        <abstract>
+            <para>Esta propuesta constituye una primera etapa de una estrategia integral para digitalizar y actualizar la infraestructura y elevar el estatus curatorial de las colecciones biológicas nacionales resguardadas en el Instituto de Biología (IB) de la UNAM. En base a un diagnóstico del nivel curatorial y de digitalización de las colecciones, se plantea como objetivo general de esta primera etapa incrementar, en al menos un 35 %, el grado de digitalizacion de las colecciones botánicas (incluyendo las vivas y etnobiológicas del Jardín Botánico) y zoológicas del IB, mejorar su infraestructura y, a la par, depurar la información curatorial, tanto en los aspectos taxonómico y geográfico, como en el de imágenes. En virtud de que se tiene contemplado recuperar bases de datos de proyectos individuales previos apoyados por la CONABIO, al finalizar el proyecto se contará con una mejor perspectiva del grado de digitalización de las diversas colecciones que integran los acervos nacionales albergados en el IB. Además, se contará con dichas bases de datos en un formato digital uniforme de acuerdo con los estándares de la UNIBIO del IB, con especial atención en que sean compatibles con los acervos digitales de la propia CONABIO. Esta iniciativa abre una nueva etapa de conectividad académica entre el IB y la CONABIO, que propiciará una etapa de colaboración y enriquecimiento mutuo. Las bases de datos actualizadas constituirán un acervo digital significativo de la biodiversidad nacional, incluyendo registros con valor histórico, de manera que será posible realizar aproximaciones cronológicas sobre tendencias ambientales. Asimismo, el impacto en estrategias de conservación será relevante, ya que se facilitará dar respuesta a preguntas sobre suficiencia de muestreo en áreas naturales protegidas o en porciones del territorio nacional que requieran atención especial en los diversos taxones. A la par, la información de los acervos del IB contribuirá a seleccionar puntos de remuestreo en busca de especies en estatus especial de conservación o especies conocidas por ejemplares únicos o sólo de localidades tipo. Aunque los registros serán primordialmente nacionales, se contará con registros de otros países, principalmente latinoamericanos, a partir de ejemplares presentes en las colecciones del IB; algunas bases de datos incluirán registros de instituciones externas al IB o al país. En síntesis, este esfuerzo y las bases de datos que se obtendrán o actualizarán, contribuirá significativamente a tener una aproximación fidedigna sobre el conocimiento de la distribución reciente, actual y futura de la biodiversidad mexicana.
+Palabras clave: México, taxonomía, biodiversidad, colecciones botánicas, colecciones zoológicas, colecciones vivas, colecciones etnobiológicas, acervos.</para><para>Reino: 1
+Filo: 2
+Clase: 7
+Orden: 83
+Familia: 366
+Género: 4980
+Subgénero: 41
+Especie: 43628
+Epitetoinfraespecifico: 7401
+</para>
+        </abstract>
+        <keywordSet>
+            <keyword>Occurrence</keyword>
+            <keywordThesaurus>GBIF Dataset Type Vocabulary: http://rs.gbif.org/vocabulary/gbif/dataset_type.xml</keywordThesaurus>
+        </keywordSet>
+        <keywordSet>
+            <keyword>Plantas</keyword>
+            <keywordThesaurus>N/A</keywordThesaurus>
+        </keywordSet>
+        <keywordSet>
+            <keyword>Occurrence</keyword>
+            <keywordThesaurus>GBIF Dataset Type Vocabulary: http://rs.gbif.org/vocabulary/gbif/dataset_type_2015-07-10.xml</keywordThesaurus>
+        </keywordSet>
+        <intellectualRights>
+            <para>This work is licensed under a <ulink url="http://creativecommons.org/licenses/by/4.0/legalcode"><citetitle>Creative Commons Attribution (CC-BY) 4.0 License</citetitle></ulink>.</para>
+        </intellectualRights>
+        <licensed>
+            <licenseName>Creative Commons Attribution 4.0 International</licenseName>
+            <url>https://spdx.org/licenses/CC-BY-4.0.html</url>
+            <identifier>CC-BY-4.0</identifier>
+        </licensed>
+        <distribution scope="document">
+            <online>
+                <url function="information">http://www.snib.mx/proyectos/cgi-bin/datos2.cgi?Letras=KE&amp;Numero=2</url>
+            </online>
+        </distribution>
+        <distribution scope="document">
+            <online>
+                <url function="download">https://www.snib.mx/iptconabio/archive.do?r=SNIB-KE002-KE0022006F-MEXU-PV-2020.08.06</url>
+            </online>
+        </distribution>
+        <coverage>
+            <geographicCoverage>
+                <geographicDescription>País: AFGANISTAN (KABUL)
+País: ALEMANIA (BADEN-WÜRTTEMBERG, BAYERN, BERLIN, BRANDENBURG, MECKLENBURG-VORPOMMERN, NIEDERSACHSEN, NORDRHEIN-WESTFALEN, RHEINLAND-PFALZ, SACHSEN, SACHSEN-ANHALT, SCHLESWIG-HOLSTEIN, SIN DATO, THÜRINGEN)
+País: ANGOLA (ZAIRE)
+País: ANTIGUA Y BARBUDA
+País: ARABIA SAUDITA (SIN DATO)
+País: ARGELIA (BÉJAÏA, DJELFA, ORAN, SIDI BEL ABBÈS, SIN DATO, TLEMCEN)
+País: ARGENTINA (, BUENOS AIRES, CATAMARCA, CHACO, CHUBUT, CIUDAD DE BUENOS AIRES, CÓRDOBA, CORRIENTES, ENTRE RÍOS, FORMOSA, JUJUY, LA PAMPA, LA RIOJA, MENDOZA, MISIONES, NEUQUÉN, RÍO NEGRO, SALTA, SAN JUAN, SAN LUIS, SANTA CRUZ, SANTA FE, SANTIAGO DEL ESTERO, SIN DATO, TIERRA DEL FUEGO, TUCUMÁN)
+País: ARMENIA (, ARARAT, KOTAYK, SIN DATO, SYUNIK, VAYOTS DZOR)
+País: AUSTRALIA (, NEW SOUTH WALES, NORTHERN TERRITORY, QUEENSLAND, SIN DATO, SOUTH AUSTRALIA, TASMANIA, VICTORIA, WESTERN AUSTRALIA)
+País: AUSTRIA (BURGENLAND, KÄRNTEN, NIEDERÖSTERREICH, OBERÖSTERREICH, SALZBURG, SIN DATO, STEIERMARK, TIROL, WIEN)
+País: AZERBAIYAN (, DAGLIG-SHIRVAN, GANJA-QAZAKH, LANKARAN, QUBA-KHACHMAZ, SIN DATO)
+País: BAHAMAS (, EXUMA, INAGUA, LONG ISLAND, MANGROVE CAY, NEW PROVIDENCE, NORTH ANDROS, SAN SALVADOR)
+País: BARBADOS (, SAINT JAMES)
+País: BELGICA (, SIN DATO, VLAANDEREN, WALLONIE)
+País: BELICE (, BELIZE, CAYO, COROZAL, ORANGE WALK, STANN CREEK, TOLEDO)
+País: BERMUDAS (HAMILTON, SIN DATO)
+País: BOLIVIA (, CHUQUISACA, COCHABAMBA, EL BENI, LA PAZ, ORURO, PANDO, POTOSÍ, SANTA CRUZ, SIN DATO, TARIJA)
+País: BONAIRE, SAN EUSTAQUIO Y SABA
+País: BOSNIA Y HERZEGOVINA (SIN DATO)
+País: BOTSWANA (, NORTH-WEST, SIN DATO)
+País: BRASIL (, ACRE, ALAGOAS, AMAPÁ, AMAZONAS, BAHIA, CEARÁ, DISTRITO FEDERAL, ESPÍRITO SANTO, GOIÁS, MARANHÃO, MATO GROSSO, MATO GROSSO DO SUL, MINAS GERAIS, PARÁ, PARAÍBA, PARAMARIBO, PARANÁ, PERNAMBUCO, PIAUÍ, RIO DE JANEIRO, RIO GRANDE DO NORTE, RIO GRANDE DO SUL, RONDÔNIA, RORAIMA, SANTA CATARINA, SÃO PAULO, SERGIPE, SIN DATO, TOCANTINS)
+País: BRUNEI DARUSSALAM (, BELAIT, SIN DATO)
+País: BULGARIA (KYUSTENDIL, SIN DATO)
+País: BURKINA FASO (GOURMA, HAUT-BASSINS, SIN DATO)
+País: BURUNDI (, BUBANZA, BUJUMBURA RURAL, BURURI, CANKUZO, MAKAMBA, MURAMVYA, NGOZI, RUTANA, RUYIGI, SIN DATO)
+País: CAMBOYA (KÂMPÔT)
+País: CAMERUN (, ADAMAOUA, NORD, SIN DATO, SUD-OUEST)
+País: CANADA (, ALBERTA, BRITISH COLUMBIA, MANITOBA, NEW BRUNSWICK, NEWFOUNDLAND AND LABRADOR, NORTHWEST TERRITORIES, NOVA SCOTIA, NUNAVUT, ONTARIO, QUÉBEC, SASKATCHEWAN, SIN DATO, YUKON)
+País: CHAD (KANEM)
+País: CHILE (, AISÉN DEL GENERAL CARLOS IBÁÑEZ DEL CAMPO, ANTOFAGASTA, ARAUCANÍA, ATACAMA, BÍO-BÍO, COQUIMBO, LIBERTADOR GENERAL BERNARDO O&apos;HIGGINS, LOS LAGOS, MAGALLANES Y ANTÁRTICA CHILENA, MAULE, REGIÓN METROPOLITANA DE SANTIAGO, SIN DATO, TARAPACÁ, VALPARAÍSO)
+País: CHINA (, BEIJING, CHONGQING, GANSU, GUANGDONG, GUANGXI, GUIZHOU, HUBEI, HUNAN, NEI MONGOL, QINGHAI, SHANDONG, SICHUAN, SIN DATO, XINJIANG UYGUR, YUNNAN, ZHEJIANG)
+País: CHIPRE (SIN DATO)
+País: COLOMBIA (, AMAZONAS, ANTIOQUIA, ATLANTICO, BOLIVAR, BOYACA, CALDAS, CAQUETA, CASANARE, CAUCA, CESAR, CHOCO, CORDOBA, CUNDINAMARCA, GUAINIA, GUAVIARE, HUILA, LA GUAJIRA, MAGDALENA, META, NARIÑO, NORTE DE SANTANDER, PUTUMAYO, QUINDIO, RISARALDA, SANTANDER, SUCRE, TOLIMA, VALLE DEL CAUCA, VAUPES, VICHADA)
+País: COMORAS (SIN DATO)
+País: COREA DEL NORTE (SIN DATO)
+País: COREA DEL SUR (SIN DATO)
+País: COSTA DE MARFIL (SIN DATO)
+País: COSTA RICA (, ALAJUELA, ALAJUELA, GUANACASTE, CARTAGO, CARTO, GUANACASTE, GUANACASTE, ALAJUELA, PUNTARENAS, HEREDIA, LIMON, PUNTARENAS, SAN JOSE, SAN JOSE,, SAN JOSE, CARTAGO, SAN JOSE, HEREDIA, SAN JOSE, PUNTAREMAS, SAN JOSE,CARTAGO)
+País: CROACIA (ISTARSKA, SIN DATO, SISACKO-MOSLAVACKA, SPLITSKO-DALMATINSKA)
+País: CUBA (, CAMAGUEY, CIENFUEGOS, CIUDAD DE LA HABANA, GRANMA, GUANTANAMO, HOLGUIN, ISLA DE LA JUVENTUD, LA HABANA, LAS TUNAS, MATANZAS, PINAR DEL RIO, SANCTI SPIRITUS, SANTIAGO DE CUBA, VILLA CLARA)
+País: CURAZAO
+País: DINAMARCA (COPENHAGEN, NORTH JUTLAND, SIN DATO)
+País: DOMINICA (, SAINT ANDREW, SAINT DAVID, SAINT GEORGE, SAINT JOHN, SAINT JOSEPH, SAINT LUKE, SAINT MARK, SAINT PATRICK, SAINT PAUL, SAINT PETER)
+País: ECUADOR (, AZUAY, BOLIVAR, CAÑAR, CARCHI, CHIMBORAZO, COTOPAXI, EL ORO, ESMERALDAS, GALÁPAGOS, GUAYAS, IMBABURA, LOJA, LOS RIOS, MANABI, MORONA SANTIAGO, NAPO, ORELLANA, PASTAZA, PICHINCHA, SIN DATO, SUCUMBIOS, TUNGURAHUA, ZAMORA CHINCHIPE)
+País: EGIPTO (SIN DATO)
+País: EL CONGO (ORIENTALE, SANGHA, SIN DATO)
+País: EL SALVADOR (, AHUACHAPAN, CABAÑAS, CHALATENANGO, CUSCATLAN, LA LIBERTAD, LA PAZ, LA UNION, MORAZAN, SAN MIGUEL, SAN SALVADOR, SAN VICENTE, SANTA ANA, SONSONATE, USULUTAN)
+País: ERITREA (SIN DATO)
+País: ESLOVAQUIA (BRATISLAVSKÝ, KOŠICKÝ, NITRIANSKY, PREŠOV, SIN DATO, TRNAVSKÝ, ŽILINSKÝ)
+País: ESLOVENIA (GORIŠKA, OSREDNJESLOVENSKA, PODRAVSKA, SAVINJSKA, SIN DATO)
+País: ESPAÑA (, ANDALUCÍA, ARAGÓN, CANTABRIA, CASTILLA Y LEÓN, CASTILLA-LA MANCHA, CATALUÑA, COMUNIDAD DE MADRID, COMUNIDAD FORAL DE NAVARRA, COMUNIDAD VALENCIANA, EXTREMADURA, GALICIA, ISLAS BALEARES, ISLAS CANARIAS, LA RIOJA, PAÍS VASCO, REGIÓN DE MURCIA, SIN DATO)
+País: ESTADOS UNIDOS DE AMERICA (, ALABAMA, ALASKA, ARIZONA, ARKANSAS, CALIFORNIA, COLORADO, CONNECTICUT, DELAWARE, DISTRICT OF COLUMBIA, FLORIDA, GEORGIA, HAWAII, IDAHO, ILLINOIS, INDIANA, IOWA, KANSAS, KENTUCKY, LOUISIANA, MAINE, MARYLAND, MASSACHUSETTS, MICHIGAN, MINNESOTA, MISSISSIPPI, MISSOURI, MONTANA, NEBRASKA, NEVADA, NEW HAMPSHIRE, NEW JERSEY, NEW MEXICO, NEW YORK, NORTH CAROLINA, NORTH DAKOTA, OHIO, OKLAHOMA, OREGON, PENNSYLVANIA, RHODE ISLAND, SOUTH CAROLINA, SOUTH DAKOTA, TENNESSEE, TEXAS, UTAH, VERMONT, VIRGINIA, WASHINGTON, WEST VIRGINIA, WISCONSIN, WYOMING)
+País: ETIOPIA (, GAMBELA PEOPLES, SIN DATO, TIGRAY)
+País: FIJI (CENTRAL, SIN DATO)
+País: FILIPINAS (, ABRA, AURORA, ISABELA, LA UNION, LAGUNA, LEYTE, MISAMIS OCCIDENTAL, NEGROS OCCIDENTAL, ORIENTAL MINDORO, PALAWAN, PANGASINAN, ROMBLON, SIN DATO, ZAMBALES)
+País: FINLANDIA (, LAPLAND, OULU, SIN DATO, SOUTHERN FINLAND, WESTERN FINLAND)
+País: FRANCIA (ALSACE, AQUITAINE, AUVERGNE, BASSE-NORMANDIE, BOURGOGNE, BRETAGNE, CENTRE, CENTRE-VAL DE LOIRE, CHAMPAGNE-ARDENNE, CORSE, FRANCHE-COMTÉ, ÎLE-DE-FRANCE, LANGUEDOC-ROUSSILLON, LIMOUSIN, LORRAINE, MIDI-PYRÉNÉES, NORD-PAS-DE-CALAIS, PAYS DE LA LOIRE, POITOU-CHARENTES, PROVENCE-ALPES-CÔTE D&apos;AZUR, RHÔNE-ALPES, SIN DATO)
+País: GABON (, ESTUAIRE, MOYEN-OGOOUÉ, NYANGA, OGOOUÉ-IVINDO, OGOOUÉ-LOLO, SIN DATO)
+País: GEORGIA (, AJARIA, GURIA, IMERETI, MTSKHETA-MTIANETI, SAMEGRELO-ZEMO SVANETI, SAMTSKHE-JAVAKHETI, SHIDA KARTLI, SIN DATO)
+País: GHANA (, EASTERN, GREATER ACCRA, NORTHERN, SIN DATO, WESTERN)
+País: GRANADA
+País: GRECIA (, AEGEAN, ATTICA, ATTIKI, EPIRUS AND WESTERN MACEDONIA, IPEIROS, MACEDONIA AND THRACE, PELOPONNESE, WESTERN GREECE AND THE IONIAN ISLANDS, SIN DATO, THESSALY AND CENTRAL GREECE, VOREIO AIGAIO)
+País: GROELANDIA (, KITAA, SIN DATO)
+País: GUADALUPE (, BASSE-TERRE)
+País: GUAM (SIN DATO)
+País: GUATEMALA (, ALTA VERAPAZ, BAJA VERAPAZ, BAJA VERAPAZ, EL PROGRESO, CHIMALTENANGO, CHIMALTENANGO, SACATEPEQUEZ, CHIQUIMULA, EL PROGRESO, ESCUINTLA, GUATEMALA, GUATEMALA, ALTA VERAPAZ, GUATEMALA, PETEN, GUATEMALA, SANTA ROSA, HUEHUETENANGO, IZABAL, JALAPA, JUTIAPA, PETEN, QUETZALTENANGO, QUICHE, RETALHULEU, SACATEPEQUEZ, SAN MARCOS, SANTA ROSA, SOLOLA, SOLOLA, TOTONICAPAN, SUCHITEPEQUEZ, TOTONICAPAN, ZACAPA)
+País: GUAYANA FRANCESA (, CAYENNE, SAINT-LAURENT-DU-MARONI, SIN DATO)
+País: GUINEA ECUATORIAL (ANNOBÓN, BIOKO NORTE, BIOKO SUR, LITORAL, SIN DATO)
+País: GUINEA-BISSAU (CACHEU)
+País: GUYANA (, BARIMA-WAINI, CUYUNI-MAZARUNI, DEMERARA-MAHAICA, ESSEQUIBO ISLANDS-WEST DEMERARA, MAHAICA-BERBICE, POMEROON-SUPENAAM, POTARO-SIPARUNI, SIN DATO, UPPER DEMERARA-BERBICE, UPPER TAKUTU-UPPER ESSEQUIBO)
+País: HAITI (, OUEST)
+País: HOLANDA (SIN DATO, ZEELAND, ZUID-HOLLAND)
+País: HONDURAS (, ATLANTIDA, CHOLUTECA, COLON, COMAYAGUA, COPAN, CORTES, CORTES, COMAYAGUA -YORO, CORTES, COMAYAGUA, YORO, CORTES, CORTES -YORO, EL PARAISO, EL PARAISO, FRANCISCO MORAZAN, FRANCISCO MORAZAN, GRACIAS A DIOS, INTIBUCA, ISLAS DE LA BAHIA, LA PAZ, LEMPIRA, OCOTEPEQUE, OLANCHO, SANTA BARBARA, TOLEDO, VALLE, YORO)
+País: HONG KONG (KOWLOON CITY, SIN DATO)
+País: HUNGRIA (BARANYA, BUDAPEST, GYOR-MOSON-SOPRON, PEST, SIN DATO, SOMOGY, VESZPRÉM)
+País: INDIA (, ANDAMAN AND NICOBAR, KERALA, PUNJAB, SIN DATO, TAMIL NADU)
+País: INDONESIA (, IRIAN JAYA BARAT, KALIMANTAN BARAT, KALIMANTAN TENGAH, KALIMANTAN TIMUR, MALUKU, PAPUA, SIN DATO, SUMATERA BARAT, SUMATERA SELATAN)
+País: IRAN (FARS, KERMAN, SIN DATO)
+País: IRLANDA (SIN DATO)
+País: ISLA CLIPPERTON
+País: ISLANDIA (HÖFUÐBORGARSVÆÐI, SIN DATO)
+País: ISLAS ALAND (FINSTRÖM)
+País: ISLAS CAIMAN (, LITTLE CAYMAN)
+País: ISLAS SALOMON (SIN DATO)
+País: ISLAS TURKS Y CAICOS (, SOUTH CAICOS AND EAST CAICOS)
+País: ISLAS VIRGENES (BRITANICAS)
+País: ISLAS VIRGENES (ESTADOS UNIDOS) (, SAINT CROIX)
+País: ITALIA (, ABRUZZO, APULIA, BASILICATA, CALABRIA, CAMPANIA, FRIULI-VENEZIA GIULIA, LIGURIA, LOMBARDIA, PIEMONTE, SARDEGNA, SICILY, SIN DATO, TOSCANA, TRENTINO-ALTO ADIGE, UMBRIA, VENETO)
+País: JAMAICA (, CLARENDON, KINGSTON, MANCHESTER, PORTLAND, SAINT ANDREW, SAINT ANN, SAINT CATHERINE, SAINT ELIZABETH, SAINT MARY, SAINT THOMAS, TRELAWNY, WESTMORELAND)
+País: JAPON (, AICHI, AKITA, AOMORI, CHIBA, EHIME, FUKUI, FUKUOKA, FUKUSHIMA, GIFU, GUNMA, HIROSHIMA, HOKKAIDO, HYOGO, IBARAKI, ISHIKAWA, IWATE, KAGOSHIMA, KANAGAWA, KOCHI, KUMAMOTO, KYOTO, MIE, MIYAGI, MIYAZAKI, NAGANO, NAGASAKI, NAOASAKI, NARA, NIIGATA, OITA, OKAYAMA, OKINAWA, OSAKA, SAGA, SAITAMA, SHIGA, SHIMANE, SHIZUOKA, SIN DATO, TOCHIGI, TOKUSHIMA, TOKYO, TOTTORI, TOYAMA, WAKAYAMA, YAMAGATA, YAMAGUCHI, YAMANASHI)
+País: JORDANIA (SIN DATO)
+País: KAZAJSTAN (SIN DATO)
+País: KENIA (, EASTERN, MACHAKOS, MERU, NAIROBI, NORTH-EASTERN, SIN DATO, TAITA TAVETA)
+País: LESOTHO (SIN DATO)
+País: LETONIA (SIN DATO)
+País: LIBANO (SIN DATO)
+País: LIBERIA (SIN DATO)
+País: LIBIA (SIN DATO)
+País: MACAO (SIN DATO)
+País: MACEDONIA (PELAGONIA, POLOG, SIN DATO)
+País: MADAGASCAR (, ANTANANARIVO, ANTSIRANANA, FIANARANTSOA, MAHAJANGA, SIN DATO, TOAMASINA, TOLIARY)
+País: MALASIA (, JOHOR, PAHANG, PERAK, SABAH, SARAWAK, SELANGOR, SIN DATO)
+País: MALAWI (CHITIPA, DOWA, KARONGA, LILONGWE, NKHATA BAY, SIN DATO)
+País: MALDIVAS (SIN DATO)
+País: MALI (KAYES, SIN DATO)
+País: MALTA (SIN DATO)
+País: MARRUECOS (CHAOUIA - OUARDIGHA, GUELMIM - ES-SEMARA, MARRAKECH - TENSIFT - AL HAOUZ, MEKNÈS - TAFILALET, RABAT - SALÉ - ZEMMOUR - ZAER, SIN DATO, SOUSS - MASSA - DRAÂ)
+País: MARTINICA
+País: MAURICIO (SIN DATO)
+País: MEXICO (, AGUASCALIENTES, BAJA CALIFORNIA, BAJA CALIFORNIA SUR, CAMPECHE, CHIAPAS, CHIAPAS, TABASCO, CHIHUAHUA, CIUDAD DE MEXICO, COAHUILA DE ZARAGOZA, COAHULA DE ZARAGOZA, COAHULA DE ZARAGOZA, DURANGO, COAHULA DE ZARAGOZA, NUEVO LEON, COLIMA, DISTRITO FEDERAL, DISTRITO FEDERAL, MEXICO, DURANGO, GUANAJUATO, GUANAJUATO, SAN LUIS POTOSI, GUERRERO, GUERRERO, MICHOACAN DE OCAMPO, GUERRERO, MORELOS, HIDALGO, HIDALGO, MEXICO, JALISCO, JALISCO, ZACATECAS, MEXICO, MEXICO, MICHOACAN DE OCAMPO, MEXICO, MORELOS, MEXICO, PUEBLA, MICHOACAN DE OCAMPO, MORELOS, MORELOS, GUERRERO, NAYARIT, NUEVO LEON, NUEVO LEON, SAN LUIS POTOSI, OAXACA, OAXACA, VERACRUZ DE IGNACIO DE LA LLAVE, PUEBLA, PUEBLA, TLAXCALA, PUEBLA, VERACRUZ DE IGNACIO DE LA LLAVE, QUERETARO, QUERETARO DE ARTEAGA, QUERETARO, GUANAJUATO, QUINTANA ROO, SAN LUIS POTOSI, SAN LUIS POTOSI, TAMAULIPAS, SINALOA, SONORA, TABASCO, TAMAULIPAS, TLAXCALA, VERACRUZ DE IGNACIO DE LA LLAVE, YUCATAN, ZACATECAS)
+País: MICRONESIA (SIN DATO)
+País: MONGOLIA (SIN DATO)
+País: MONTENEGRO (HERCEG NOVI, SIN DATO)
+País: MOZAMBIQUE (INHAMBANE, MAPUTO, SIN DATO)
+País: MYANMAR (BIRMANIA) (SIN DATO, TANINTHARYI)
+País: NAMIBIA (SIN DATO)
+País: NEPAL (SIN DATO, WEST)
+País: NICARAGUA (, ATLANTICO NORTE, ATLANTICO NORTE, ZELAYA, ATLANTICO SUR, ATLANTICO SUR, ZELAYA, BOACO, BOACO, CHONTALES, BOCA, CARAZO, CARAZO, RIVAS, CELAYA, CHINANDEGA, CHONTALES, CHONTALES, ZELAYA, ESTELI, GRANADA, JINOTEGA, LAGO NICARAGUA, GRANADA, LEON, MADRIZ, MANAGUA, MANAGUA, BOACO, MANAGUAC, MASAYA, MATAGALPA, MATAGALPA, CHONTALES, MATAGALPA, JINOTEGA, MATAGALPA, MANAGUA, MATAGALPA, ZELAYA, NICARAGUA, NUEVA SEGOVIA, RIO SAN JUAN, RIVAS, RIVAS, CARAZO, RIVAS, CARAZO, GRANADA, RIVAS, GRANADA, RIVAS, GRANADA, CARAZAO, SAN CARLOS, ZELAYA, ZELEYA)
+País: NIGERIA (, BORNO, OGUN, SIN DATO)
+País: NORUEGA (, AUST-AGDER, FINNMARK, OSLO, SIN DATO, VESTFOLD)
+País: NUEVA CALEDONIA (NORD, SIN DATO, SUD)
+País: NUEVA ZELANDA (, AUCKLAND, CANTERBURY, SIN DATO)
+País: PAKISTAN (, SIN DATO, SIND)
+País: PALAU (SIN DATO)
+País: PALESTINA (SIN DATO)
+País: PANAMA (, BOCAS DEL TORO, BOCAS DEL TORO, PANAMA, CANAL AREA, CANAL ZONE, CARTAGO, CHIRIQUI, CHIRIQUI , BOCAS DEL TORO, CHIRIQUI ,BOCAS DEL TORO, CHIRIQUI, BOCAS DEL TORO, CHIRIQUI, BOCAS DEL TORO, PANAMA, CHIRIQUI, PANAMA, COCLE, COCLE, HERRERA, COCLE, PANAMA, COLON, COMARCA KUNA YALA, COMARCA NGOBE BUGLE, DARIEN, HERRERA, LOS SANTOS, PANAMA, PANAMA OESTE, PANAMA OESTE, PANAMA, PANAMA, BOCAS DEL TORO, SAN BLAS, VERAGUAS, VERAGUAS, LOS SANTOS)
+País: PAPUA NUEVA GUINEA (, CENTRAL, CHIMBU, EAST SEPIK, GULF, MADANG, MOROBE, SANDAUN, SIN DATO)
+País: PARAGUAY (, ALTO PARAGUAY, ALTO PARANÁ, AMAMBAY, ASUNCIÓN, BOQUERÓN, CAAGUAZÚ, CAAZAPÁ, CANINDEYÚ, CENTRAL, CONCEPCIÓN, CORDILLERA, GUAIRÁ, ITAPÚA, MISIONES, ÑEEMBUCÚ, PARAGUARÍ, PRESIDENTE HAYES, SAN PEDRO, SIN DATO)
+País: PERU (, AMAZONAS, ANCASH, APURÍMAC, AREQUIPA, AYACUCHO, CAJAMARCA, CUSCO, HUÁNUCO, JUNÍN, LA LIBERTAD, LAMBAYEQUE, LIMA, LORETO, MADRE DE DIOS, PASCO, PIURA, PUNO, SAN MARTÍN, SIN DATO, TUMBES, UCAYALI)
+País: POLINESIA FRANCESA (SIN DATO)
+País: POLONIA (, ASH SHARQIYAH, BORKOU, GREATER POLAND, LESSER POLAND, LÓDZ, LOWER SILESIAN, LUBLIN, MASOVIAN, PODLACHIAN, POMERANIAN, PREŠOVSKÝ, SILESIAN, SIN DATO, SUBCARPATHIAN, SWIETOKRZYSKIE, WARMIAN-MASURIAN, WEST POMERANIAN)
+País: PORTUGAL (BEJA, FARO, GUARDA, LEIRIA, LISBOA, MADEIRA, PORTALEGRE, SANTARÉM, SETÚBAL, SIN DATO)
+País: PUERTO RICO (, ADJUNTAS, AÑASCO, ARECIBO, BAYAMON, CABO ROJO, CAGUAS, CAYEY, CEIBA, CIALES, FAJARDO, FLORIDA, GUANICA, GUAYAMA, HORMIGUEROS, HUMACAO, JAYUYA, LAJAS, LARES, LAS MARIAS, LOIZA, LUQUILLO, MARICAO, MAYAGUEZ, NAGUABO, OROCOVIS, PONCE, QUEBRADILLAS, RINCON, RIO GRANDE, SABANA GRANDE, SALINAS, SAN GERMAN, SAN JUAN, SAN SEBASTIAN, TOA ALTA, YAUCO)
+País: REINO UNIDO (, ENGLAND, SCOTLAND, SIN DATO, WALES)
+País: REPUBLICA CENTROAFRICANA (, BAMINGUI-BANGORAN, SANGHA-MBAÉRÉ, SIN DATO)
+País: REPUBLICA CHECA (JIHOCESKÝ, JIHOMORAVSKÝ, KRÁLOVÉHRADECKÝ, LIBERECKÝ, OLOMOUCKÝ, PARDUBICKÝ, PRAGUE, SIN DATO, STREDOCESKÝ, ÚSTECKÝ, ZLÍNSKÝ)
+País: REPUBLICA DOMINICANA (, AZUA, BAHORUCO, BARAHONA, DAJABON, EL SEYBO, HATO MAYOR, INDEPENDENCIA, LA ESTRELLETA, LA ROMANA, LA VEGA, MARIA TRINIDAD SANCHEZ, MONSEÑOR NOUEL, MONTE CRISTI, MONTE PLATA, PEDERNALES, PERAVIA, PUERTO PLATA, SAN JUAN, SANTIAGO, SANTIAGO RODRIGUEZ, SANTO DOMINGO, VALVERDE)
+País: REPUBLICA GUINEA (SIN DATO)
+País: RUMANIA (BRAŞOV, CARAŞ-SEVERIN, MARAMUREȘ, SIBIU, SIN DATO)
+País: RUSIA (, BELGOROD, BURYAT, CHITA, CITY OF ST. PETERSBURG, DAGESTAN, IRKUTSK, KALININGRAD, KALUGA, KARELIA, KHABAROVSK, MAGA BURYATDAN, NOVOSIBIRSK, PENZA, RYAZAN&apos;, SAKHALIN, SIN DATO, TAMBOV, ZABAYKAL&apos;YE)
+País: RWANDA (BUTARE, CYANGUGU, KIBUNGU, RUHENGERI, SIN DATO)
+País: SAHARA OCCIDENTAL (OUED EL DAHAB)
+País: SAMOA (SIN DATO)
+País: SAN VICENTE Y LAS GRANADINAS
+País: SANTA LUCIA
+País: SENEGAL (LOUGA, SIN DATO)
+País: SERBIA (JUŽNO-BACKI)
+País: SEYCHELLES (SIN DATO)
+País: SIRIA (, ALEPPO, HAMAH, HIMS, IDLIB, LATTAKIA, SIN DATO, TARTUS)
+País: SOMALIA (, MUDUG, SIN DATO)
+País: SRI LANKA (, ANURADHAPURA, BADULLA, BATTICALOA, COLOMBO, GALLE, HAMBANTOTA, KANDY, KEGALLE, MATALE, MATARA, NUWARA ELIYA, POLONNARUWA, RATNAPURA, SIN DATO, TRINCOMALEE, VAVUNIYA)
+País: SUDAFRICA (, AL JIZAH, EASTERN CAPE, GAUTENG, KWAZULU-NATAL, SIN DATO, WESTERN CAPE)
+País: SUDAN (SIN DATO)
+País: SUECIA (BLEKINGE, GÄVLEBORG, GOTLAND, JÄMTLAND, KALMAR, SIN DATO, SKÅNE, STOCKHOLM, UPPSALA, VÄSTERBOTTEN, VÄSTRA GÖTALAND)
+País: SUIZA (FRIBOURG, GENÈVE, GRAUBÜNDEN, SIN DATO, TICINO, VALAIS, VAUD, ZÜRICH)
+País: SURINAM (, BROKOPONDO, PARA, PARAMARIBO, SARAMACCA, SIN DATO, SIPALIWINI)
+País: SVALBARD Y JAN MAYEN (SIN DATO)
+País: SWAZILANDIA (SIN DATO)
+País: TAILANDIA (, CHAI NAT, CHIANG MAI, CHIANG RAI, LAMPANG, MAE HONG SON, NAKHON NAYOK, NONG BUA LAM PHU, PHETCHABUN, PRACHUAP KHIRI KHAN, RAYONG, SARABURI, SIN DATO, UBON RATCHATHANI, YALA)
+País: TAIWAN (, KAOHSIUNG, SIN DATO, TAIPEI, TAIWAN)
+País: TANZANIA (, IRINGA, KATAVI, LINDI, MANYARA, MBEYA, MOROGORO, RUKWA, SIN DATO, SINGIDA, TABORA, TANGA)
+País: TIMOR ORIENTAL (SIN DATO)
+País: TOGO (, MARITIME, PLATEAUX, SIN DATO)
+País: TONGA (HA&apos;APAI, SIN DATO)
+País: TRINIDAD Y TOBAGO (, PORT OF SPAIN, TOBAGO)
+País: TUNEZ (, GAFSA, JENDOUBA, KAIROUAN, KASSÉRINE, NABEUL, SILIANA, SIN DATO, SOUSSE)
+País: TURKMENISTAN (SIN DATO)
+País: TURQUIA (, ANKARA, ANTALYA, BITLIS, BOLU, DENIZLI, ELAZIG, ERZURUM, GAZIANTEP, GÜMÜSHANE, HATAY, ISPARTA, ISTANBUL, KASTAMONU, KONYA, KÜTAHYA, MARDIN, ORDU, RIZE, SANLIURFA, SIN DATO, TUNCELI, VAN)
+País: UCRANIA (CRIMEA, KIEV, SIN DATO, TRANSCARPATHIA)
+País: UGANDA (, SIN DATO, WAKISO)
+País: URUGUAY (, ARTIGAS, CANELONES, CERRO LARGO, FLORES, FLORIDA, LAVALLEJA, MALDONADO, MONTEVIDEO, PAYSANDÚ, RÍO NEGRO, RIVERA, ROCHA, SALTO, SAN JOSÉ, SIN DATO, TACUAREMBÓ)
+País: UZBEKISTAN (BUKHORO, SIN DATO, TASHKENT CITY)
+País: VANUATU (, SANMA)
+País: VENEZUELA (, AMAZONAS, ANZOÁTEGUI, APURE, ARAGUA, BARINAS, BOLÍVAR, CARABOBO, COJEDES, DELTA AMACURO, DISTRITO CAPITAL, FALCÓN, GUÁRICO, LARA, MÉRIDA, MIRANDA, MONAGAS, NUEVA ESPARTA, PORTUGUESA, SIN DATO, SUCRE, TÁCHIRA, TRUJILLO, VARGAS, YARACUY, ZULIA)
+País: VIETNAM (, HÀ GIANG, NGHỆ AN, SIN DATO, THÁI NGUYÊN)
+País: ZAMBIA (, CENTRAL, COPPERBELT, NORTHERN, SIN DATO, SOUTHERN, WESTERN)
+País: ZIMBABWE (, MANICALAND, MASHONALAND EAST, MIDLANDS, SIN DATO)</geographicDescription>
+                <boundingCoordinates>
+                    <westBoundingCoordinate>-118.517</westBoundingCoordinate>
+                    <eastBoundingCoordinate>-84.4</eastBoundingCoordinate>
+                    <northBoundingCoordinate>33</northBoundingCoordinate>
+                    <southBoundingCoordinate>11.8</southBoundingCoordinate>
+                </boundingCoordinates>
+            </geographicCoverage>
+            <temporalCoverage>
+                <rangeOfDates>
+                    <beginDate>
+                        <calendarDate>                1774-03-07
+</calendarDate>
+                    </beginDate>
+                    <endDate>
+                        <calendarDate>                2017-10-16
+</calendarDate>
+                    </endDate>
+                </rangeOfDates>
+            </temporalCoverage>
+            <taxonomicCoverage>
+                <generalTaxonomicCoverage>Reino: Plantae
+Filo: Tracheophyta, Marchantiophyta
+Clase: Magnoliopsida, Lycopodiopsida, Polypodiopsida, Pinopsida, Cycadopsida, Ginkgoopsida, Jungermanniopsida
+Orden: Fabales, Caryophyllales, Solanales, Malpighiales, Poales, Asterales, Lamiales, Asparagales, Gentianales, Magnoliales, Rosales, Alismatales, Malvales, Apiales, Commelinales, Cucurbitales, Sapindales, Myrtales, Zingiberales, Piperales, Zygophyllales, Santalales, Liliales, Selaginellales, Hymenophyllales, Ericales, Ephedrales, Polypodiales, Fagales, Proteales, Cyatheales, Dioscoreales, Arecales, Dilleniales, Brassicales, Boraginales, Saxifragales, Ophioglossales, Cupressales, Dipsacales, Pinales, Ranunculales, Laurales, Gunnerales, Cornales, Oxalidales, Celastrales, Vitales, Schizaeales, Picramniales, Aquifoliales, Nymphaeales, Lycopodiales, Cycadales, Chloranthales, Geraniales, Pandanales, Garryales, Crossosomatales, Equisetales, Gleicheniales, Araucariales, Canellales, Marattiales, Isoetales, Buxales, Psilotales, Osmundales, Salviniales, Austrobaileyales, Huerteales, Metteniusales, Icacinales, Ceratophyllales, Escalloniales, Cardiopteridales, Trochodendrales, Bruniales, Ginkgoales, Gnetales, Acorales, Berberidopsidales, Metzgeriales
+Familia: Fabaceae, Cactaceae, Solanaceae, Euphorbiaceae, Bromeliaceae, Asteraceae, Polygonaceae, Passifloraceae, Acanthaceae, Orchidaceae, Lamiaceae, Cyperaceae, Apocynaceae, Caryophyllaceae, Annonaceae, Rubiaceae, Phyllanthaceae, Poaceae, Urticaceae, Araceae, Verbenaceae, Convolvulaceae, Gesneriaceae, Malvaceae, Apiaceae, Commelinaceae, Begoniaceae, Meliaceae, Sapindaceae, Myrtaceae, Marantaceae, Piperaceae, Krameriaceae, Nyctaginaceae, Santalaceae, Burseraceae, Asparagaceae, Onagraceae, Hydroleaceae, Alstroemeriaceae, Selaginellaceae, Martyniaceae, Bignoniaceae, Plantaginaceae, Malpighiaceae, Hymenophyllaceae, Polemoniaceae, Ephedraceae, Schoepfiaceae, Dryopteridaceae, Pteridaceae, Fagaceae, Amaranthaceae, Moraceae, Platanaceae, Aspleniaceae, Dicksoniaceae, Erythroxylaceae, Dioscoreaceae, Araliaceae, Arecaceae, Dilleniaceae, Smilacaceae, Orobanchaceae, Brassicaceae, Blechnaceae, Polygalaceae, Resedaceae, Rhamnaceae, Clethraceae, Ehretiaceae, Primulaceae, Namaceae, Ericaceae, Crassulaceae, Muntingiaceae, Polypodiaceae, Ophioglossaceae, Cupressaceae, Phytolaccaceae, Melastomataceae, Cordiaceae, Adoxaceae, Boraginaceae, Costaceae, Pinaceae, Ranunculaceae, Thelypteridaceae, Lauraceae, Gunneraceae, Lythraceae, Vochysiaceae, Taxaceae, Loasaceae, Actinidiaceae, Capparaceae, Oxalidaceae, Heliotropiaceae, Anacardiaceae, Heliconiaceae, Chrysobalanaceae, Sapotaceae, Gentianaceae, Typhaceae, Campanulaceae, Violaceae, Celastraceae, Caprifoliaceae, Pontederiaceae, Fouquieriaceae, Scrophulariaceae, Iridaceae, Portulacaceae, Vitaceae, Cucurbitaceae, Schlegeliaceae, Ulmaceae, Saururaceae, Juncaceae, Rosaceae, Simaroubaceae, Amaryllidaceae, Papaveraceae, Hypericaceae, Salicaceae, Melanthiaceae, Lentibulariaceae, Sabiaceae, Magnoliaceae, Siparunaceae, Pedaliaceae, Rutaceae, Calceolariaceae, Chenopodiaceae, Lygodiaceae, Clusiaceae, Dennstaedtiaceae, Alismataceae, Menyanthaceae, Cytinaceae, Pittosporaceae, Hydrocharitaceae, Bixaceae, Ebenaceae, Theaceae, Berberidaceae, Loranthaceae, Tofieldiaceae, Picramniaceae, Cistaceae, Hydrangeaceae, Aquifoliaceae, Menispermaceae, Linaceae, Styracaceae, Nymphaeaceae, Montiaceae, Cleomaceae, Cannabaceae, Saxifragaceae, Monimiaceae, Woodsiaceae, Combretaceae, Phrymaceae, Balsaminaceae, Oleaceae, Plagiogyriaceae, Lycopodiaceae, Zamiaceae, Chloranthaceae, Elatinaceae, Aristolochiaceae, Connaraceae, Grossulariaceae, Juncaginaceae, Geraniaceae, Cyclanthaceae, Caricaceae, Frankeniaceae, Petiveriaceae, Zingiberaceae, Plocospermataceae, Symplocaceae, Betulaceae, Pentaphylacaceae, Oleandraceae, Elaeocarpaceae, Garryaceae, Staphyleaceae, Cabombaceae, Loganiaceae, Xyridaceae, Plumbaginaceae, Surianaceae, Gelsemiaceae, Tectariaceae, Equisetaceae, Zygophyllaceae, Altingiaceae, Achariaceae, Hydrophyllaceae, Cyatheaceae, Asphodelaceae, Simmondsiaceae, Gleicheniaceae, Athyriaceae, Tamaricaceae, Cystopteridaceae, Iteaceae, Anemiaceae, Hamamelidaceae, Liliaceae, Talinaceae, Hypoxidaceae, Hernandiaceae, Lecythidaceae, Haloragaceae, Podocarpaceae, Myristicaceae, Lindsaeaceae, Cornaceae, Juglandaceae, Lennoaceae, Nephrolepidaceae, Winteraceae, Lacistemataceae, Ochnaceae, Calophyllaceae, Bataceae, Olacaceae, Marattiaceae, Potamogetonaceae, Myricaceae, Rhizophoraceae, Thymelaeaceae, Achatocarpaceae, Aizoaceae, Apodanthaceae, Opiliaceae, Podostemaceae, Isoetaceae, Putranjivaceae, Buxaceae, Droseraceae, Haemodoraceae, Psilotaceae, Cannaceae, Humiriaceae, Osmundaceae, Salviniaceae, Araucariaceae, Proteaceae, Cunoniaceae, Molluginaceae, Marcgraviaceae, Schisandraceae, Eriocaulaceae, Coriariaceae, Trigoniaceae, Dipentodontaceae, Lomariopsidaceae, Brunelliaceae, Metteniusaceae, Elaeagnaceae, Marsileaceae, Culcitaceae, Basellaceae, Icacinaceae, Tovariaceae, Didymochlaenaceae, Goodeniaceae, Burmanniaceae, Lonchitidaceae, Peraceae, Ceratophyllaceae, Linderniaceae, Stegnospermataceae, Escalloniaceae, Anacampserotaceae, Crossosomataceae, Phyllonomaceae, Casuarinaceae, Triuridaceae, Cibotiaceae, Tetrachondraceae, Picrodendraceae, Balanophoraceae, Mitrastemonaceae, Tropaeolaceae, Sarcobataceae, Peltantheraceae, Koeberliniaceae, Dichapetalaceae, Penthoraceae, Zosteraceae, Schizaeaceae, Nyssaceae, Stemonuraceae, Musaceae, Petenaeaceae, Coulaceae, Cardiopteridaceae, Cymodoceaceae, Ruppiaceae, Colchicaceae, Nitrariaceae, Strelitziaceae, Mayacaceae, Cyrillaceae, Caryocaraceae, Moringaceae, Trochodendraceae, Canellaceae, Guamatelaceae, Saccolomataceae, Datiscaceae, Onocleaceae, Sphenocleaceae, Tecophilaeaceae, Alzateaceae, Paulowniaceae, Columelliaceae, Quiinaceae, Nelumbonaceae, Goupiaceae, Nartheciaceae, Limnanthaceae, Ticodendraceae, Sarraceniaceae, Setchellanthaceae, Pandanaceae, Calycanthaceae, Lepidobotryaceae, Ginkgoaceae, Paeoniaceae, Thesiaceae, Grammitidaceae, Parnassiaceae, Coldeniaceae, Diapensiaceae, Metaxyaceae, Cycadaceae, Gnetaceae, Hemidictyaceae, Microteaceae, Acoraceae, Stylidiaceae, Aptandraceae, Tapisciaceae, Cercidiphyllaceae, Rapateaceae, Butomaceae, Lardizabalaceae, Aponogetonaceae, Eucommiaceae, Doryanthaceae, Cephalotaxaceae, Loxsomataceae, Sciadopityaceae, Davalliaceae, Scheuchzeriaceae, Capparidaceae, Aextoxicaceae, Myrsinaceae, Aneuraceae, Didiereaceae</generalTaxonomicCoverage>
+                <taxonomicClassification>
+                    <taxonRankName>Kingdom</taxonRankName>
+                    <taxonRankValue>Plantae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Phylum</taxonRankName>
+                    <taxonRankValue>Tracheophyta</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Phylum</taxonRankName>
+                    <taxonRankValue>Marchantiophyta</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Class</taxonRankName>
+                    <taxonRankValue>Magnoliopsida</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Class</taxonRankName>
+                    <taxonRankValue>Lycopodiopsida</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Class</taxonRankName>
+                    <taxonRankValue>Polypodiopsida</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Class</taxonRankName>
+                    <taxonRankValue>Pinopsida</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Class</taxonRankName>
+                    <taxonRankValue>Cycadopsida</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Class</taxonRankName>
+                    <taxonRankValue>Ginkgoopsida</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Class</taxonRankName>
+                    <taxonRankValue>Jungermanniopsida</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Fabales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Caryophyllales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Solanales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Malpighiales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Poales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Asterales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Lamiales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Asparagales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Gentianales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Magnoliales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Rosales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Alismatales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Malvales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Apiales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Commelinales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Cucurbitales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Sapindales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Myrtales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Zingiberales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Piperales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Zygophyllales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Santalales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Liliales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Selaginellales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Hymenophyllales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Ericales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Ephedrales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Polypodiales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Fagales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Proteales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Cyatheales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Dioscoreales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Arecales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Dilleniales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Brassicales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Boraginales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Saxifragales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Ophioglossales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Cupressales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Dipsacales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Pinales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Ranunculales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Laurales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Gunnerales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Cornales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Oxalidales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Celastrales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Vitales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Schizaeales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Picramniales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Aquifoliales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Nymphaeales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Lycopodiales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Cycadales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Chloranthales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Geraniales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Pandanales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Garryales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Crossosomatales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Equisetales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Gleicheniales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Araucariales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Canellales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Marattiales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Isoetales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Buxales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Psilotales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Osmundales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Salviniales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Austrobaileyales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Huerteales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Metteniusales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Icacinales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Ceratophyllales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Escalloniales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Cardiopteridales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Trochodendrales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Bruniales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Ginkgoales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Gnetales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Acorales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Berberidopsidales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Metzgeriales</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Fabaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Cactaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Solanaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Euphorbiaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Bromeliaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Asteraceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Polygonaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Passifloraceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Acanthaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Orchidaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Lamiaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Cyperaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Apocynaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Caryophyllaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Annonaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Rubiaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Phyllanthaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Poaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Urticaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Araceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Verbenaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Convolvulaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Gesneriaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Malvaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Apiaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Commelinaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Begoniaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Meliaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Sapindaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Myrtaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Marantaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Piperaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Krameriaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Nyctaginaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Santalaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Burseraceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Asparagaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Onagraceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Hydroleaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Alstroemeriaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Selaginellaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Martyniaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Bignoniaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Plantaginaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Malpighiaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Hymenophyllaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Polemoniaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Ephedraceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Schoepfiaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Dryopteridaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Pteridaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Fagaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Amaranthaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Moraceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Platanaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Aspleniaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Dicksoniaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Erythroxylaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Dioscoreaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Araliaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Arecaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Dilleniaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Smilacaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Orobanchaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Brassicaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Blechnaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Polygalaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Resedaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Rhamnaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Clethraceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Ehretiaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Primulaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Namaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Ericaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Crassulaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Muntingiaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Polypodiaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Ophioglossaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Cupressaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Phytolaccaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Melastomataceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Cordiaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Adoxaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Boraginaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Costaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Pinaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Ranunculaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Thelypteridaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Lauraceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Gunneraceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Lythraceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Vochysiaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Taxaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Loasaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Actinidiaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Capparaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Oxalidaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Heliotropiaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Anacardiaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Heliconiaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Chrysobalanaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Sapotaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Gentianaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Typhaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Campanulaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Violaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Celastraceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Caprifoliaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Pontederiaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Fouquieriaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Scrophulariaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Iridaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Portulacaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Vitaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Cucurbitaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Schlegeliaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Ulmaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Saururaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Juncaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Rosaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Simaroubaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Amaryllidaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Papaveraceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Hypericaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Salicaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Melanthiaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Lentibulariaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Sabiaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Magnoliaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Siparunaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Pedaliaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Rutaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Calceolariaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Chenopodiaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Lygodiaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Clusiaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Dennstaedtiaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Alismataceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Menyanthaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Cytinaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Pittosporaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Hydrocharitaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Bixaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Ebenaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Theaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Berberidaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Loranthaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Tofieldiaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Picramniaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Cistaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Hydrangeaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Aquifoliaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Menispermaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Linaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Styracaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Nymphaeaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Montiaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Cleomaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Cannabaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Saxifragaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Monimiaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Woodsiaceae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Combretaceae</taxonRankValue>
+                </taxonomicClassification>
+            </taxonomicCoverage>
+        </coverage>
+        <maintenance>
+            <description>
+                <para></para>
+            </description>
+            <maintenanceUpdateFrequency>notPlanned</maintenanceUpdateFrequency>
+        </maintenance>
+        <contact>
+            <individualName>
+                <givenName>Patricia</givenName>
+                <surName>Ramos Rivera</surName>
+            </individualName>
+            <organizationName>Comisión Nacional para el Conocimiento y Uso de la Biodiversidad</organizationName>
+            <positionName>Directora General de Sistemas</positionName>
+            <address>
+                <deliveryPoint>Liga Periférico-Insurgentes Sur No. 4903, Col. Parques del Pedregal</deliveryPoint>
+                <city>México</city>
+                <administrativeArea>Tlalpan</administrativeArea>
+                <postalCode>14010</postalCode>
+                <country>MEXICO</country>
+            </address>
+            <phone>50045000</phone>
+            <electronicMailAddress>patricia.ramos@conabio.gob.mx</electronicMailAddress>
+            <onlineUrl>https://www.gob.mx/conabio</onlineUrl>
+        </contact>
+
+            <project id="SNIB-KE002-KE0022006F_MEXU_PV_2020.08.06-plantas vasculares">
+                <title>Digitalización y Sistematización de las Colecciones Biológicas Nacionales del Instituto de Biología, UNAM (Plantas vasculares)</title>
+                <personnel>
+                    <individualName>
+                    <givenName>Víctor</givenName>
+                    <surName>Sánchez Cordero Dávila</surName>
+                    </individualName>
+                    <role>ADMINISTRATIVE_POINT_OF_CONTACT</role>
+                </personnel>
+                <abstract>
+                    <para>Esta propuesta constituye una primera etapa de una estrategia integral para digitalizar y actualizar la infraestructura y elevar el estatus curatorial de las colecciones biológicas nacionales resguardadas en el Instituto de Biología (IB) de la UNAM. En base a un diagnóstico del nivel curatorial y de digitalización de las colecciones, se plantea como objetivo general de esta primera etapa incrementar, en al menos un 35 %, el grado de digitalizacion de las colecciones botánicas (incluyendo las vivas y etnobiológicas del Jardín Botánico) y zoológicas del IB, mejorar su infraestructura y, a la par, depurar la información curatorial, tanto en los aspectos taxonómico y geográfico, como en el de imágenes. En virtud de que se tiene contemplado recuperar bases de datos de proyectos individuales previos apoyados por la CONABIO, al finalizar el proyecto se contará con una mejor perspectiva del grado de digitalización de las diversas colecciones que integran los acervos nacionales albergados en el IB. Además, se contará con dichas bases de datos en un formato digital uniforme de acuerdo con los estándares de la UNIBIO del IB, con especial atención en que sean compatibles con los acervos digitales de la propia CONABIO. Esta iniciativa abre una nueva etapa de conectividad académica entre el IB y la CONABIO, que propiciará una etapa de colaboración y enriquecimiento mutuo. Las bases de datos actualizadas constituirán un acervo digital significativo de la biodiversidad nacional, incluyendo registros con valor histórico, de manera que será posible realizar aproximaciones cronológicas sobre tendencias ambientales. Asimismo, el impacto en estrategias de conservación será relevante, ya que se facilitará dar respuesta a preguntas sobre suficiencia de muestreo en áreas naturales protegidas o en porciones del territorio nacional que requieran atención especial en los diversos taxones. A la par, la información de los acervos del IB contribuirá a seleccionar puntos de remuestreo en busca de especies en estatus especial de conservación o especies conocidas por ejemplares únicos o sólo de localidades tipo. Aunque los registros serán primordialmente nacionales, se contará con registros de otros países, principalmente latinoamericanos, a partir de ejemplares presentes en las colecciones del IB; algunas bases de datos incluirán registros de instituciones externas al IB o al país. En síntesis, este esfuerzo y las bases de datos que se obtendrán o actualizarán, contribuirá significativamente a tener una aproximación fidedigna sobre el conocimiento de la distribución reciente, actual y futura de la biodiversidad mexicana.
+Palabras clave: México, taxonomía, biodiversidad, colecciones botánicas, colecciones zoológicas, colecciones vivas, colecciones etnobiológicas, acervos.</para>
+                </abstract>
+                <funding>
+                    <para>Comisión Nacional para el Conocimiento y Uso de la Biodiversidad (CONABIO)</para>
+                </funding>
+                <studyAreaDescription>
+                    <descriptor name="generic" citableClassificationSystem="false">
+                        <descriptorValue>Plantas
+con flores
+con flores como abedules, avellanas, encinos, hayas, nueces de castilla, nueces pecanas, pino de los bobos, robles
+con flores como acantos, aceitunas, ajonjolís, albahacas, chías, fresnos, hierbabuenas, jacarandas, jazmines, mejoranas, mentas, olivos, oréganos, romeros, salvias, tepozanes, tomillos, toronjiles, violetas africanas
+con flores como acebos, yerba mate
+con flores como acelgas, amarantos, betabeles, biznagas, bugambilias, claveles, epazotes, espinacas, huauhzontles, jojobas, nopales, quelites, quinoas, saguaros, trigos serracenos, tunas, verdolagas, xoconostles
+con flores como achiotes, algodón, baobabs, cacao, ceibas, flor de Jamaica, flor de manita, jonote, malvas, pochotes
+con flores como agapantos, ajos, azafránes, cebollas, espárragos, gladiolas, magueyes, orquídeas, patas de elefante, sábilas, vainillas, yucas
+con flores como agritos, tréboles
+con flores como aguacates, alcanforeros, canelas, laureles
+con flores como ahuejotes, álamos, árboles del caucho, coca, flores de la pasión, granadas chinas, linos, mandiocas, maracuyás, nanches, nochebuenas, ricinos, sauces, semillas de linaza
+con flores como alcachofas, campanitas, cempasúchil, crisantemos, dalias, estrellas de agua, gerberas, girasoles, lechugas, manzanilla, margaritas, senecios
+con flores como alcatraces, anturios, cunas de Moisés, filodendros, hojas elegantes, lentejas de agua
+con flores como alfalfas, aluvias, cacahuates, chícharos, ejotes, frijoles, garbanzos, guajes, habas, huizaches, jícamas, lentejas, mezquites, tamarindos
+con flores como almendras, amates, capulines, cerezas, chabacanos, ciruelas, duraznos, frambuesas, fresas, higos, manzanas, marihuana, matapalos, membrillos, peras, rosas, tejocotes, zarzamoras
+con flores como alpiste, arroz, avena, caña de azúcar, cebada, centeno, heno, juncos, maíz, mijo, pastos terrestres, piña, sorgo, trigo, triticale, tules
+con flores como amapolas, chicalotes
+con flores como anís estrella
+con flores como anís, apios, cilantros, eneldos, ginseng, hiedras, perejil, zanahorias
+con flores como arándanos, árboles del chicle, argán, azáleas, belenes, camelias, chicozapotes, ébanos, karités, kiwis, madroños, mameyes, nueces de Brasil, ocotillos, zapotes
+con flores como árboles amargos
+con flores como aretes, eucaliptos, flores de cepillo, granadas, guayabas
+con flores como arúgulas, berros, brócolis, coles, coliflores, kales, mastuerzos, moringas, mostazas, papayas, rábanos
+con flores como aves del paraíso, cañas de indias, cúrcumas, jengibres, plátanos
+con flores como azucenas, lilis, tulipanes
+con flores como barbascos, camotes ñame
+con flores como begonias, calabazas, chayotes, melones, pepinos, sandías
+con flores como bejuquillos
+con flores como berenjenas, camotes, chiles, floripondios, jitomates, papas, petunias, pimientos, tabacos, toloaches, tomates
+con flores como bojs
+con flores como borrajas, heliotropos, nomeolvides, palomillas de tintes
+con flores como café, flores de mayo, gardenias
+con flores como cálamos
+con flores como canelos, palo picante
+con flores como caobas, copales, limas, limones, naranjas, mandarinas, mangos, maples, nueces de la India, pirúles, pistaches, rudas, toronjas, zapotes blancos
+con flores como cardos, madreselvas, saúcos
+con flores como chirimoyas, guanábanas, magnolias, nuez moscada
+con flores como cocoteros, dátiles, palmas, palmeras, palmitos
+con flores como echeverias, kalanchoes, liquidámbares, siempre vivas
+con flores como geranios, malvones
+con flores como gobernadoras, guayacanes
+con flores como hayas, lotos, ninfas, nueces de macadamia, robles australianos, sicomoros
+con flores como hortensias
+con flores como lirios acuáticos
+con flores como manzanas de los elefantes
+con flores como michay rojo
+con flores como muérdagos, sándalos
+con flores como palmas falsas
+con flores como palos de agua
+con flores como palos verdes
+con flores como pimientas
+con flores como plantas del aceite negro
+con flores como sombrillas de pobre
+con flores como uvas
+con flores: bambúes
+con flores: carnívoras, insectívoras
+con flores: mangles
+con flores: nenúfares
+con flores: pastos marinos
+sin flores como abetos, araucarias, cedros, cícadas, cipreses, efedras, ginkgos, pinos, secuoyas
+sin flores: antoceros, hepáticas, musgos
+sin flores: helechos y afines</descriptorValue>
+                    </descriptor>
+                </studyAreaDescription>
+            </project>
+    </dataset>
+
+    <additionalMetadata>
+        <metadata>
+            <gbif>
+                <dateStamp>2025-07-16T11:43:21Z</dateStamp>
+                <citation>Sánchez Cordero Dávila V, Comisión nacional para el conocimiento y uso de la biodiversidad C (2025). Digitalización y Sistematización de las Colecciones Biológicas Nacionales del Instituto de Biología, UNAM (Plantas vasculares). Comisión nacional para el conocimiento y uso de la biodiversidad. Occurrence dataset https://doi.org/10.15468/9uut5l accessed via GBIF.org on 2025-07-16.</citation>
+                <physical>
+                    <objectName>SNIB-KE002-plantas_vasculares-BD.zip</objectName>
+                    <characterEncoding>UTF-8</characterEncoding>
+                    <dataFormat>
+                        <externallyDefinedFormat>
+                            <formatName>MDB</formatName>
+                            <formatVersion>MicrosoftAccess2007</formatVersion>
+                        </externallyDefinedFormat>
+                    </dataFormat>
+                    <distribution>
+                        <online>
+                            <url function="download">http://www.snib.mx/proyectos/KE002/plantas_vasculares/SNIB-KE002-plantas_vasculares-BD.zip</url>
+                        </online>
+                    </distribution>
+                </physical>
+                <collection>
+                    <parentCollectionIdentifier>NO APLICA</parentCollectionIdentifier>
+                    <collectionIdentifier>SNIB-KE002-KE0022006F_MEXU_PV_2020.08.06-plantas vasculares</collectionIdentifier>
+                    <collectionName>Herbario Nacional de México, Plantas Vasculares;MEXU;Instituto de Biología, Universidad Nacional Autónoma de México;IBUNAM</collectionName>
+                </collection>
+                <jgtiCuratorialUnit>
+                    <jgtiUnitType>Ejemplar</jgtiUnitType>
+                    <jgtiUnitRange>
+                        <beginRange>1</beginRange>
+                        <endRange>1,030,139</endRange>
+                    </jgtiUnitRange>
+                </jgtiCuratorialUnit>
+            </gbif>
+        </metadata>
+    </additionalMetadata>
+    </eml:eml>

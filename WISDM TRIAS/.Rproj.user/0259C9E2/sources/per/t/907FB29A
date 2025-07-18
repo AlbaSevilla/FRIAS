@@ -1,0 +1,26 @@
+{
+    "id": "907FB29A",
+    "path": "D:/NextCloud/FRIASpackage_68 - copia/WISDM TRIAS/src/00_prepare_files_and_folders.R",
+    "project_path": "src/00_prepare_files_and_folders.R",
+    "type": "r_source",
+    "hash": "3578656102",
+    "contents": "",
+    "dirty": false,
+    "created": 1752664960197.0,
+    "source_on_save": false,
+    "relative_order": 2,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "12,0",
+        "scrollLine": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1749648821,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1749648821,
+    "read_only": false,
+    "read_only_alternatives": []
+}

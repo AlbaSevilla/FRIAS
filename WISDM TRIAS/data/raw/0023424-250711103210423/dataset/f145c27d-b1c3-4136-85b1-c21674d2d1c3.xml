@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eml:eml xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0 https://rs.gbif.org/schema/eml-gbif-profile/1.3/eml.xsd"
+packageId="f145c27d-b1c3-4136-85b1-c21674d2d1c3"  system="http://gbif.org" scope="system"
+xml:lang="en">
+    <dataset>
+        <alternateIdentifier>10.15468/cqfrx0</alternateIdentifier>
+        <alternateIdentifier>https://ipt.biodiversity.be/resource?r=inva</alternateIdentifier>
+        <alternateIdentifier>f145c27d-b1c3-4136-85b1-c21674d2d1c3</alternateIdentifier>
+        <alternateIdentifier>http://ipt.biodiversity.be/resource?r=inva</alternateIdentifier>
+        <title>DEMNA-DNE : Exotic plant occurrences in Wallonia</title>
+        <creator>
+            <individualName>
+                <surName>GT Flore &amp; associated parties</surName>
+            </individualName>
+            <organizationName>Département de l&apos;Étude du Milieu Naturel et Agricole</organizationName>
+            <positionName>Expert group</positionName>
+            <address>
+                <deliveryPoint>Avenue Maréchal Juin, 23</deliveryPoint>
+                <city>Gembloux</city>
+                <administrativeArea>Namur</administrativeArea>
+                <postalCode>5030</postalCode>
+                <country>BELGIUM</country>
+            </address>
+            <electronicMailAddress>louismarie.delescaille@spw.wallonie.be</electronicMailAddress>
+        </creator>
+        <creator>
+            <individualName>
+                <givenName>Arnaud</givenName>
+                <surName>Monty</surName>
+            </individualName>
+            <organizationName>University of Liège</organizationName>
+            <positionName>Professor</positionName>
+            <address>
+                <city>Gembloux</city>
+                <administrativeArea>Namur</administrativeArea>
+                <postalCode>5030</postalCode>
+                <country>BELGIUM</country>
+            </address>
+            <electronicMailAddress>Arnaud.monty@uliege.be</electronicMailAddress>
+            <onlineUrl>https://www.uliege.be/cms/c_9054334/fr/repertoire?uid=U301148</onlineUrl>
+        </creator>
+        <creator>
+            <individualName>
+                <givenName>Adrien</givenName>
+                <surName>Delforge</surName>
+            </individualName>
+            <organizationName>University of Liège</organizationName>
+            <positionName>Researcher</positionName>
+            <address>
+                <city>Gembloux</city>
+                <administrativeArea>Namur</administrativeArea>
+                <postalCode>5030</postalCode>
+                <country>BELGIUM</country>
+            </address>
+            <electronicMailAddress>adelforge@uliege.be</electronicMailAddress>
+            <onlineUrl>https://www.gembloux.uliege.be/cms/c_4039847/fr/gembloux-repertoire?uid=u237109</onlineUrl>
+        </creator>
+        <creator>
+            <individualName>
+                <givenName>Guillaume</givenName>
+                <surName>Petit</surName>
+            </individualName>
+            <organizationName>Département d&apos;Etude du Milieu Naturel et Agricole</organizationName>
+            <positionName>IT Expert</positionName>
+            <address>
+                <city>Gembloux</city>
+                <administrativeArea>Namur</administrativeArea>
+                <postalCode>5030</postalCode>
+                <country>BELGIUM</country>
+            </address>
+            <electronicMailAddress>guillaume.petit@spw.wallonie.be</electronicMailAddress>
+        </creator>
+        <creator>
+            <individualName>
+                <givenName>Etienne</givenName>
+                <surName>Branquart</surName>
+            </individualName>
+            <organizationName>Department d&apos;Etude du Milieu naturel et Agricole (DEMNA)</organizationName>
+            <positionName>Biodiversity Expert</positionName>
+            <address>
+                <city>Gembloux</city>
+                <administrativeArea>Namur</administrativeArea>
+                <postalCode>5030</postalCode>
+                <country>BELGIUM</country>
+            </address>
+            <electronicMailAddress>Etienne.branquart@spw.wallonie.be</electronicMailAddress>
+        </creator>
+        <creator>
+            <individualName>
+                <surName>All Plant Observers from OFFH</surName>
+            </individualName>
+            <organizationName>http://observatoire.biodiversite.wallonie.be/encodage</organizationName>
+            <positionName>Users</positionName>
+            <address>
+                <country>BELGIUM</country>
+            </address>
+        </creator>
+        <metadataProvider>
+            <individualName>
+                <givenName>Maxime</givenName>
+                <surName>Coupremanne</surName>
+            </individualName>
+            <organizationName>Belgian Biodiversity Platform</organizationName>
+            <positionName>Data Liaison officer</positionName>
+            <address>
+                <deliveryPoint>Avenue Maréchal Juin, 23</deliveryPoint>
+                <city>Gembloux</city>
+                <administrativeArea>Namur</administrativeArea>
+                <postalCode>5030</postalCode>
+                <country>BELGIUM</country>
+            </address>
+            <electronicMailAddress>m.coupremanne@biodiversity.be</electronicMailAddress>
+        </metadataProvider>
+        <metadataProvider>
+            <individualName>
+                <givenName>Yvan</givenName>
+                <surName>Barbier</surName>
+            </individualName>
+            <organizationName>Département de l&apos;Étude du Milieu Naturel et Agricole</organizationName>
+            <positionName>Biodiversity Expert - IT manager</positionName>
+            <address>
+                <deliveryPoint>Avenue Maréchal Juin, 23</deliveryPoint>
+                <city>Gembloux</city>
+                <administrativeArea>Namur</administrativeArea>
+                <postalCode>5030</postalCode>
+                <country>BELGIUM</country>
+            </address>
+            <electronicMailAddress>yvan.barbier@spw.wallonie.be</electronicMailAddress>
+        </metadataProvider>
+        <associatedParty>
+            <individualName>
+                <givenName>Louis-Marie</givenName>
+                <surName>Delescaille</surName>
+            </individualName>
+            <organizationName>Département de l&apos;Étude du Milieu Naturel et Agricole</organizationName>
+            <positionName>Biodiversity Expert - Flora working group coordinator</positionName>
+            <address>
+                <deliveryPoint>Avenue Maréchal Juin, 23</deliveryPoint>
+                <city>Gembloux</city>
+                <administrativeArea>Namur</administrativeArea>
+                <postalCode>5030</postalCode>
+                <country>BELGIUM</country>
+            </address>
+            <electronicMailAddress>louismarie.delescaille@spw.wallonie.be</electronicMailAddress>
+            <role>POINT_OF_CONTACT</role>
+        </associatedParty>
+        <associatedParty>
+            <individualName>
+                <givenName>Yvan</givenName>
+                <surName>Barbier</surName>
+            </individualName>
+            <organizationName>Département de l&apos;Étude du Milieu Naturel et Agricole</organizationName>
+            <positionName>Biodiversity Expert - IT manager</positionName>
+            <address>
+                <deliveryPoint>Avenue Maréchal Juin, 23</deliveryPoint>
+                <city>Gembloux</city>
+                <administrativeArea>Namur</administrativeArea>
+                <postalCode>5030</postalCode>
+                <country>BELGIUM</country>
+            </address>
+            <electronicMailAddress>yvan.barbier@spw.wallonie.be</electronicMailAddress>
+            <role>PROGRAMMER</role>
+        </associatedParty>
+        <associatedParty>
+            <individualName>
+                <givenName>Maxime</givenName>
+                <surName>Coupremanne</surName>
+            </individualName>
+            <organizationName>Belgian Biodiversity Platform</organizationName>
+            <positionName>Data liaison officer</positionName>
+            <address>
+                <deliveryPoint>Avenue Maréchal Juin, 23</deliveryPoint>
+                <city>Gembloux</city>
+                <administrativeArea>Namur</administrativeArea>
+                <postalCode>5030</postalCode>
+                <country>BELGIUM</country>
+            </address>
+            <electronicMailAddress>m.coupremanne@biodiversity.be</electronicMailAddress>
+            <role>PROCESSOR</role>
+        </associatedParty>
+        <pubDate>
+                2024-08-09
+        </pubDate>
+        <language>ENGLISH</language>
+        <abstract>
+            <para>Exotic plant occurrences in Wallonia  is a merged occurrence-only dataset, compiling records of exotic taxa from various floristic data sources covering Wallonia (Southern Belgium). Data compilation, cleaning and validation were performed by the Département de l’Étude du Milieu Naturel et Agricole (SPW – DGARNE - DEMNA), in particular the &amp;#39;GT-Flore&amp;#39;, a working group bringing together plant experts from the department and external collaborators from regional naturalist networks.</para>
+<para>The types of primary sources compiled in this dataset are heterogeneous, including specific surveys, citizen observations, digitized collections, etc. Attention should therefore be paid to the &amp;#34;DC term: collectionCode&amp;#34; when figuring out record features. Also,  &amp;#39;FootprintWKT&amp;#39;  should be used preferably for spatial referencing, as the dataset includes both grid-derived and point data.</para>
+<para>&amp;#34;Flore OFFH and Co&amp;#34; (120 000 records) is the core of the DEMNA database. It covers monitoring carried out by the department officers or by partners under agreement, data from digitization calls, etc.</para>
+<para>&amp;#34;Observatoire Wallon des Ambroisies&amp;#34;,&amp;#34;BD Berce du Caucase&amp;#34;, &amp;#34;Enquetes OFFH&amp;#34;,&amp;#34;Rinse&amp;#34;, &amp;#34;Inv. Perm. des Res. For.&amp;#34;,&amp;#34;Natura 2000&amp;#34;,are topical surveys, limited in time and/or taxonomically/spatially oriented.</para>
+<para>All records have been subject to a validation procedure performed by the department experts. Validation rules were based on pictures, observer’s expertise, ecological relevance, or additional information provided by the observer.</para>
+<para>This dataset content is under a CC-BY license. Please make sure to quote the Département de l’Étude du Milieu Naturel et Agricole (SPW – DGARNE - DEMNA) if you make any use of the data, using preferably the form &amp;#39;Origin of the Information: SPW-DGARNE – DEMNA – GT Flore &amp; collaborators&amp;#39;  whenever it is possible.</para>
+<para>Additional information is accessible upon specific and motivated request addressed to: http://observatoire.biodiversite.wallonie.be/cmdd/. Please contact the department for additional information about the dataset, about the Walloon &amp;#39;GT-Flore&amp;#39;, or about our biodiversity related activities. Returns and comments are highly appreciated.</para>
+        </abstract>
+        <keywordSet>
+            <keyword>Plants; Plantae; Wallonia; Belgium; Exotic species; Biological Invasions; TrIAS; Département de l&apos;Étude du Milieu naturel et agricole; Merged database; Open data; neophytes; Observation ; Non-Native</keyword>
+            <keywordThesaurus>GBIF Dataset Type Vocabulary: http://rs.gbif.org/vocabulary/gbif/dataset_type.xml</keywordThesaurus>
+        </keywordSet>
+        <keywordSet>
+            <keyword>Observation</keyword>
+            <keywordThesaurus>GBIF Dataset Subtype Vocabulary: http://rs.gbif.org/vocabulary/gbif/dataset_subtype.xml</keywordThesaurus>
+        </keywordSet>
+        <keywordSet>
+            <keyword>Occurrence</keyword>
+            <keywordThesaurus>GBIF Dataset Type Vocabulary: http://rs.gbif.org/vocabulary/gbif/dataset_type_2015-07-10.xml</keywordThesaurus>
+        </keywordSet>
+        <intellectualRights>
+            <para>This work is licensed under a <ulink url="http://creativecommons.org/licenses/by/4.0/legalcode"><citetitle>Creative Commons Attribution (CC-BY) 4.0 License</citetitle></ulink>.</para>
+        </intellectualRights>
+        <licensed>
+            <licenseName>Creative Commons Attribution 4.0 International</licenseName>
+            <url>https://spdx.org/licenses/CC-BY-4.0.html</url>
+            <identifier>CC-BY-4.0</identifier>
+        </licensed>
+        <distribution scope="document">
+            <online>
+                <url function="information">http://observatoire.biodiversite.wallonie.be/cmdd/</url>
+            </online>
+        </distribution>
+        <distribution scope="document">
+            <online>
+                <url function="download">https://ipt.biodiversity.be/archive.do?r=inva</url>
+            </online>
+        </distribution>
+        <coverage>
+            <geographicCoverage>
+                <geographicDescription>Wallonia - Southern Belgium. Some opportunistic data may be out of the area, within 
+neighboring regions and countries. Many records derive from a grid-based georeferencing system (I.F.B.L) and their location should be considered with caution.</geographicDescription>
+                <boundingCoordinates>
+                    <westBoundingCoordinate>2.747</westBoundingCoordinate>
+                    <eastBoundingCoordinate>6.504</eastBoundingCoordinate>
+                    <northBoundingCoordinate>51.17</northBoundingCoordinate>
+                    <southBoundingCoordinate>49.44</southBoundingCoordinate>
+                </boundingCoordinates>
+            </geographicCoverage>
+            <temporalCoverage>
+                <rangeOfDates>
+                    <beginDate>
+                        <calendarDate>                1900-05-05
+</calendarDate>
+                    </beginDate>
+                    <endDate>
+                        <calendarDate>                2020-12-28
+</calendarDate>
+                    </endDate>
+                </rangeOfDates>
+            </temporalCoverage>
+            <taxonomicCoverage>
+                <generalTaxonomicCoverage>Exotic plant species from Belgium. The Manual of the Alien Plants of Belgium (Verloove et al., 2018 - DOI10.15468/wtda1m) and the Global Register of Introduced and Invasive Species - Belgium (Desmet P. et al, 2020 - DOI10.15468/xoidmd) were used as references to identify neophyte taxa that should be integrated in this publication. The current version includes 826 taxa, mostly with a species-level resolution (746) and fewer with an infraspecific resolution (80 subspecies, forms and varieties). The reference used for the nomenclature of species is Digitale 3.1 (https://www.cbnbl.org/referentiel-taxonomique-digitale,Conservatoire botanique national de Bailleul - CBNBL)</generalTaxonomicCoverage>
+                <taxonomicClassification>
+                    <taxonRankName>Kingdom</taxonRankName>
+                    <taxonRankValue>Plantae</taxonRankValue>
+                    <commonName>Plants</commonName>
+                </taxonomicClassification>
+            </taxonomicCoverage>
+        </coverage>
+        <purpose><para>The dataset was published within the framework of the TrIAS project (Tracking Invasive Alien Species, Vanderhoeven et al. 2017 - http://trias-project.be) .The aim of TrIAS is to establish an open data framework to follow the progression of exotic species, identify emerging species, assess the risk and inform the IAS policies.</para></purpose>
+        <maintenance>
+            <description>
+                <para>The content that can be integrated to this publication evolves continuously and depends on data inputs within the department databases, its validation by experts, but also the harmonization of our taxonomy with the reference used to identify exotic species (Verloove, 2018), so updates will be done on a regular basis.</para>
+            </description>
+            <maintenanceUpdateFrequency>unkown</maintenanceUpdateFrequency>
+        </maintenance>
+        <contact>
+            <individualName>
+                <givenName>Yvan</givenName>
+                <surName>Barbier</surName>
+            </individualName>
+            <organizationName>Département de l&apos;Étude du Milieu Naturel et Agricole</organizationName>
+            <positionName>Biodiversity Expert - IT manager</positionName>
+            <address>
+                <deliveryPoint>Avenue Maréchal Juin, 23</deliveryPoint>
+                <city>Gembloux</city>
+                <administrativeArea>Namur</administrativeArea>
+                <postalCode>5030</postalCode>
+                <country>BELGIUM</country>
+            </address>
+            <electronicMailAddress>yvan.barbier@spw.wallonie.be</electronicMailAddress>
+        </contact>
+        <contact>
+            <individualName>
+                <givenName>Maxime</givenName>
+                <surName>Coupremanne</surName>
+            </individualName>
+            <organizationName>Belgian Biodiversity Platform</organizationName>
+            <positionName>Data liaison officer</positionName>
+            <address>
+                <deliveryPoint>Avenue Maréchal Juin, 23</deliveryPoint>
+                <city>Gembloux</city>
+                <administrativeArea>Namur</administrativeArea>
+                <postalCode>5030</postalCode>
+                <country>BELGIUM</country>
+            </address>
+            <electronicMailAddress>m.coupremanne@biodiversity.be</electronicMailAddress>
+        </contact>
+        <methods>
+            <methodStep>
+                <description>
+                    <para>Fusion of botanical data sources.</para>
+                </description>
+            </methodStep>
+            <methodStep>
+                <description>
+                    <para>Comparison &amp; linkage of the different taxa with the reference used for exotic species (see &apos;taxonomic coverage&apos; section).</para>
+                </description>
+            </methodStep>
+            <methodStep>
+                <description>
+                    <para>Semi-automatic validation based on observer&apos;s expertise.</para>
+                </description>
+            </methodStep>
+            <methodStep>
+                <description>
+                    <para>Mapping to Darwin Core.</para>
+                </description>
+            </methodStep>
+            <sampling>
+                <studyExtent>
+                    <description>
+                        <para>Wallonia, southern Belgium. Some opportunistic data may be slightly out of the described area. This dataset includes data from different projects that may have very different time distributions: going from early 20th data recovered by digitizsation projects to early 2018 inputs into the department databases.</para>
+                    </description>
+                </studyExtent>
+                <samplingDescription>
+                    <para>Multiple sources involving different types of data collection. The dataset encompasses citizen observations, expert prospection, digitized collection, published documents, etc.</para>
+                </samplingDescription>
+            </sampling>
+            <qualityControl>
+                <description>
+                    <para>The validation was carried out by botanical experts from the department. Each validator is assigned to a list of taxa of his expertise and has access to corresponding records. The validation may be based on a document (picture), on rules (credibility of the occurrence, of the observer expertise, etc.) or without any document (additional informations provided by the observer). It is documented by the &quot;DC-Term : IdentificationVerificationStatus&quot;. For the purpose of this publication, semi-automatic treatment has been applied to validate all records made by qualified observers. Records subject to this semi-automatic validation are flagged on the &quot;DC-Term: IdentificationRemarks&quot;.</para>
+                </description>
+            </qualityControl>
+        </methods>
+
+            <project id="TrIAS">
+                <title>Tracking Invasive Alien Species (TrIAS)</title>
+                <personnel>
+                    <individualName>
+                    <givenName>Tim</givenName>
+                    <surName>Adriaens</surName>
+                    </individualName>
+            <userId directory="http://orcid.org/">0000-0001-7268-4200</userId>
+                    <role>AUTHOR</role>
+                </personnel>
+                <personnel>
+                    <individualName>
+                    <givenName>Peter</givenName>
+                    <surName>Desmet</surName>
+                    </individualName>
+            <userId directory="http://orcid.org/">0000-0002-8442-8025</userId>
+                    <role>AUTHOR</role>
+                </personnel>
+                <personnel>
+                    <individualName>
+                    <givenName>Groom</givenName>
+                    <surName>Quentin</surName>
+                    </individualName>
+            <userId directory="http://orcid.org/">0000-0002-0596-5376</userId>
+                    <role>PRINCIPAL_INVESTIGATOR</role>
+                </personnel>
+                <personnel>
+                    <individualName>
+                    <givenName>Diederik</givenName>
+                    <surName>Strubbe</surName>
+                    </individualName>
+            <userId directory="http://orcid.org/">0000-0002-2613-4985</userId>
+                    <role>AUTHOR</role>
+                </personnel>
+                <personnel>
+                    <individualName>
+                    <givenName>Sonia</givenName>
+                    <surName>Vanderhoeven</surName>
+                    </individualName>
+            <userId directory="http://orcid.org/">0000-0002-6298-5373</userId>
+                    <role>AUTHOR</role>
+                </personnel>
+                <abstract>
+                    <para>Imagine a future where dynamically, from year to year, we can track the progression of alien species (AS), identify emerging species, assess their current and future risk and timely inform policy in a seamless data-driven workflow. One that is built on open science and open data infrastructures. By using international biodiversity standards and facilities, we would ensure interoperability, repeatability and sustainability. This would make the process adaptable to future requirements in an evolving IAS policy landscape both locally and internationally. The project Tracking Invasive Alien Species (TrIAS) aims to do this for Belgium. For a full project description, see Vanderhoeven et al. (2017, https://doi.org/10.3897/rio.3.e13414).</para>
+                </abstract>
+                <funding>
+                    <para>TrIAS is funded by the Belgian Science Policy Office (BELSPO) call for Belgian Research Action through Interdisciplinary Networks (BRAIN).</para>
+                </funding>
+                <studyAreaDescription>
+                    <descriptor name="generic" citableClassificationSystem="false">
+                        <descriptorValue>Belgium.</descriptorValue>
+                    </descriptor>
+                </studyAreaDescription>
+                <designDescription>
+                    <description>
+                        <para>The project builds on two components: 1) The establishment of a data mobilization framework for alien species data from diverse data sources and 2) the development of data-driven procedures for risk evaluation based on risk modelling, risk mapping and risk assessment. TrIAS uses facilities from the Global Biodiversity Information Facility (GBIF, http://www.gbif.org), standards from the Biodiversity Information Standards organization (TDWG, http://www.tdwg.org) and expertise from Lifewatch (http://www.lifewatch.be) to create and facilitate a systematic workflow. Alien species data are gathered from a large set of regional, national and international initiatives, including citizen science data, with a wide taxonomic scope from marine, terrestrial and freshwater environments. Observation data are funnelled in repeatable ways to GBIF. In parallel, a Belgian checklist of alien species is established, benefiting from various taxonomic and project-based checklists foreseen for GBIF publication.</para>
+                    </description>
+                </designDescription>
+            </project>
+    </dataset>
+
+    <additionalMetadata>
+        <metadata>
+            <gbif>
+                <dateStamp>2025-07-16T11:47:23Z</dateStamp>
+                <citation>GT Flore &amp; associated parties, Monty A, Delforge A, Petit G, Branquart E, Coupremanne M, Barbier Y, All Plant Observers from OFFH (2024). DEMNA-DNE : Exotic plant occurrences in Wallonia. Version 1.22. Service Public de Wallonie – Département d’Etude du Milieu Naturel et Agricole (SPW – DEMNA). Occurrence dataset https://doi.org/10.15468/cqfrx0 accessed via GBIF.org on 2025-07-16.</citation>
+                <bibliography>
+                <citation identifier="https://doi.org/10.15468/wtda1m">Verloove F, Groom Q, Brosens D, Desmet P, Reyserhove L (2018). Manual of the Alien Plants of Belgium. Version 1.6. Botanic Garden Meise. Checklist Dataset accessed via GBIF.org on 2018-05-14.</citation>
+                <citation>Groom Q, Brosens D, Adriaens T, Vanderhoeven S (2017). TrIAS Data Management Plan. Version 1.2.</citation>
+                <citation identifier="https://doi.org/10.3897/rio.3.e13414">Vanderhoeven S, Adriaens T, Desmet P, Strubbe D, Backeljau T, Barbier Y, Brosens D, Cigar J, Coupremanne M, De Troch R, Eggermont H, Heughebaert A, Hostens K, Huybrechts P, Jacquemart A, Lens L, Monty A, Paquet J, Prévot C, Robertson T, Termonia P, Van De Kerchove R, Van Hoey G, Van Schaeybroeck B, Vercayie D, Verleye T, Welby S, Groom Q (2017) Tracking Invasive Alien Species (TrIAS): Building a data-driven framework to inform policy. Research Ideas and outcomes 3: e13414.</citation>
+                <citation identifier="http://dx.doi.org/10.3391/mbi.2015.6.2.02">Groom, Q. J., Desmet, P., Vanderhoeven, S. and Adriaens, T. The importance of open data for invasive alien species research, policy and management. Management of Biological Invasions 6, 2 (2015), 119–125.</citation>
+                <citation identifier=" https://doi.org/10.15468/xoidmd">Desmet P, Reyserhove L, Oldoni D, Groom Q, Adriaens T, Vanderhoeven S, Pagad S (2020). Global Register of Introduced and Invasive Species - Belgium. Version 1.8. Invasive Species Specialist Group ISSG. Checklist dataset accessed via GBIF.org on 2020-02-14.</citation>
+                <citation identifier="https://doi.org/10.25518/1780-4507.20086">Monty A, Etcheverria Z, Delforge, A (2022). Ambrosia artemisiifolia L. seeds in bird feed in southern Belgium, 10 years after the EU regulation. Biotechnologie, Agronomie, Société et Environnement, 26 (Special Issue), p. 1 - 4</citation>
+                </bibliography>
+                <resourceLogoUrl>http://ipt.biodiversity.be/logo.do?r=inva</resourceLogoUrl>
+            </gbif>
+        </metadata>
+    </additionalMetadata>
+    </eml:eml>

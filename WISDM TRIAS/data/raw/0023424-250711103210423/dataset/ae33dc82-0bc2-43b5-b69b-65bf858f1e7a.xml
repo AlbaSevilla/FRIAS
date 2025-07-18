@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eml:eml xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0 https://rs.gbif.org/schema/eml-gbif-profile/1.3/eml.xsd"
+packageId="ae33dc82-0bc2-43b5-b69b-65bf858f1e7a"  system="http://gbif.org" scope="system"
+xml:lang="en">
+    <dataset>
+        <alternateIdentifier>10.15468/ckxw7v</alternateIdentifier>
+        <alternateIdentifier>https://cch2.org/portal/collections/misc/collprofiles.php?collid=44</alternateIdentifier>
+        <alternateIdentifier>http://cch2.org/portal/collections/misc/collprofiles.php?collid=44</alternateIdentifier>
+        <alternateIdentifier>http://www.cch2.org/portal/collections/misc/collprofiles.php?collid=44</alternateIdentifier>
+        <title>CHSC - Ahart Herbarium, CSU Chico - Vascular Plants</title>
+        <creator>
+            <organizationName>CCH2 Portal</organizationName>
+            <electronicMailAddress>jyost@calpoly.edu</electronicMailAddress>
+            <onlineUrl>https://cch2.org/portal/index.php</onlineUrl>
+        </creator>
+        <metadataProvider>
+            <organizationName>CCH2 Portal</organizationName>
+            <electronicMailAddress>jyost@calpoly.edu</electronicMailAddress>
+            <onlineUrl>https://cch2.org/portal/index.php</onlineUrl>
+        </metadataProvider>
+        <associatedParty>
+            <individualName>
+                <givenName>Lawrence</givenName>
+                <surName>Janeway</surName>
+            </individualName>
+            <positionName>herbarium curator</positionName>
+            <electronicMailAddress>ljaneway@csuchico.edu</electronicMailAddress>
+            <role>CONTENT_PROVIDER</role>
+        </associatedParty>
+        <associatedParty>
+            <individualName>
+                <givenName>Adrienne</givenName>
+                <surName>Edwards</surName>
+            </individualName>
+            <positionName>herbarium director</positionName>
+            <electronicMailAddress>aledwards@csuchico.edu</electronicMailAddress>
+            <role>CONTENT_PROVIDER</role>
+        </associatedParty>
+        <pubDate>
+                2025-07-01
+        </pubDate>
+        <language>ENGLISH</language>
+        <abstract>
+            <para>The Chico State Herbarium is the most complete repository of plant specimens from northeastern California. The emphasis is on the northern California flora, and includes a great number of rare, threatened, and endangered plant species. Established with specimens donated by the late Professor Vesta Holt in the 1950&amp;#39;s, the Herbarium now contains more than 125,000 dried and mounted specimens. The majority of samples are flowering plants, conifers, and ferns, but bryophytes, lichens, and especially slime molds, are also well represented. The Herbarium is used extensively for identification of sensitive and other plant species by various agencies and individuals. Loans of herbarium specimens are made to any higher academic institutions who request them.</para>
+        </abstract>
+        <intellectualRights>
+            <para>This work is licensed under a <ulink url="http://creativecommons.org/licenses/by-nc/4.0/legalcode"><citetitle>Creative Commons Attribution Non Commercial (CC-BY-NC) 4.0 License</citetitle></ulink>.</para>
+        </intellectualRights>
+        <licensed>
+            <licenseName>Creative Commons Attribution Non Commercial 4.0 International</licenseName>
+            <url>https://spdx.org/licenses/CC-BY-NC-4.0.html</url>
+            <identifier>CC-BY-NC-4.0</identifier>
+        </licensed>
+        <distribution scope="document">
+            <online>
+                <url function="download">https://cch2.org/portal/content/dwca/CHSC-VascularPlants_DwC-A.zip</url>
+            </online>
+        </distribution>
+        <contact>
+            <organizationName>CHSC - Ahart Herbarium, CSU Chico - Vascular Plants</organizationName>
+            <phone>(530)-898-5381</phone>
+            <electronicMailAddress>ljaneway@csuchico.edu</electronicMailAddress>
+            <onlineUrl>https://www.csuchico.edu/herbarium/</onlineUrl>
+        </contact>
+
+    </dataset>
+
+    <additionalMetadata>
+        <metadata>
+            <gbif>
+                <dateStamp>2025-07-16T11:43:12Z</dateStamp>
+                <citation>Chico State Herbarium (2025). CHSC - Ahart Herbarium, CSU Chico - Vascular Plants. Occurrence dataset https://doi.org/10.15468/ckxw7v accessed via GBIF.org on 2025-07-16.</citation>
+            </gbif>
+        </metadata>
+    </additionalMetadata>
+    </eml:eml>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eml:eml xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0 https://rs.gbif.org/schema/eml-gbif-profile/1.3/eml.xsd"
+packageId="07fe4908-3eeb-41e4-899c-c861047cdb3d"  system="http://gbif.org" scope="system"
+xml:lang="en">
+    <dataset>
+        <title>GBIF Occurrence Download 0023424-250711103210423</title>
+        <creator>
+            <individualName>
+                <surName>GBIF Download Service</surName>
+            </individualName>
+            <electronicMailAddress>support@gbif.org</electronicMailAddress>
+        </creator>
+        <metadataProvider>
+            <individualName>
+                <surName>GBIF Download Service</surName>
+            </individualName>
+            <electronicMailAddress>support@gbif.org</electronicMailAddress>
+        </metadataProvider>
+        <pubDate>
+                2025-07-16
+        </pubDate>
+        <language>ENGLISH</language>
+        <abstract>
+            A dataset containing all occurrences available in GBIF matching the query:
+{
+  "and" : [
+    "TaxonKey is one of (Elodea densa, Koenigia polystachya, Hydrocharis laevigata)",
+    "BasisOfRecord is one of (Observation, Human Observation, Material sample, Specimen, Unknown evidence, Machine Observation, Occurrence evidence)",
+    "Year is greater than or equal to 1971",
+    "Year is less than or equal to 1980",
+    "HasCoordinate is true"
+  ]
+}
+The dataset includes records from the following constituent datasets. The full metadata for each constituent is also included in this archive:
+1 records from Chadron State College, High Plains Herbarium
+7 records from Allan Herbarium (CHR)
+2 records from Albion R. Hodgdon Herbarium, University of New Hampshire
+1 records from Centre for Australian National Biodiversity Research (CANB) AVH data
+1 records from Plant specimens of Komatsu City Museum
+1 records from University of Amsterdam (NL) - Páramo pollen reference collection
+4 records from William &amp; Mary Herbarium
+7 records from DIGITALE - Observations flore et habitat centralisées par le CBN de Bailleul-Données d'occurrence taxon (Plantes vasculaires, Bryophytes et Algues) de la région des Hauts-de-France mises au format standard OccTax v3.1 par le CBN de Bailleul en mai 2023 (Données issues de Digitale2 : digitale.cbnbl.org)
+2 records from Vascular plant specimens of The Shirakami Research Center for Environmental Sciences, Hirosaki University
+8 records from Freshwater Pest Plants
+2 records from CHSC - Ahart Herbarium, CSU Chico - Vascular Plants
+8 records from Digitalización y Sistematización de las Colecciones Biológicas Nacionales del Instituto de Biología, UNAM (Plantas vasculares)
+6 records from Conservation Atlas Surveys
+1 records from University of Southern Mississippi Herbarium
+7 records from INPN - Données flore des CBN agrégées par la FCBN
+5 records from Tropicos MO Specimen Data
+11 records from Auckland Museum Botany Collection
+1 records from Vascular Plant Specimen database of Kanagawa Prefectural Museum of Natural History
+1 records from Herbarium of Shinshu University
+1 records from North Merseyside Local Species Data (DEFRA Grant 23169)
+2 records from Gunma Museum of Natural History, Vascular Plant Specimen
+1 records from Angelo State University Herbarium
+2 records from Computarización del Herbario ENCB. Fase I (Base de datos de los ejemplares del Valle de México)
+1 records from Las monocotiledóneas mexicanas, una sinopsis florística
+1 records from Plant specimens deposited in Osaka Museum of Natural History, Japan
+3 records from Field Museum of Natural History (Botany) Seed Plant Collection
+1 records from Indiana University Herbarium, Deam Herbarium
+1 records from Vascular Plant Herbarium, UiB
+1 records from Eastern Washington University Herbarium Vascular Plants.
+1 records from Catálogo electrónico de especímenes depositados en el Herbario de la Universidad de Texas en Austin, Fase IV (Ejemplaresimagenes)
+19 records from Naturalis Biodiversity Center (NL) - Botany
+2 records from Mecklenburg County Park and Recreation Herbarium
+1 records from HSC - Humboldt State University Vascular Plant Herbarium
+1 records from HUEFS - Herbario da Universidade Estadual de Feira de Santana
+1 records from Brigham Young University, S. L. Welsh Herbarium
+2 records from Deaver Herbarium (Northern Arizona University)
+1 records from Natural History Museum Rotterdam - Specimens
+3 records from Royal Botanic Gardens, Kew - Herbarium Specimens
+1 records from University of Nevada, Reno (UNR) Herbarium
+2 records from Tasmanian Herbarium (HO) AVH data
+3 records from Digitalización y sistematización de las colecciones biológicas del INECOL (Herbario)
+1 records from Données issues du portail Sigogne - Bourgogne-Franche-Comté - Données flore, fonge, habitats naturels du Conservatoire Botanique National du Bassin Parisien
+3 records from Données issues du portail Sigogne - Bourgogne-Franche-Comté - TAXA - Flore et habitats naturels de Franche-Comté
+2 records from University of Arkansas Herbarium
+1 records from University of Idaho, Stillinger Herbarium Vascular Plants
+1 records from Observations du Conservatoire botanique national du Bassin parisien.
+1 records from OBI - Robert F. Hoover Herbarium, Cal Poly State University
+3 records from RSA - California Botanic Garden Herbarium
+1 records from John T. Waterhouse Herbarium (UNSW) AVH data
+3 records from Herbarium Specimens of Tokushima Prefectural Museum, Japan
+1 records from Wikiplantbase #Italia
+10 records from USGS Nonindigenous Aquatic Species database
+12 records from Swiss National Databank of Vascular Plants
+2 records from Oregon State University Vascular Plant Collection
+4 records from University of Alabama Herbarium
+1 records from Merseyside BioBank (verified)
+4 records from DEMNA-DNE : Exotic plant occurrences in Wallonia
+1 records from Desert Botanical Garden Herbarium
+3 records from Vascular plant specimens of National Museum of Nature and Science (TNS)
+4 records from Vascular Plant Specimens of the RYU Herbarium (Faculty of Science, University of the Ryukyus)
+2 records from Record species dataset covering Cheshire, Halton, Warrington &amp; Wirral
+5 records from Vascular plant specimens of Toyama Science Museum
+2 records from ALCB herbarium - Universidade Federal da Bahia - Herbário Virtual REFLORA
+3 records from The AAU Herbarium Database
+1 records from ACQUISITION_CBNMC - VIGIER Bernard
+1 records from Botanical Research Institute of Texas, Philecology Herbarium
+1 records from Dutch Vegetation Database
+3 records from INNS Data: All Taxa (South East Wales)
+1 records from University of Michigan Herbarium
+1 records from Baylor University Herbarium
+8 records from Shropshire Ecological Data Network database
+2 records from Charles University Prague - Herbarium PRC
+4 records from Digitalización y sistematización de las colecciones biológicas del INECOL (Herbario)
+19 records from Freshwater Pest Plants Observations
+9 records from Colección de Plantas Vasculares del Herbario CTES (CTES-DIG2020)
+2 records from Wisconsin State Herbarium, Vascular Plants
+1 records from Texas Tech University, E. L. Reed Herbarium
+11 records from MEXU/Colección de Plantas Acuáticas
+2 records from Botanical Database of Southern Africa (BODATSA): Botanical Collections
+1 records from North Carolina State University Vascular Plant Herbarium
+1 records from Observation.org, Nature data from around the World
+1 records from Vascular Plant Herbarium, Oslo (O) UiO
+1 records from 16 - Inventaire général de la flore et de la fonge - ASTERS - Conservatoire d'Espaces Naturels Haute-Savoie - inventaire général de la flore et de la fonge réalisé sur le terrain
+7 records from Données d'observation flore du réseau des CBN issues du système d'information de la FCBN
+1 records from Suffolk Biodiversity Information Service (SBIS) Dataset
+20 records from Database of Aquatic Macrophytes in Japanese lakes
+1 records from MVSC; The James C. Parks Herbarium at Millersville University
+2 records from IBF Monitoring of Vascular Plants
+3 records from Vascular plants collection of Hiratsuka City Museum
+1 records from NY herbarium - The New York Botanical Garden - Amostras Brasileiras Repatriadas - Herbário Virtual REFLORA
+2 records from LERN Records
+2 records from Natural History Museum (London) Collection Specimens
+4 records from Fife Nature Records Centre combined dataset
+4 records from G. S. Torrey Herbarium at the University of Connecticut (CONN)
+2 records from New Zealand National Forestry Herbarium
+1 records from BRI AVH Data and Images
+1 records from Depuración de la colección y base de datos del Herbario CICY. Fase IV
+2 records from Eastern Illinois University, Stover-Ebinger Herbarium
+1 records from Royal BC Museum - Herbarium (V)
+10 records from Colección de Alismatales, Apiales, Aquifoliales, Arecales y Asparagales del Museo Botánico CORD - IMBIV
+4 records from 16 - Inventaire général de la flore et de la fonge - Inventaires de la flore et de la fonge réalisés ou transmis par Denis JORDAN
+1 records from AD AVH Data
+2 records from University of North Carolina at Chapel Hill Herbarium: Vascular Plants
+3 records from 2023 Contributions of Plant Specimen Data inside China
+1 records from R. L. McGregor Herbarium Vascular Plants Collection
+1 records from Fairchild Tropical Botanic Garden (FTG)
+8 records from Meise Botanic Garden Herbarium (BR)
+3 records from UCR - University of California, Riverside Herbarium - Vascular Plants
+3 records from Tropicos Specimens Non-MO
+1 records from Herbarium Senckenbergianum (GLM) - Plantae
+17 records from Welsh BSBI data (ex-VPDB dataset) at hectad resolution
+7 records from University of South Florida Herbarium (USF)
+1 records from SD - SD Herbarium, San Diego Natural History Museum
+1 records from University of Northern Colorado Herbarium
+2 records from The New York Botanical Garden Herbarium (NY)
+2 records from NSW AVH feed
+3 records from Invasive Species and Pests
+
+        </abstract>
+        <contact>
+            <individualName>
+                <surName>GBIF Download Service</surName>
+            </individualName>
+            <electronicMailAddress>support@gbif.org</electronicMailAddress>
+        </contact>
+
+    </dataset>
+
+    <additionalMetadata>
+        <metadata>
+            <gbif>
+                <dateStamp>2025-07-16T11:47:25Z</dateStamp>
+                <citation identifier="0023424-250711103210423">GBIF Occurrence Download 0023424-250711103210423</citation>
+                <physical>
+                    <objectName>Darwin Core Archive</objectName>
+                    <characterEncoding>UTF-8</characterEncoding>
+                    <dataFormat>
+                        <externallyDefinedFormat>
+                            <formatName>Darwin Core Archive</formatName>
+                        </externallyDefinedFormat>
+                    </dataFormat>
+                    <distribution>
+                        <online>
+                            <url function="download">https://api.gbif.org/v1/occurrence/download/request/0023424-250711103210423.zip</url>
+                        </online>
+                    </distribution>
+                </physical>
+            </gbif>
+        </metadata>
+    </additionalMetadata>
+    </eml:eml>

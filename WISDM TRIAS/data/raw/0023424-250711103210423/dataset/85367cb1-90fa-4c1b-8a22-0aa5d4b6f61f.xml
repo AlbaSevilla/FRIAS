@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eml:eml xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0 https://rs.gbif.org/schema/eml-gbif-profile/1.3/eml.xsd"
+packageId="85367cb1-90fa-4c1b-8a22-0aa5d4b6f61f"  system="http://gbif.org" scope="system"
+xml:lang="en">
+    <dataset>
+        <alternateIdentifier>10.15468/qhd3hc</alternateIdentifier>
+        <alternateIdentifier>https://sernecportal.org/portal/collections/misc/collprofiles.php?collid=252</alternateIdentifier>
+        <title>Mecklenburg County Park and Recreation Herbarium</title>
+        <creator>
+            <organizationName>SERNEC</organizationName>
+            <electronicMailAddress>hbrown@mailbox.sc.edu</electronicMailAddress>
+            <onlineUrl>https://sernecportal.org/portal/index.php</onlineUrl>
+        </creator>
+        <metadataProvider>
+            <organizationName>SERNEC</organizationName>
+            <electronicMailAddress>hbrown@mailbox.sc.edu</electronicMailAddress>
+            <onlineUrl>https://sernecportal.org/portal/index.php</onlineUrl>
+        </metadataProvider>
+        <associatedParty>
+            <individualName>
+                <givenName>Lenny</givenName>
+                <surName>Lampel</surName>
+            </individualName>
+            <positionName>Curator</positionName>
+            <electronicMailAddress>Lenny.Lampel@mecklenburgcountync.gov</electronicMailAddress>
+            <role>CONTENT_PROVIDER</role>
+        </associatedParty>
+        <associatedParty>
+            <individualName>
+                <givenName>Mary</givenName>
+                <surName>Wyant</surName>
+            </individualName>
+            <positionName>Data Administrator</positionName>
+            <electronicMailAddress>Mary.Wyant@mecklenburgcountync.gov</electronicMailAddress>
+            <role>CONTENT_PROVIDER</role>
+        </associatedParty>
+        <pubDate>
+                2025-06-03
+        </pubDate>
+        <language>ENGLISH</language>
+        <abstract>
+            <para>Collection records at UNCC may contain language that reflects historical place or taxon names in an original form that is no longer acceptable or appropriate in an inclusive environment. Because UNCC preserves data in their original form to retain authenticity and facilitate research, we have chosen to facilitate conversations and are committed to address the problem of racial, derogatory and demeaning language that may be found in our database. Insensitive or offensive language is not condoned by Mecklenburg County.</para>
+        </abstract>
+        <intellectualRights>
+            <para>This work is licensed under a <ulink url="http://creativecommons.org/licenses/by-nc/4.0/legalcode"><citetitle>Creative Commons Attribution Non Commercial (CC-BY-NC) 4.0 License</citetitle></ulink>.</para>
+        </intellectualRights>
+        <licensed>
+            <licenseName>Creative Commons Attribution Non Commercial 4.0 International</licenseName>
+            <url>https://spdx.org/licenses/CC-BY-NC-4.0.html</url>
+            <identifier>CC-BY-NC-4.0</identifier>
+        </licensed>
+        <distribution scope="document">
+            <online>
+                <url function="download">https://sernecportal.org/portal/content/dwca/UNCC-UNCC_DwC-A.zip</url>
+            </online>
+        </distribution>
+        <contact>
+            <organizationName>Mecklenburg County Park and Recreation Herbarium</organizationName>
+            <electronicMailAddress>Lenny.Lampel@mecklenburgcountync.gov</electronicMailAddress>
+            <onlineUrl>https://www.mecknc.gov/ParkandRec/StewardshipServices/NaturalResources/Pages/CBS.aspx</onlineUrl>
+        </contact>
+
+    </dataset>
+
+    <additionalMetadata>
+        <metadata>
+            <gbif>
+                <dateStamp>2025-07-16T11:43:23Z</dateStamp>
+                <citation>Mecklenburg County Park and Recreation (2025). Mecklenburg County Park and Recreation Herbarium. Occurrence dataset https://doi.org/10.15468/qhd3hc accessed via GBIF.org on 2025-07-16.</citation>
+            </gbif>
+        </metadata>
+    </additionalMetadata>
+    </eml:eml>

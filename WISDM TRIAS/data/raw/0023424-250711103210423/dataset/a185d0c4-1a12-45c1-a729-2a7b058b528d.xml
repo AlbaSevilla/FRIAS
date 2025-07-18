@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eml:eml xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0 https://rs.gbif.org/schema/eml-gbif-profile/1.3/eml.xsd"
+packageId="a185d0c4-1a12-45c1-a729-2a7b058b528d"  system="http://gbif.org" scope="system"
+xml:lang="pt">
+    <dataset>
+        <alternateIdentifier>10.15468/5y84ye</alternateIdentifier>
+        <alternateIdentifier>https://ipt.jbrj.gov.br/reflora/resource?r=nyh</alternateIdentifier>
+        <alternateIdentifier>a185d0c4-1a12-45c1-a729-2a7b058b528d</alternateIdentifier>
+        <alternateIdentifier>http://ipt.jbrj.gov.br/reflora/resource?r=nyh</alternateIdentifier>
+        <title>NY herbarium - The New York Botanical Garden - Amostras Brasileiras Repatriadas - Herbário Virtual REFLORA</title>
+        <creator>
+            <individualName>
+                <givenName>Patricia</givenName>
+                <surName>Holmgren</surName>
+            </individualName>
+            <organizationName>New York Botanical Garden</organizationName>
+            <positionName>Director</positionName>
+            <address>
+                <city>New York</city>
+                <administrativeArea>NY</administrativeArea>
+                <country>UNITED_STATES</country>
+            </address>
+            <onlineUrl>https://www.nybg.org</onlineUrl>
+        </creator>
+        <metadataProvider>
+            <individualName>
+                <givenName>Brazilian Flora Group</givenName>
+                <surName>Reflora</surName>
+            </individualName>
+            <organizationName>Rio de Janeiro Botanical Garden</organizationName>
+            <positionName>Reflora coordinator</positionName>
+            <address>
+                <deliveryPoint>Rua Pacheco Leão 915</deliveryPoint>
+                <city>Rio de Janeiro</city>
+                <administrativeArea>RJ</administrativeArea>
+                <postalCode>22460-030</postalCode>
+                <country>BRAZIL</country>
+            </address>
+            <phone>+552132042082</phone>
+            <electronicMailAddress>reflora@jbrj.gov.br</electronicMailAddress>
+        </metadataProvider>
+        <pubDate>
+                2023-11-22
+        </pubDate>
+        <language>PORTUGUESE</language>
+        <abstract>
+            NY herbarium - The New York Botanical Garden - Amostras Brasileiras Repatriadas - Herbário Virtual REFLORA
+        </abstract>
+        <keywordSet>
+            <keyword>Occurrence</keyword>
+            <keywordThesaurus>GBIF Dataset Type Vocabulary: http://rs.gbif.org/vocabulary/gbif/dataset_type.xml</keywordThesaurus>
+        </keywordSet>
+        <keywordSet>
+            <keyword>Specimen</keyword>
+            <keywordThesaurus>GBIF Dataset Subtype Vocabulary: http://rs.gbif.org/vocabulary/gbif/dataset_subtype.xml</keywordThesaurus>
+        </keywordSet>
+        <keywordSet>
+            <keyword>Occurrence</keyword>
+            <keywordThesaurus>GBIF Dataset Type Vocabulary: http://rs.gbif.org/vocabulary/gbif/dataset_type_2015-07-10.xml</keywordThesaurus>
+        </keywordSet>
+        <intellectualRights>
+            <para>This work is licensed under a <ulink url="http://creativecommons.org/licenses/by/4.0/legalcode"><citetitle>Creative Commons Attribution (CC-BY) 4.0 License</citetitle></ulink>.</para>
+        </intellectualRights>
+        <licensed>
+            <licenseName>Creative Commons Attribution 4.0 International</licenseName>
+            <url>https://spdx.org/licenses/CC-BY-4.0.html</url>
+            <identifier>CC-BY-4.0</identifier>
+        </licensed>
+        <distribution scope="document">
+            <online>
+                <url function="download">https://ipt.jbrj.gov.br/reflora/archive.do?r=nyh</url>
+            </online>
+        </distribution>
+        <maintenance>
+            <description>
+                <para></para>
+            </description>
+            <maintenanceUpdateFrequency>monthly</maintenanceUpdateFrequency>
+        </maintenance>
+        <contact>
+            <individualName>
+                <givenName>Emily</givenName>
+                <surName>Sessa</surName>
+            </individualName>
+            <organizationName>New York Botanical Garden</organizationName>
+            <address>
+                <city>New York</city>
+                <administrativeArea>NY</administrativeArea>
+                <country>UNITED_STATES</country>
+            </address>
+            <electronicMailAddress>esessa@nybg.org</electronicMailAddress>
+            <onlineUrl>https://www.nybg.org</onlineUrl>
+        </contact>
+
+    </dataset>
+
+    <additionalMetadata>
+        <metadata>
+            <gbif>
+                <dateStamp>2025-07-16T11:43:18Z</dateStamp>
+                <citation>Holmgren P, Reflora B F G (2023). NY herbarium - The New York Botanical Garden - Amostras Brasileiras Repatriadas - Herbário Virtual REFLORA. Version 1.224. Instituto de Pesquisas Jardim Botanico do Rio de Janeiro. Occurrence dataset https://doi.org/10.15468/5y84ye accessed via GBIF.org on 2025-07-16.</citation>
+                <resourceLogoUrl>http://ipt.jbrj.gov.br/reflora/logo.do?r=nyh</resourceLogoUrl>
+            </gbif>
+        </metadata>
+    </additionalMetadata>
+    </eml:eml>
