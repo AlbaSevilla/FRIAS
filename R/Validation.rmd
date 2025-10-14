@@ -1,0 +1,275 @@
+---
+title: "Medidas de Evaluación"
+author: "Alba Sevilla Navarro"
+date: "`r Sys.Date()`"
+output:
+  pdf_document: default
+  word_document: default
+  html_document:
+    df_print: paged
+---
+
+Obtención de medidas de evaluación para los datasets:
+
+-   AmphibiansAndReptilesCesar Capinha de César Capinha
+
+-   EASIN
+
+-   USGS
+
+-   List for Invasive Alien Species Management in Japan
+
+-   Zenni et al 2024
+
+Abrimos los datasets obtenidos con la función "Medidas_Evaluación.R"
+
+```{r}
+library(readxl)
+setwd("../FinalFiles")
+dataset <- read_excel("../FinalFiles/FRIAS_SpeciesList_MasterList.xlsx")
+dataset <- dataset %>% separate_rows(Source_Data, sep=",")
+EASIN_dataset <- 
+USGS_dataset <- read_excel("USGS_DATASET_HABITAT.xlsx")
+List_for_invasive_alien_species_management_in_Japan <- 
+CesarCapinha_dataset <- read_excel("AMPHIBIANSCESAR_DATASET_HABITAT.xlsx")
+Zenni_dataset <- read_excel("ZENNI_DATASET_HABITAT.xlsx")
+```
+
+La columna con los valores predichos será la llamada `Binary Habitat Predcited` donde:
+
+$$
+\left\{\begin{array}{ll}Y=0 & \text{(No Freshwater)} \\Y=1 & \text{(Freshwater)}\end{array}\right.
+$$
+
+La columna con los valores reales será la llamada `Binary Habitat original` donde Y=0 e Y=1 tiene la misma asignación que en el caso de los valores predichos.
+
+$$
+\left\{\begin{array}{ll}Y=0 & \text{(No Freshwater)} \\Y=1 & \text{(Freshwater)}\end{array}\right.
+$$
+
+Para comprobar la bondad del ajuste de la función que obtiene los habitats de las especies en base a la Database GBIF, a través de su paquete 'rgbif', obtenemos las siguientes matrices de confusión y medidas de bondad de ajuste, mediante la función `confusionMatrix` del paquete `caret` :
+
+|                | **Original**  |            |
+|----------------|---------------|------------|
+| **Predicción** |               |            |
+|                | No Freshwater | Freshwater |
+| No Freshwater  | A             | B          |
+| Freshwater     | C             | D          |
+
+: ConfusionMatrix
+
+Con las fórmulas:
+
+$$
+Sensibilidad:\frac{A}{A+C}
+$$ $$
+Especificidad: \frac{D}{B+D}
+$$ $$
+Prevalencia: \frac{A+C}{A+B+C+D}
+$$ $$
+PPV= \frac{Sensibilidad*Prevalencia}{(Sensibilidad*Prevalencia)+((1-Especificidad)*(1-Prevalencia))}
+$$ $$
+NPV=\frac{Especificidad*(1-Prevalencia)}{((1-Sensibilidad)*Prevalencia)+(Especificidad*(1-Prevalencia))}
+$$ $$
+DetectionRate = \frac{A}{A+B+C+D}
+$$ $$
+DetectionPrevalence = \frac{A+B}{A+B+C+D}
+$$ $$
+BalancedAccuracy = \frac{(Sensibilidad+Especificidad)}{2}
+$$ $$
+Precision= \frac{A}{A+B}
+$$ $$
+Recall=\frac{A}{A+C}
+$$ $$
+F1 = \frac{(1+\beta^2)*Precision*Recall}{(\beta^2*Precision)+Recall};~~~~~~~~ donde~\beta=1
+$$
+
+-   AmphibiansAndReptilesCesar Capinha
+
+```{r}
+# Extraer la matriz
+amphibians_dataset$`1_Cesar` <- factor(amphibians_dataset$`1_Cesar`, levels = c("FRESHWATER", "NO FRESHWATER"))
+amphibians_dataset$Habitat <- factor(amphibians_dataset$Habitat, levels = c("FRESHWATER", "NO FRESHWATER"))
+matriz <- caret::confusionMatrix(factor(amphibians_dataset$Habitat), factor(amphibians_dataset$`1_Cesar`),  positive = "FRESHWATER")$table
+
+# Obtener los valores específicos de TP, FP, TN, FN
+tp <- matriz["FRESHWATER", "FRESHWATER"]  # Verdaderos positivos
+fp <- matriz["FRESHWATER", "NO FRESHWATER"]  # Falsos positivos
+tn <- matriz["NO FRESHWATER", "NO FRESHWATER"]  # Verdaderos negativos
+fn <- matriz["NO FRESHWATER", "FRESHWATER"]  # Falsos negativos
+
+# Imprimir los resultados
+cat("Verdaderos Positivos (TP):", tp, "\n")
+cat("Falsos Positivos (FP):", fp, "\n")
+cat("Verdaderos Negativos (TN):", tn, "\n")
+cat("Falsos Negativos (FN):", fn, "\n")
+
+# Tasa de Verdaderos Positivos (Sensibilidad o TPR)
+tpr <- tp / (tp + fn)
+# Tasa de Falsos Positivos (FPR)
+fpr <- fp / (fp + tn)
+# Tasa de Verdaderos Negativos (Especificidad o TNR)
+tnr <- tn / (tn + fp)
+# Tasa de Falsos Negativos (FNR)
+fnr <- fn / (fn + tp)
+
+# Mostrar los resultados
+cat("Tasa de Verdaderos Positivos (TPR o Sensibilidad):", tpr, "\n")
+cat("Tasa de Falsos Positivos (FPR):", fpr, "\n")
+cat("Tasa de Verdaderos Negativos (TNR o Especificidad):", tnr, "\n")
+cat("Tasa de Falsos Negativos (FNR):", fnr, "\n")
+```
+
+-   USGS
+
+```{r}
+# Extraer la matriz
+usgs_dataset$Native.Habitat <- factor(usgs_dataset$Native.Habitat, levels = c("FRESHWATER", "NO FRESHWATER"))
+usgs_dataset$Habitat <- factor(usgs_dataset$Habitat, levels = c("FRESHWATER", "NO FRESHWATER"))
+matriz <- caret::confusionMatrix(factor(usgs_dataset$Habitat), factor(usgs_dataset$Native.Habitat),  positive = "FRESHWATER")$table
+
+# Obtener los valores específicos de TP, FP, TN, FN
+tp <- matriz["FRESHWATER", "FRESHWATER"]  # Verdaderos positivos
+fp <- matriz["FRESHWATER", "NO FRESHWATER"]  # Falsos positivos
+tn <- matriz["NO FRESHWATER", "NO FRESHWATER"]  # Verdaderos negativos
+fn <- matriz["NO FRESHWATER", "FRESHWATER"]  # Falsos negativos
+
+# Imprimir los resultados
+cat("Verdaderos Positivos (TP):", tp, "\n")
+cat("Falsos Positivos (FP):", fp, "\n")
+cat("Verdaderos Negativos (TN):", tn, "\n")
+cat("Falsos Negativos (FN):", fn, "\n")
+
+# Tasa de Verdaderos Positivos (Sensibilidad o TPR)
+tpr <- tp / (tp + fn)
+# Tasa de Falsos Positivos (FPR)
+fpr <- fp / (fp + tn)
+# Tasa de Verdaderos Negativos (Especificidad o TNR)
+tnr <- tn / (tn + fp)
+# Tasa de Falsos Negativos (FNR)
+fnr <- fn / (fn + tp)
+
+# Mostrar los resultados
+cat("Tasa de Verdaderos Positivos (TPR o Sensibilidad):", tpr, "\n")
+cat("Tasa de Falsos Positivos (FPR):", fpr, "\n")
+cat("Tasa de Verdaderos Negativos (TNR o Especificidad):", tnr, "\n")
+cat("Tasa de Falsos Negativos (FNR):", fnr, "\n")
+```
+
+-   InvasiveNonNativeSpeciesInBrazil_RafaelZenni
+
+```{r}
+# Extraer la matriz
+InvasiveNonNativeSpeciesInBrazil_RafaelZenni_dataset$Habitat_Original <- factor(InvasiveNonNativeSpeciesInBrazil_RafaelZenni_dataset$Habitat_Original, levels = c("FRESHWATER", "NO FRESHWATER"))
+InvasiveNonNativeSpeciesInBrazil_RafaelZenni_dataset$Habitat <- factor(InvasiveNonNativeSpeciesInBrazil_RafaelZenni_dataset$Habitat, levels = c("FRESHWATER", "NO FRESHWATER"))
+matriz <- caret::confusionMatrix(factor(InvasiveNonNativeSpeciesInBrazil_RafaelZenni_dataset$Habitat), factor(InvasiveNonNativeSpeciesInBrazil_RafaelZenni_dataset$Habitat_Original),  positive = "FRESHWATER")$table
+
+# Obtener los valores específicos de TP, FP, TN, FN
+tp <- matriz["FRESHWATER", "FRESHWATER"]  # Verdaderos positivos
+fp <- matriz["FRESHWATER", "NO FRESHWATER"]  # Falsos positivos
+tn <- matriz["NO FRESHWATER", "NO FRESHWATER"]  # Verdaderos negativos
+fn <- matriz["NO FRESHWATER", "FRESHWATER"]  # Falsos negativos
+
+# Imprimir los resultados
+cat("Verdaderos Positivos (TP):", tp, "\n")
+cat("Falsos Positivos (FP):", fp, "\n")
+cat("Verdaderos Negativos (TN):", tn, "\n")
+cat("Falsos Negativos (FN):", fn, "\n")
+
+# Tasa de Verdaderos Positivos (Sensibilidad o TPR)
+tpr <- tp / (tp + fn)
+# Tasa de Falsos Positivos (FPR)
+fpr <- fp / (fp + tn)
+# Tasa de Verdaderos Negativos (Especificidad o TNR)
+tnr <- tn / (tn + fp)
+# Tasa de Falsos Negativos (FNR)
+fnr <- fn / (fn + tp)
+
+# Mostrar los resultados
+cat("Tasa de Verdaderos Positivos (TPR o Sensibilidad):", tpr, "\n")
+cat("Tasa de Falsos Positivos (FPR):", fpr, "\n")
+cat("Tasa de Verdaderos Negativos (TNR o Especificidad):", tnr, "\n")
+cat("Tasa de Falsos Negativos (FNR):", fnr, "\n")
+```
+
+En resumen:
+
+```{r}
+calcular_metricas <- function(pred, real) {
+  cm <- caret::confusionMatrix(factor(pred), factor(real), positive = "FRESHWATER")
+  data.frame(
+    BalancedAccuracy = cm$byClass["Balanced Accuracy"],
+    Sensitivity = cm$byClass["Sensitivity"],
+    Specificity = cm$byClass["Specificity"],
+    Pos_Pred_Value = cm$byClass["Pos Pred Value"],
+    Neg_Pred_Value = cm$byClass["Neg Pred Value"]
+  )
+}
+
+# Calcular métricas para cada base
+amphibians_metrics <- calcular_metricas(amphibians_dataset$`1_Cesar`, amphibians_dataset$Habitat)
+usgs_metrics <- calcular_metricas(usgs_dataset$Habitat, usgs_dataset$Native.Habitat)
+InvasiveNonNativeSpeciesInBrazil_RafaelZenni_metrics <- calcular_metricas(InvasiveNonNativeSpeciesInBrazil_RafaelZenni_dataset$Habitat, InvasiveNonNativeSpeciesInBrazil_RafaelZenni_dataset$Habitat_Original)
+
+library(tidyjson)
+# Juntar en una sola tabla
+tabla_final <- bind_rows(
+  AmphibiansAndReptiles_CesarCapinha = amphibians_metrics,
+  USGS = usgs_metrics,
+  InvasiveNonNativeSpeciesInBrazil_RafaelZenni = InvasiveNonNativeSpeciesInBrazil_RafaelZenni_metrics,
+  .id = "Database"
+)
+tabla_final <- as.data.frame(tabla_final)
+tabla_final
+```
+
+MATRICES DE CONFUSION:\
+
+```{r}
+# Instalar paquetes si no están instalados
+if(!require(caret)) install.packages("caret")
+if(!require(ggplot2)) install.packages("ggplot2")
+if(!require(reshape2)) install.packages("reshape2")
+
+# Cargar las librerías
+library(caret)
+library(ggplot2)
+library(reshape2)
+
+# AmphibiansAndReptilesCesar Capinha
+amphibians_dataset$`1_Cesar` <- factor(amphibians_dataset$`1_Cesar`, levels = c("FRESHWATER", "NO FRESHWATER"))
+amphibians_dataset$Habitat <- factor(amphibians_dataset$Habitat, levels = c("FRESHWATER", "NO FRESHWATER"))
+matriz_amphibios <- caret::confusionMatrix(factor(amphibians_dataset$Habitat), factor(amphibians_dataset$`1_Cesar`),  positive = "FRESHWATER")$table
+
+# USGS
+usgs_dataset$Native.Habitat <- factor(usgs_dataset$Native.Habitat, levels = c("FRESHWATER", "NO FRESHWATER"))
+usgs_dataset$Habitat <- factor(usgs_dataset$Habitat, levels = c("FRESHWATER", "NO FRESHWATER"))
+matriz_usgs <- caret::confusionMatrix(factor(usgs_dataset$Habitat), factor(usgs_dataset$Native.Habitat),  positive = "FRESHWATER")$table
+
+# InvasiveNonNativeSpeciesInBrazil_RafaelZenni
+InvasiveNonNativeSpeciesInBrazil_RafaelZenni_dataset$Habitat_Original <- factor(InvasiveNonNativeSpeciesInBrazil_RafaelZenni_dataset$Habitat_Original, levels = c("FRESHWATER", "NO FRESHWATER"))
+InvasiveNonNativeSpeciesInBrazil_RafaelZenni_dataset$Habitat <- factor(InvasiveNonNativeSpeciesInBrazil_RafaelZenni_dataset$Habitat, levels = c("FRESHWATER", "NO FRESHWATER"))
+matriz_InvasiveNonNativeSpeciesInBrazil_RafaelZenni <- caret::confusionMatrix(factor(InvasiveNonNativeSpeciesInBrazil_RafaelZenni_dataset$Habitat), factor(InvasiveNonNativeSpeciesInBrazil_RafaelZenni_dataset$Habitat_Original),  positive = "FRESHWATER")$table
+
+# Función para graficar la ConfusionMatrix con los números y un gradiente de azul claro a azul oscuro
+plot_confusion_matrix <- function(matriz, title) {
+  matriz_melt <- melt(matriz)
+  colnames(matriz_melt) <- c("Predicted", "Actual", "Count")
+  
+  ggplot(matriz_melt, aes(x = Actual, y = Predicted, fill = Count)) +
+    geom_tile() +
+    scale_fill_gradient(low = "lightblue", high = "darkblue") +  # Gradiente de colores
+    geom_text(aes(label = Count), color = "white", size = 6) +  # Añadir los números en las celdas
+    theme_minimal() +
+    labs(title = title, x = "Real Value", y = "Predicted Value") +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1))  # Ajuste de texto en los ejes
+}
+
+
+
+# Graficar las matrices de confusión para cada conjunto de datos
+plot_confusion_matrix(matriz_amphibios, "ConfusionMatrix: AmphibiansAndReptilesCesar Capinha")
+plot_confusion_matrix(matriz_usgs, "ConfusionMatrix: USGS")
+plot_confusion_matrix(matriz_InvasiveNonNativeSpeciesInBrazil_RafaelZenni, "ConfusionMatrix: InvasiveNonNativeSpeciesInBrazil_RafaelZenni")
+
+```

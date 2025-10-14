@@ -1,0 +1,50 @@
+USGS_2025_Download_and_Depurate <- function() {
+
+  ##########################################################
+  ######### PARA DESCARGAR LA BASE DE DATOS USGS_2025 ##########
+  ##########################################################
+  #Lo descargamos de la web https://nas.er.usgs.gov/queries/SpeciesList.aspx
+  #No lo hacemos automáticamente porque en el pie de la página pone que:
+  #Data are not available for download from the web site. Please contact NAS staff for a custom query.
+
+
+
+  ##########################################################
+  ########## PARA DEPURAR USGS_2025 ############################
+  ##########################################################
+  ruta_inputfiles <- file.path("Inputfiles")
+  data_name_USGS_2025 <- list.files(path = ruta_inputfiles, pattern = "Step0_OriginalDatabase_USGS_2025.csv", full.names = TRUE)
+  dat <- read.csv(data_name_USGS_2025, sep=",") #Aquí estamos indicando que sustraiga los excel de las bases de dat iniciales de la carpeta 'InputFiles'.
+
+
+  #NOS QUEDAMOS CON LOS REGISTROS FRESHWATER
+  USGS_2025_freshwater_01 <- dat %>%
+    filter(Native.Habitat %in% c("Freshwater","Freshwater-Marine","Marine-Freshwater",
+                                 "Brackish-Freshwater","Freshwater-Brackish"))
+
+  origin <- unique(USGS_2025_freshwater_01$Species.Origin)
+
+  USGS_2025_freshwater_02 <- USGS_2025_freshwater_01 %>%
+    filter(Species.Origin %in% c("Exotic","Unknown","Exotic Hybrid"))
+
+
+  USGS_2025_freshwater_03 <- USGS_2025_freshwater_02 %>%
+    select(-Common.Name)
+
+  nrow(USGS_2025_freshwater_03)
+
+  #ELIMINAMOS DUPLICADOS
+  source(file.path("R","noduplicates.r"))
+  USGS_2025_sinduplicados <- noduplicates(USGS_2025_freshwater_03, "Scientific.Name")
+  names(USGS_2025_sinduplicados)[names(USGS_2025_sinduplicados) == "Scientific.Name"] <- "Scientific_Name"
+  names(USGS_2025_sinduplicados)[names(USGS_2025_sinduplicados) == "Species.Origin"] <- "Species_Origin"
+  names(USGS_2025_sinduplicados)[names(USGS_2025_sinduplicados) == "Native.Habitat"] <- "Native_Habitat"
+
+  # Mover la columna 'Species' al inicio
+  USGS_2025_sinduplicados <- USGS_2025_sinduplicados[, c("Scientific_Name", setdiff(names(USGS_2025_sinduplicados), "Scientific_Name"))]
+
+  write.xlsx(USGS_2025_sinduplicados, "./Inputfiles/Step0_OriginalDatabaseFreshwaterNODUPLICATES_USGS_2025.xlsx")
+  cat("Archivo descargado correctamente: Inputfiles/Step0_OriginalDatabaseFreshwaterNODUPLICATES_USGS_2025.xlsx")
+  #write.csv2(USGS_2025_sinduplicados, "./Inputfiles/Step0_OriginalDatabaseFreshwaterNODUPLICATES_USGS_2025.csv")
+
+}
