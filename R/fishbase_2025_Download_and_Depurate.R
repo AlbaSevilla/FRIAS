@@ -1,0 +1,131 @@
+fishbase_2025_Download_and_Depurate <- function() {
+  #LA OBTENCIÓN DE LA BASE DE DATOS DE fishbase SEALIFE no se aplica a través de un repositorio de zenodo, por lo que obtenemos los datos desde R. Para ello:
+
+  ##########################################################################################################
+  # Obtener el listado de todos los peces disponibles en fishbase y SeaLifeBase en su versión más reciente #
+  ##########################################################################################################
+  fishbase_dataset <- species_names(server = c("fishbase", "sealifebase"), version = "latest")
+
+  ##########################################################################################################
+  # Convertir el tibble en un dataframe ####################################################################
+  ##########################################################################################################
+  dataframe_species_dataset <- as.data.frame(fishbase_dataset)
+  write.xlsx(dataframe_species_dataset, file.path("InputFiles", "originaldatabase_fishbase_2025.xlsx"))
+
+  ##########################################################################################################
+  # Obtener los nombres científicos de los peces ###########################################################
+  ##########################################################################################################
+  nombres_delos_peces <- dataframe_species_dataset$Species
+
+  ##########################################################################################################
+  # Obtener el Status, Salinity y EcosystemType en base al nombre científico ###############################
+  ##########################################################################################################
+  informacion_peces <- ecosystem(species_list = nombres_delos_peces)
+  informacion_peces$Status <- factor(informacion_peces$Status)
+  informacion_peces <- informacion_peces %>%
+    filter(Status == "introduced")
+  # endemic             error        extirpated        introduced* misidentification            native            Native   not established      questionable             stray
+  # 17161               143                88              1562               655            138504               198                12              1767               244
+  informacion_peces$Salinity <- factor(informacion_peces$Salinity)
+  unique(informacion_peces$Salinity)
+  informacion_peces <- informacion_peces %>% filter(Salinity == "freshwater")
+  # brackish* freshwater*  saltwater
+  # 1421      53198     103905
+  informacion_peces$EcosystemType <- factor(informacion_peces$EcosystemType)
+  unique(informacion_peces$EcosystemType)
+  informacion_peces <- informacion_peces %>%
+    filter(EcosystemType == "River (basin)" | EcosystemType == "Lake" | EcosystemType == "Zoogreographic realm")
+  # Lagoon*                Lake*       River (basin)*        sea/bay/gulf        Sea/Bay/Gulf            Seamount Zoogeographic realm
+  # 712                4065               30221                  26              102639                1777               19124
+
+
+  #######################################################################
+  #######   OBTENCIÓN DE LOS PECES de interés               #############
+  #######################################################################
+  subset_peces_introducidos <- informacion_peces
+
+  # Unir la base de datos de fishbase con la información sobre los peces introducidos por 'SpecCode'
+  dataset_conjunto <- fishbase_dataset %>%
+    full_join(subset_peces_introducidos, by = "SpecCode") %>%
+    filter(!is.na(Status))
+  columnas_a_quedarse <- c("Species.x","Family","Order","Class","Status","Salinity","EcosystemType","EcosystemName")
+
+  data_subset_fishbase <- dataset_conjunto %>%
+    select(all_of(columnas_a_quedarse))
+
+  #NO DUPLICADOS
+  source(file.path("R", "noduplicates.r"))
+  fishbase_sinduplicados <- noduplicates(data_subset_fishbase,column_name_species = "Species.x")
+
+  write.xlsx(fishbase_sinduplicados, file.path("InputFiles", "originaldatabase_fishbase_2025.xlsx"))
+
+  fishbase_sinduplicados <- read_excel("Inputfiles/originaldatabase_fishbase_2025.xlsx")
+  especies <- unique(fishbase_sinduplicados$Species.x)
+
+  intro_df <- map_dfr(especies, function(sp) {
+    tbl <- introductions(sp)
+    if (nrow(tbl) > 0 && any(c("From", "RangeMin", "Year") %in% names(tbl))) {
+      tbl <- tbl %>%
+        mutate(
+          Year_fusion = ifelse(!is.na(RangeMin), RangeMin, as.numeric(stringr::str_extract(Year, "\\d{4}")))
+        ) %>%
+        filter(!is.na(Year_fusion))
+      if (nrow(tbl) > 0) {
+        idx_min <- which.min(tbl$Year_fusion)
+        rango_nativo <- tbl$From[idx_min]
+        year_nativo <- tbl$Year_fusion[idx_min]
+        # Si el país es "Unknown", ponerlo como NA
+        if (!is.na(rango_nativo) && rango_nativo == "Unknown") rango_nativo <- NA_character_
+        tibble(Species.x = sp, Rango_nativo = rango_nativo, Year_Nativo = year_nativo)
+      } else {
+        tibble(Species.x = sp, Rango_nativo = NA_character_, Year_Nativo = NA_real_)
+      }
+    } else {
+      tibble(Species.x = sp, Rango_nativo = NA_character_, Year_Nativo = NA_real_)
+    }
+  })
+
+  fishbase_sinduplicados <- fishbase_sinduplicados %>%
+    left_join(intro_df, by = "Species.x")
+
+  especies <- fishbase_sinduplicados$Species.x
+
+  ecosystem_species <- map_dfr(especies, function(sp) {
+    tbl <- ecosystem(sp)
+    if (nrow(tbl) > 0 && all(c("EcosystemName", "Location", "Status") %in% names(tbl))) {
+      tbl <- tbl %>% filter(grepl("native", Status, ignore.case = TRUE))
+      if (nrow(tbl) > 0) {
+        tbl <- tbl %>%
+          mutate(Native_Range = paste(EcosystemName, Location, sep = "; ")) %>%
+          mutate(Native_Range = ifelse(is.na(Native_Range) | Native_Range == "NA", NA_character_, Native_Range))
+        return(tibble(Species.x = sp, Native_Range = tbl$Native_Range))
+      }
+    }
+    tibble(Species.x = sp, Native_Range = NA_character_)
+  })
+
+  #sinduplicados
+  source(file.path("R", "noduplicates.r"))
+  fishbase_ecosystemnoduplicates <- noduplicates(ecosystem_species, "Species.x")
+
+
+  fishbase_sinduplicados2 <- fishbase_sinduplicados %>%
+    left_join(fishbase_ecosystemnoduplicates, by = "Species.x")
+
+  fishbase_sinduplicados3 <- fishbase_sinduplicados2 %>%
+    mutate(Native_Range = paste(EcosystemName, Native_Range, sep=";"))
+
+  fishbase_sinduplicados3$Native_Range <- gsub("NA;", "", fishbase_sinduplicados3$Native_Range)
+  fishbase_sinduplicados3$Native_Range <- gsub("NA,", "", fishbase_sinduplicados3$Native_Range)
+  fishbase_sinduplicados3$Native_Range <- gsub(";NA", "", fishbase_sinduplicados3$Native_Range)
+  fishbase_sinduplicados3$Native_Range <- gsub(",NA", "", fishbase_sinduplicados3$Native_Range)
+  fishbase_sinduplicados3$Native_Range <- gsub(",", ";", fishbase_sinduplicados3$Native_Range)
+
+  fishbase_sinduplicados4 <- fishbase_sinduplicados3 %>%
+    select(-EcosystemName, -EcosystemType)
+
+
+  write.xlsx(fishbase_sinduplicados4, file.path("InputFiles", "freshwatersubset_fishbase_2025.xlsx"))
+  cat("Archivo descargado correctamente: InputFiles/freshwatersubset_fishbase_2025.xlsx")
+}
+
