@@ -95,6 +95,7 @@ FinalMasterlist <- function(){
   MasterList <- MasterList %>%
     separate_rows(Source_Data, sep=";|,") %>%
     mutate(Source_Data = trimws((Source_Data)))
+  head(MasterList$Source_Data)
   merged <- merge(
     MasterList,
     table1,
@@ -102,10 +103,18 @@ FinalMasterlist <- function(){
     by.y = "FRIAS_name",
     all.x = TRUE
   )
-  MasterList <- noduplicates(merged, "AcceptedNameGBIF")
+  merged_grouped <- merged %>%
+    dplyr::group_by(AcceptedNameGBIF) %>%
+    dplyr::summarise(
+      across(
+        everything(),        # todas las columnas
+        ~ paste(unique(.), collapse = "; "),  # combina valores únicos con ";"
+        .names = "{.col}"
+      ),
+      .groups = "drop"
+    )
 
   #
-  names(MasterList)
   namesordered <- c("AcceptedNameGBIF","OriginalNameDB","ID_GBIF",
                     "Kingdom","Phylum","Class","Order","Family",
                     "Group","FunctionalGroup",
@@ -116,9 +125,9 @@ FinalMasterlist <- function(){
                     "AffectedTaxa",
                     "ReportYear","EarliestReport",
                     "Habitat","Source_Data", "Reference")
-  MasterList<- MasterList[,namesordered]
+  MasterList3<- merged_grouped[,namesordered]
 
-  MasterList <- MasterList %>%
+  MasterList3 <- MasterList3 %>%
     mutate(across(
       .cols = -Source_Data,
       .fns = ~ str_replace_all(., "\\b[Nn][Aa]\\b", "") %>%
@@ -127,19 +136,28 @@ FinalMasterlist <- function(){
         str_squish()
     ))
 
-  MasterList[] <- lapply(MasterList, function(x) gsub(",", ";", x))
-  MasterList <- MasterList %>%
-    mutate(across(everything(), ~na_if(., "")))
-  MasterList <- MasterList[order(rowSums(is.na(MasterList))), ]
+  MasterList4 <- MasterList3 %>%
+    mutate(
+      across(
+        -Reference,
+        ~ gsub(",", ";", .)
+      ),
+      across(
+        -Reference,
+        ~ na_if(., "")
+      )
+    )
 
-  write.xlsx(MasterList,
+  MasterList5 <- MasterList4[order(rowSums(is.na(MasterList4))), ]
+
+  write.xlsx(MasterList5,
              file.path("FinalFiles", paste0("FRIAS_masterlist.xlsx")),
              sep = ",",
              row.names = FALSE,
              col.names = TRUE)
-  write.csv(MasterList,"FinalFiles/FRIAS_masterlist.csv")
+  write.csv(MasterList5,"FinalFiles/FRIAS_masterlist.csv")
 
- species_number <- nrow(MasterList)
+ species_number <- nrow(MasterList5)
  cat("🐟 FRIAS Masterlist contains :",  species_number, "Alien Freshwater Species 🦀.", "\n")
 }
 
