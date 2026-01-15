@@ -11,17 +11,8 @@ StandardizeMechanism <- function() {
     mutate(OriginalCategories = trimws(OriginalCategories))
 
   dat <- read_csv("OutputFiles/Intermediate/step10_standardlocationnames_masterlist.csv") %>%
-    mutate(Mechanisms = str_split(Mechanisms, ",|;")) %>%
-    unnest(Mechanisms) %>%
-    mutate(
-      Mechanisms = Mechanisms %>%
-        str_trim() %>%
-        tolower() %>%
-        gsub("[_/\\-]", "", .)
-    )%>%
-    mutate(
-      Mechanisms = tolower(trimws(Mechanisms))
-      )
+    separate_rows(Mechanisms, sep=",|;") %>%
+    mutate(Mechanisms = tolower(trimws(Mechanisms)))
 
   matches <- match(dat$Mechanisms, equivs$OriginalCategories)
   replacements <- equivs$StandardizedCategoriesMechanisms[matches]

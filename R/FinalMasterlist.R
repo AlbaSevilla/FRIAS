@@ -3,12 +3,13 @@ FinalMasterlist <- function(){
 
   #Create Max impact field
   MasterList <- MasterList %>%
-    mutate(EICATImpact = str_split(EICATImpact, ",")) %>%
+    separate_rows(EICATImpact, sep=",") %>%
     unnest(EICATImpact) %>%
     mutate(EICATImpact = str_trim(tolower(EICATImpact))) %>%
-    mutate(Mechanisms = str_split(Mechanisms, ";")) %>%
+    separate_rows(EICATImpact, sep=";") %>%
     unnest(Mechanisms) %>%
     mutate(Mechanisms = str_trim(tolower(Mechanisms)))
+
   MasterList <- MasterList %>%
     mutate(
       EICAT_by_Mechanism = str_split(EICAT_by_Mechanism, "[;,]")   # separar por ; o ,

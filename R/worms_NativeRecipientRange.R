@@ -1,4 +1,4 @@
-worrms_NativeRecipientRange <- function(){
+worms_NativeRecipientRange <- function(){
   get_worms_info <- function(species_name) {
     rec <- try(wm_records_name(species_name), silent = TRUE)
     if (inherits(rec, "try-error") || length(rec) == 0) {
