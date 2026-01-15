@@ -7,7 +7,7 @@ HarmonizationDatabases <- function (CorrespondenceTable){
 
   for (i in 1:nrow(CorrespondenceTable)){
     #Load neccessary objects
-    #i<-29
+    #i<-1
     data_name <- CorrespondenceTable[i,"File_name_to_load"]
     dataset_NAMECOLUMN <- CorrespondenceTable[i,"FRIAS_name"]
     dataset_NAMECOLUMN
@@ -173,9 +173,10 @@ HarmonizationDatabases <- function (CorrespondenceTable){
       colnames(dat)[colnames(dat)==col_pathway] <- "pathway"
       all_column_names <- c(all_column_names,"pathway")
       dat$pathway <- tolower(dat$pathway)
-      dat$pathway <- gsub("\\s+", "", dat$pathway)
+      dat$pathway <- str_squish(dat$pathway)   # <- aquí conserva espacios simples
       dat$pathway <- sub(":.*", "", dat$pathway)
     }
+
     #Column:AffectedTaxa
     if (!is.na(CorrespondenceTable[i,"Column_AffectedTaxa"]) & CorrespondenceTable[i,"Column_AffectedTaxa"]!=""){
       col_AffectedTaxa <- CorrespondenceTable[i,"Column_AffectedTaxa"]
@@ -196,60 +197,39 @@ HarmonizationDatabases <- function (CorrespondenceTable){
     # Column: EICATImpact
     if (!is.na(CorrespondenceTable[i, "Column_EICATImpact"]) &&
         CorrespondenceTable[i, "Column_EICATImpact"] != "") {
-
-      # Renombrar columna origen → EICATImpact
       col_EICATImpact <- CorrespondenceTable[i, "Column_EICATImpact"]
       colnames(dat)[colnames(dat) == col_EICATImpact] <- "EICATImpact"
       all_column_names <- c(all_column_names, "EICATImpact")
-
       data_name <- CorrespondenceTable[i, "FRIAS_name"]
-
-      # Asegurar tipo character (números o texto)
       dat$EICATImpact <- as.character(dat$EICATImpact)
-
-      # Normalización SOLO para matching
       dat_match <- trimws(str_to_lower(dat$EICATImpact))
-
-      # Filtrar equivalencias para la base
       equivs_filtered <- equivs %>%
         filter(Database == data_name) %>%
         mutate(
           OriginalCategories = trimws(str_to_lower(as.character(OriginalCategories))),
           StandardizedCategoriesEICAT = as.character(StandardizedCategoriesEICAT)
         )
-
       if (nrow(equivs_filtered) > 0) {
-
-        # Matching robusto
         match_idx <- match(dat_match, equivs_filtered$OriginalCategories)
         replacements <- equivs_filtered$StandardizedCategoriesEICAT[match_idx]
-
-        # Guardar no-matching (valores reales)
         non_matching <- dat %>%
           filter(
             is.na(replacements) &
               !is.na(EICATImpact) &
               trimws(EICATImpact) != ""
           )
-
         if (nrow(non_matching) > 0) {
           filename <- paste0("OutputFiles/Check/NA_EICATImpact_", data_name, ".xlsx")
           write_xlsx(non_matching, filename)
         }
-
-        # Aplicar reemplazos
         dat$EICATImpact[!is.na(replacements)] <- replacements[!is.na(replacements)]
         dat$EICATImpact[is.na(replacements)] <- NA
       }
-
-      # Normalización final del resultado
       dat$EICATImpact <- trimws(str_to_lower(dat$EICATImpact))
     }
 
 
-
     #################################################################################
-
     #Column:Mechanisms
     if (!is.na(CorrespondenceTable[i,"Column_Mechanisms"]) & CorrespondenceTable[i,"Column_Mechanisms"]!=""){
       col_Mechanisms <- CorrespondenceTable[i,"Column_Mechanisms"]

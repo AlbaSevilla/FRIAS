@@ -1,10 +1,12 @@
 Over_Sub_Representation_InformalGroup <- function(){
 
   #Data
-  TableS5 <- read.xlsx("TablesToStandardize/Table S5.xlsx", sheet=2)
-  Taxa <- TableS5$Taxa
-  MasterList_Count <- TableS5$MasterList_Count
-  FW_Total <- TableS5$FW_Total
+  TableS5 <- read.xlsx("TablesToStandardize/Table S5.xlsx", sheet=2) %>%
+    filter(!is.na(FW_Total))
+  TableS5[] <- lapply(TableS5, function(x) if(is.character(x)) gsub("\\*", "", x) else x)
+  Taxa <- as.character(TableS5$Taxa)
+  MasterList_Count <- as.numeric(TableS5$MasterList_Count)
+  FW_Total <- as.numeric(TableS5$FW_Total)
 
   #Expected Proportions
   expected_prop <- FW_Total / sum(FW_Total)

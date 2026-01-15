@@ -8,15 +8,9 @@ StandardizePathways <- function(){
 
   #Masterlist
   dat <- read_csv("OutputFiles/Intermediate/step12_standardizedhabitat_masterlist.csv") %>%
-    mutate(pathway = str_split(pathway, ";")) %>%
-    unnest(pathway) %>%
-    mutate(pathway = pathway %>%
-             str_trim() %>%
-             sub(":.*", "", .) %>%
-             str_squish() %>%
-             tolower() %>%
-             gsub("[^a-z]", "", .)
-    )
+    separate_rows(pathway, sep=";|,") %>%
+    mutate(pathway = trimws(tolower(pathway)))
+
 
   #Apply standardization
   if ("pathway" %in% colnames(dat) && any(!is.na(dat$pathway) & dat$pathway != "")) {
@@ -32,6 +26,7 @@ StandardizePathways <- function(){
 
   #Remove and merge duplicates
   MasterlistStandardized <- noduplicates(dat, "AcceptedNameGBIF")
+
 
   #Save
   write_xlsx(MasterlistStandardized, "OutputFiles/Intermediate/step13_standardizedpathway_masterlist.xlsx")

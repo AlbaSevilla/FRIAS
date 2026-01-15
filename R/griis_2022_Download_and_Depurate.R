@@ -27,5 +27,5 @@ griis_2022_Download_and_Depurate <- function() {
   nrow(griis_2022_noduplicates)
 
   #Save
-  write.xlsx(griis_2022_noduplicates, "./Inputfiles/freshwatersubset_griis_2022.xlsx")
+  write.xlsx(griis_2022_noduplicates, "./InputFiles/freshwatersubset_griis_2022.xlsx")
 }

@@ -145,7 +145,8 @@ FinalMasterlist <- function(){
       across(
         -Reference,
         ~ na_if(., "")
-      )
+      ),
+      ID_GBIF = str_split(ID_GBIF, ";") %>% sapply(`[`, 1) %>% trimws()
     )
 
   MasterList5 <- MasterList4[order(rowSums(is.na(MasterList4))), ]
