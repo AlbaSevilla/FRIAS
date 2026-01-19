@@ -227,11 +227,11 @@ FinalMasterlist <- function(){
   MasterList5 <- MasterList4[order(MasterList4$AcceptedNameGBIF), ]
 
   write.xlsx(MasterList5,
-             file.path("FinalFiles", paste0("FRIAS_masterlist.xlsx")),
+             file.path("FinalFiles", paste0("(Table S3) FRIAS_masterlist.xlsx")),
              sep = ",",
              row.names = FALSE,
              col.names = TRUE)
-  write.csv(MasterList5,"FinalFiles/FRIAS_masterlist.csv")
+  write.csv(MasterList5,"FinalFiles/(Table S3) FRIAS_masterlist.csv")
 
  species_number <- nrow(MasterList5)
  cat("🐟 FRIAS Masterlist contains :",  species_number, "Alien Freshwater Species 🦀.", "\n")
