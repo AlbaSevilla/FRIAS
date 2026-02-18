@@ -12,17 +12,18 @@ StandardizeMechanism <- function() {
 
   dat <- read_csv("OutputFiles/Intermediate/step10_standardlocationnames_masterlist.csv") %>%
     separate_rows(Mechanisms, sep=",|;") %>%
+    mutate(across(Mechanisms, ~ str_replace_all(., "/", ";"))) %>%
+    separate_rows(Mechanisms, sep=",|;") %>%
     mutate(Mechanisms = tolower(trimws(Mechanisms)))
 
   matches <- match(dat$Mechanisms, equivs$OriginalCategories)
   replacements <- equivs$StandardizedCategoriesMechanisms[matches]
 
   dat$Mechanisms[!is.na(replacements)] <- replacements[!is.na(replacements)]
+  dat$Mechanisms[!is.na(replacements)] <- replacements[!is.na(replacements)]
+  dat$Mechanisms[is.na(replacements)] <- "NA"
 
-  no_estandarizados <- dat %>% filter(is.na(replacements))
-
-  write_xlsx(no_estandarizados,
-             "OutputFiles/Check/NA_Mechanisms_masterlist.xlsx")
+  #write_xlsx(no_estandarizados,"OutputFiles/Check/NA_Mechanisms_masterlist.xlsx")
 
   MasterlistStandardized <- noduplicates(dat, "AcceptedNameGBIF")
 
