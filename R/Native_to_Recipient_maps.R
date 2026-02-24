@@ -1,8 +1,11 @@
 Native_to_Recipient_maps <- function() {
 
-  ruta <- "FinalFiles/FRIAS_masterlist.csv"
+  rdylbu_cont <- colorRampPalette(
+    paletteer_d("RColorBrewer::RdYlBu")
+  )(256)
+  rdylbu_cont <- rev(rdylbu_cont)
 
-  MasterList <- read_csv(ruta) %>%
+  MasterList <- read_csv("FinalFiles/(Table S3) FRIAS_masterlist.csv") %>%
     select(AcceptedNameGBIF, ID_GBIF, Group, Kingdom, NativeRangeISO3, RecipientRangeISO3)
 
   dataset_native <- MasterList %>%
@@ -46,10 +49,13 @@ Native_to_Recipient_maps <- function() {
   )
   limits_global <- c(global_min, global_max)
 
-  plot_species_map <- function(world_sf, column, cmap, limits, legend_title = "Density") {
+  plot_species_map <- function(world_sf, column, palette, limits,
+                               legend_title = "Density") {
 
-    world_sf$zero_or_na <- ifelse(is.na(world_sf[[column]]) |
-                                    world_sf[[column]] == 0, TRUE, FALSE)
+    world_sf$zero_or_na <- ifelse(
+      is.na(world_sf[[column]]) | world_sf[[column]] == 0,
+      TRUE, FALSE
+    )
 
     hatch_lines <- st_make_grid(world_sf, cellsize = 10) %>%
       st_as_sf() %>%
@@ -60,14 +66,14 @@ Native_to_Recipient_maps <- function() {
       geom_sf(
         data = world_sf %>% filter(!zero_or_na),
         aes(fill = !!sym(column), geometry = geometry),
-        color = "black",   # bordes negros
+        color = "black",
         linewidth = 0.15
       ) +
       geom_sf(
         data = world_sf %>% filter(zero_or_na),
         aes(geometry = geometry),
         fill = "white",
-        color = "black",   # bordes negros
+        color = "black",
         linewidth = 0.15
       ) +
       geom_sf(
@@ -77,17 +83,16 @@ Native_to_Recipient_maps <- function() {
             hatch_lines
           )
         ),
-        color = "black",   # bordes de hatch negros
+        color = "black",
         linewidth = 0.2,
         alpha = 0.6
       ) +
-      scale_fill_viridis_c(
-        option = cmap,
-        direction = -1,
-        name = legend_title,
+      scale_fill_gradientn(
+        colours = palette,
         limits = limits,
         na.value = "white",
-        breaks = seq(0, limits[2], by = 200)  # 🔹 categorías cada 200
+        breaks = seq(0, limits[2], by = 200),
+        name = legend_title
       ) +
       coord_sf(crs = "+proj=moll") +
       theme_minimal() +
@@ -101,8 +106,8 @@ Native_to_Recipient_maps <- function() {
         legend.position = "bottom",
         legend.title = element_text(size = 25, color = "black"),
         legend.text = element_text(size = 20, color = "black"),
-        legend.key.height = unit(1.2, "cm"),  # altura de la barra
-        legend.key.width = unit(3, "cm")      # ancho de la barra
+        legend.key.height = unit(1.2, "cm"),
+        legend.key.width = unit(3, "cm")
       )
   }
 
@@ -111,21 +116,20 @@ Native_to_Recipient_maps <- function() {
   p1 <- plot_species_map(
     world_native,
     "NativeSpeciesCount",
-    "viridis",
+    rdylbu_cont,
     limits_global,
     legend_title = "Density by native range"
   )
 
-  p1
-
   p2 <- plot_species_map(
     world_Recipient,
     "RecipientSpeciesCount",
-    "viridis",
+    rdylbu_cont,
     limits_global,
     legend_title = "Density by recipient range"
   )
 
+  p1
   p2
 
   # ----- SAVE -----

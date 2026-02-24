@@ -1,7 +1,6 @@
 Over_Sub_Representation_InformalGroup <- function(){
-
   #Data
-  TableS5 <- read.xlsx("TablesToStandardize/Table S5.xlsx", sheet=2) %>%
+  TableS5 <- read.xlsx("Metadata/Table S5.xlsx", sheet=2) %>%
     filter(!is.na(FW_Total))
   TableS5[] <- lapply(TableS5, function(x) if(is.character(x)) gsub("\\*", "", x) else x)
   Taxa <- as.character(TableS5$Taxa)
@@ -30,8 +29,8 @@ Over_Sub_Representation_InformalGroup <- function(){
         TRUE ~ "Neutral"
       ),
       Color = case_when(
-        Representation == "Overrepresented" ~ "lightpink",
-        Representation == "Underrepresented" ~ "lightblue",
+        Representation == "Overrepresented" ~ "#A50026FF",
+        Representation == "Underrepresented" ~ "#74ADD1FF",
         TRUE ~ "grey80"
       )
     )
@@ -40,14 +39,28 @@ Over_Sub_Representation_InformalGroup <- function(){
 
 
   #Graph
-  graph <- ggplot(table, aes(x = reorder(Taxa, StdResidual), y = StdResidual, fill = Color)) +
+  graph <- ggplot(
+    table,
+    aes(
+      x = reorder(Taxa, StdResidual),
+      y = StdResidual,
+      fill = Representation
+    )
+  ) +
     geom_bar(stat = "identity", color = "black") +
-    scale_fill_identity() +
+    scale_fill_manual(
+      values = c(
+        "Overrepresented"  = "#A50026FF",
+        "Underrepresented" = "#74ADD1FF",
+        "Neutral"          = "grey80"
+      ),
+      name = "Representation"
+    ) +
     scale_y_continuous(expand = expansion(mult = c(0.05, 0.05))) +
     geom_hline(yintercept = c(-2, 2), linetype = "dashed") +
     coord_flip() +
     labs(
-      x="",
+      x = "",
       y = "Standardized residuals"
     ) +
     theme_minimal(base_size = 20) +
@@ -59,10 +72,11 @@ Over_Sub_Representation_InformalGroup <- function(){
       axis.text.x  = element_text(size = 18),
       axis.text.y  = element_text(size = 18),
       axis.line = element_line(color = "black", linewidth = 0.6),
-      axis.ticks = element_line(color = "black", linewidth = 0.6)
+      axis.ticks = element_line(color = "black", linewidth = 0.6),
+      legend.position = "bottom"
     )
   graph
 
-  ggsave("Figures/Figure6.png", graph, width = 10, height = 6, dpi = 300)
-  ggsave("Figures/Figure6.svg", graph, width = 10, height = 6, dpi = 300)
+  ggsave("Figures/Figure6.png", graph, width = 15, height = 6, dpi = 300)
+  ggsave("Figures/Figure6.svg", graph, width = 15, height = 6, dpi = 300)
 }
