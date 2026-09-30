@@ -45,12 +45,30 @@ devtools::install("path/to/FRIASpackage")
 
 
 ## 📊 Analysis Workflow
+The FRIAS worlfow includes a dedicated suite of automated analysis and visualization functions to explore macroecological patterns, database circularity, and reporting biases directly from the harmonized dataset.
 
-The analysis follows these main steps:
-1. **Data Cleaning:** Standardizing tables in `TablesToStandardize/`.
-2. **Completeness Analysis:** Using `Completeness_FRIAS.R` to evaluate missing data before and after processing.
-3. **Geographic Bias:** Assessing over/under-representation using `over_subrepresentation_geographicbias.r`.
-4. **GBIF Integration:** Fetching and analyzing native ranges via `GBIF_NativeRange.R`.
+### 1. 📈 Temporal Trends
+* **Function:** `Dates_graphs()`.
+* **Description:** Analyzes historical introduction dynamics and species accumulation curves over time based on global first-record years .
+* **Output:** Generates trend lines and bar plots showing newly reported freshwater alien species per year, highlighting historical detection rates and invasion velocity .
+
+### 2. 🌍 Geographical Coverage & Spatial Patterns
+* **Functions:** `Native_to_Recipient_maps()`, `Groups_through_RecipientBioregions()`.
+* **Description:** Maps native range origins against recipient locations and evaluates species distribution across global regions.
+* **Output:** 
+  * World choropleth maps displaying native origins and recipient country counts (standardized to ISO3 codes and UN Geoscheme bioregions).
+  * Cross-tabulation plots detailing broad life-form groups across continental recipient bioregions to identify invasion hotspots and geographic monitoring gaps.
+
+### 3. 🔄 Database Circularity & Redundancy
+* **Function:** `Duplicates_uniques_species_databases()`
+* **Description:** Quantifies data redundancy, circularity, and overlap across the 94 aggregated source databases.
+* **Output:** Comparative overlap diagrams (e.g., unique vs. shared species counts) distinguishing species contributed exclusively by single repositories from those cross-referenced across major databases like GRIIS, EASIN, and GFID.
+
+### 4. ⚖️ Taxonomic Representation & Biases
+* **Function:** `Over_Sub_Representation_InformalGroup()`
+* **Description:** Evaluates taxonomic reporting biases by contrasting alien species counts against overall known freshwater species richness for each broad life-form group.
+* **Output:** Diagnostic plots illustrating over-represented groups (e.g., fish, vascular plants, molluscs) versus under-represented or neglected taxa (e.g., aquatic insects, algae, microorganisms) .
+
 
 ## 📝 Publication Status
 
