@@ -16,32 +16,23 @@
 
 ---
 
-## ⚡ **Installation**
+## ⚡ Installation & Getting Started
 
-1. To create a new repository from this template, **[generate your new repository from this template](https://github.com/Josee9988/project-template/generate)**;
-for more information or guidance, follow the [GitHub guide](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template).
-2. Install the [🤖 used GitHub bots](https://github.com/Josee9988/project-template#-used-github-bots) (recommended)
-3. Clone your new repository **[generated from this template](https://github.com/Josee9988/project-template/generate)** and `cd` into it.
-4. **Execute** the `SETUP_TEMPLATE.sh` shell script to **customize** the files with your data.
+To run or collaborate on the FRIAS workflow, follow these steps to set up your local environment:
 
-    ```bash
-    bash SETUP_TEMPLATE.sh
-    ```
+1. **Clone the Repository:**
+   Clone the repository to your machine and navigate into the project directory:
+   ```bash
+   git clone https://github.com/AlbaSevilla/FRIAS.git
+   cd FRIAS
+Open the R Project: Open FRIAS.Rproj in RStudio (recommended) or set your working directory in R to the project root:
+setwd("/path/to/FRIAS")
 
-    Or
-
-    ```bash
-    ./SETUP_TEMPLATE.sh
-    ```
-
-    Additionally, watch *[this video](https://asciinema.org/a/425259)* to see **how to execute the script** or use *`bash SETUP_TEMPLATE.sh --help`* to obtain some extra information.
-
-    If the automatic detection of the username, project name or email is NOT correct, please post an issue, and you can **manually correct** them using the optional arguments like: *`bash SETUP_TEMPLATE.sh --username=whatever --projectName=whatever --email=whatever --projectType=whatever`*
-
-5. **Review** every single file and **customize** it as you like.
-6. Build your project. 🚀
-
-⚠️ _Customize every file to fit your requirements_ ⚠️
+Verify Data Directories: Ensure raw inputs and auxiliary files are placed in data/raw/ and data/translation_tables/.
+Execute the Workflow: 🚀 Run the master pipeline script to execute the complete end-to-end processing (from data extraction to database consolidation and figure generation):
+source("scripts/master_pipeline.R")
+Note: Full execution takes approximately 3.25 hours on a standard multi-core setup.
+⚠️ Make sure to preserve the folder structure so that relative script paths function correctly. ⚠️
 
 ---
 
