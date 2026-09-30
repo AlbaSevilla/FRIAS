@@ -1,5 +1,5 @@
 <!-- markdownlint-disable MD032 MD033-->
-# 🦀🪼🫧 FRIAS R Project : A reproducible workflow to generate a global database of FReshwater Invasive and Alien Species
+# 🪼🫧 FRIAS R Project : A reproducible workflow to generate a global database of FReshwater Invasive and Alien Species
 
 
 ## **What is this workflow all about?**
